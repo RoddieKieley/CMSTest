@@ -1,7 +1,3 @@
-# Generated on 2019-1-11 22:36:30 by version 0.7.0 of mulle-xcode-to-cmake
-# Command line:
-#    mulle-xcode-to-cmake export CMSTest.xcodeproj
-
 project(srt-game-server)
 
 cmake_minimum_required (VERSION 3.4)
