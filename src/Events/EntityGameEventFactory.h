@@ -16,8 +16,8 @@
 //   limitations under the License.
 
 #include "../Shared/FactoryT.h"
-#include "../proto/GameEventBuffer.pb.h"
-#include "../proto/EntityGameEventBuffer.pb.h"
+#include "../Proto/GameEventBuffer.pb.h"
+#include "../Proto/EntityGameEventBuffer.pb.h"
 #include "../Game/AEntity.h"
 #include <assert.h>
 

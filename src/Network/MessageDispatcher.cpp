@@ -15,7 +15,7 @@
 #include "MessageDispatcher.h"
 #include "SimpleAsyncProducer.h"
 #include "../Events/EventDispatcher.h"
-#include "../proto/GameEventBuffer.pb.h"
+#include "../Proto/GameEventBuffer.pb.h"
 #include <Poco/Delegate.h>
 #include <cms/CMSException.h>
 #include <google/protobuf/message.h>
