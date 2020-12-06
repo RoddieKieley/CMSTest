@@ -1,5 +1,5 @@
-#ifndef __CMSTest__CommandQueue__
-#define __CMSTest__CommandQueue__
+#ifndef __SRT__CommandQueue__
+#define __SRT__CommandQueue__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -91,4 +91,4 @@ public:
     
 };
 
-#endif /* defined(__CMSTest__CommandQueue__) */
+#endif /* defined(__SRT__CommandQueue__) */

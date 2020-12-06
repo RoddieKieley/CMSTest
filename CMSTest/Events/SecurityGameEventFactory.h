@@ -1,5 +1,5 @@
-#ifndef __CMSTest__SecurityGameEventFactory__
-#define __CMSTest__SecurityGameEventFactory__
+#ifndef __SRT__SecurityGameEventFactory__
+#define __SRT__SecurityGameEventFactory__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -143,4 +143,4 @@ protected:
     //    virtual SecurityGameEvent* Create(SecurityGameEvent_Dependencies& anSecurityGameEvent_Dependencies);
 };
 
-#endif /* defined(__CMSTest__SecurityGameEventFactory__) */
+#endif /* defined(__SRT__SecurityGameEventFactory__) */

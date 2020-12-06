@@ -1,5 +1,5 @@
-#ifndef __CMSTest__SimpleAsyncProducer__
-#define __CMSTest__SimpleAsyncProducer__
+#ifndef __SRT__SimpleAsyncProducer__
+#define __SRT__SimpleAsyncProducer__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -74,4 +74,4 @@ public:
     void Send(const unsigned char* pucArray, int iSize);
 };
 
-#endif /* defined(__CMSTest__SimpleAsyncProducer__) */
+#endif /* defined(__SRT__SimpleAsyncProducer__) */

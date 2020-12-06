@@ -1,5 +1,5 @@
-#ifndef __CMSTest__Pod__
-#define __CMSTest__Pod__
+#ifndef __SRT__Pod__
+#define __SRT__Pod__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -75,4 +75,4 @@ public:
 };
 
 
-#endif /* defined(__CMSTest__Pod__) */
+#endif /* defined(__SRT__Pod__) */

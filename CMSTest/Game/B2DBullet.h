@@ -1,5 +1,5 @@
-#ifndef __CMSTest__B2DBullet__
-#define __CMSTest__B2DBullet__
+#ifndef __SRT__B2DBullet__
+#define __SRT__B2DBullet__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -59,4 +59,4 @@ public:
 };
 
 
-#endif /* defined(__CMSTest__B2DBullet__) */
+#endif /* defined(__SRT__B2DBullet__) */

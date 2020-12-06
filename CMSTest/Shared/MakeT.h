@@ -1,5 +1,5 @@
-#ifndef CMSTest_MakeT_h
-#define CMSTest_MakeT_h
+#ifndef SRT_MakeT_h
+#define SRT_MakeT_h
 
 //   Copyright 2020 Roddie Kieley
 //

@@ -1,5 +1,5 @@
-#ifndef __CMSTest__Heartbeat__
-#define __CMSTest__Heartbeat__
+#ifndef __SRT__Heartbeat__
+#define __SRT__Heartbeat__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -47,4 +47,4 @@ public:
     void run();
 };
 
-#endif /* defined(__CMSTest__Heartbeat__) */
+#endif /* defined(__SRT__Heartbeat__) */

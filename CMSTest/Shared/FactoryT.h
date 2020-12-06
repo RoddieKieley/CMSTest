@@ -1,5 +1,5 @@
-#ifndef CMSTest_FactoryT_h
-#define CMSTest_FactoryT_h
+#ifndef SRT_FactoryT_h
+#define SRT_FactoryT_h
 
 //   Copyright 2020 Roddie Kieley
 //

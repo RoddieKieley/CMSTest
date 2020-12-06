@@ -1,5 +1,5 @@
-#ifndef __CMSTest__RawInputCommand__
-#define __CMSTest__RawInputCommand__
+#ifndef __SRT__RawInputCommand__
+#define __SRT__RawInputCommand__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -61,4 +61,4 @@ public:
     virtual void Execute() = 0;
 };
 
-#endif /* defined(__CMSTest__RawInputCommand__) */
+#endif /* defined(__SRT__RawInputCommand__) */

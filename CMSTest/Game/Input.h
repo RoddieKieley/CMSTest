@@ -1,5 +1,5 @@
-#ifndef __CMSTest__Input__
-#define __CMSTest__Input__
+#ifndef __SRT__Input__
+#define __SRT__Input__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -59,4 +59,4 @@ public:
     void FireDualStickEvent(DualStick::PbDualStick aPbDualStick);
 };
 #endif
-#endif /* defined(__CMSTest__Input__) */
+#endif /* defined(__SRT__Input__) */

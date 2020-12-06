@@ -1,6 +1,6 @@
 //
 //  Entity.h
-//  CMSTest
+//  SRT
 //
 //  Created by Roddie Kieley on 13-04-20.
 //   Copyright 2020 Roddie Kieley
@@ -19,8 +19,8 @@
 
 //
 
-#ifndef __CMSTest__Entity__
-#define __CMSTest__Entity__
+#ifndef __SRT__Entity__
+#define __SRT__Entity__
 
 #include "../Proto/GameEventBuffer.pb.h"
 #include "../Proto/EntityGameEventBuffer.pb.h"
@@ -129,4 +129,4 @@ public:
 };
 
 
-#endif /* defined(__CMSTest__Entity__) */
+#endif /* defined(__SRT__Entity__) */

@@ -1,5 +1,5 @@
-#ifndef __CMSTest__EventDispatcher__
-#define __CMSTest__EventDispatcher__
+#ifndef __SRT__EventDispatcher__
+#define __SRT__EventDispatcher__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -121,4 +121,4 @@ public:
     void HandleLeaveSecurityCommandExecutedEvent(const void* pSender, const std::string& strUUID);
 };
 
-#endif /* defined(__CMSTest__EventDispatcher__) */
+#endif /* defined(__SRT__EventDispatcher__) */

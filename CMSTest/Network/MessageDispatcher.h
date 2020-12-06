@@ -1,5 +1,5 @@
-#ifndef __CMSTest__MessageDispatcher__
-#define __CMSTest__MessageDispatcher__
+#ifndef __SRT__MessageDispatcher__
+#define __SRT__MessageDispatcher__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -78,4 +78,4 @@ public:
     void HandleEventDispatchedEvent(const void* pSender, google::protobuf::Message*& pEventMessage);
 };
 
-#endif /* defined(__CMSTest__MessageDispatcher__) */
+#endif /* defined(__SRT__MessageDispatcher__) */

@@ -1,5 +1,5 @@
-#ifndef __CMSTest__GameEventFactory__
-#define __CMSTest__GameEventFactory__
+#ifndef __SRT__GameEventFactory__
+#define __SRT__GameEventFactory__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -134,4 +134,4 @@ protected:
 //    virtual EntityGameEvent* Create(EntityGameEvent_Dependencies& anEntityGameEvent_Dependencies);
 };
 
-#endif /* defined(__CMSTest__GameEventFactory__) */
+#endif /* defined(__SRT__GameEventFactory__) */

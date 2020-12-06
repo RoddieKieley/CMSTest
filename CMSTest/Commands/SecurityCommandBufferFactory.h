@@ -1,5 +1,5 @@
-#ifndef __CMSTest__CommandBufferFactory__
-#define __CMSTest__CommandBufferFactory__
+#ifndef __SRT__CommandBufferFactory__
+#define __SRT__CommandBufferFactory__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -324,4 +324,4 @@ public:
     Poco::BasicEvent<CommandBuffer*&>    DestroyedEvent;
 };
 
-#endif /* defined(__CMSTest__CommandBufferFactory__) */
+#endif /* defined(__SRT__CommandBufferFactory__) */

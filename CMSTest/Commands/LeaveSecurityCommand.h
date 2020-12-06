@@ -1,5 +1,5 @@
-#ifndef __CMSTest__LeaveSecurityCommand__
-#define __CMSTest__LeaveSecurityCommand__
+#ifndef __SRT__LeaveSecurityCommand__
+#define __SRT__LeaveSecurityCommand__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif /* defined(__CMSTest__LeaveSecurityCommand__) */
+#endif /* defined(__SRT__LeaveSecurityCommand__) */

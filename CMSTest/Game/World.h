@@ -1,5 +1,5 @@
-#ifndef __CMSTest__World__
-#define __CMSTest__World__
+#ifndef __SRT__World__
+#define __SRT__World__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -85,4 +85,4 @@ public:
     void Simulate();
 };
 
-#endif /* defined(__CMSTest__World__) */
+#endif /* defined(__SRT__World__) */

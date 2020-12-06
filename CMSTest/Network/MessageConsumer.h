@@ -1,5 +1,5 @@
-#ifndef __CMSTest__MessageConsumer__
-#define __CMSTest__MessageConsumer__
+#ifndef __SRT__MessageConsumer__
+#define __SRT__MessageConsumer__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -89,4 +89,4 @@ public:
     virtual void onMessage(const cms::Message* pMessage);
 };
 
-#endif /* defined(__CMSTest__MessageConsumer__) */
+#endif /* defined(__SRT__MessageConsumer__) */

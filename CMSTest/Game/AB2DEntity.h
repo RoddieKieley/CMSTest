@@ -1,6 +1,6 @@
 //
 //  AB2DEntity.h
-//  CMSTest
+//  SRT
 //
 //  Created by Roddie Kieley on 13-05-12.
 //   Copyright 2020 Roddie Kieley
@@ -19,8 +19,8 @@
 
 //
 
-#ifndef __CMSTest__AB2DEntity__
-#define __CMSTest__AB2DEntity__
+#ifndef __SRT__AB2DEntity__
+#define __SRT__AB2DEntity__
 
 #include <Poco/BasicEvent.h>
 //#include "../../../ThirdParty/box2d/Box2D/Box2D/Box2D.h"
@@ -111,4 +111,4 @@ public:
 
 
 
-#endif /* defined(__CMSTest__AB2DEntity__) */
+#endif /* defined(__SRT__AB2DEntity__) */

@@ -1,5 +1,5 @@
-#ifndef __CMSTest__Server__
-#define __CMSTest__Server__
+#ifndef __SRT__Server__
+#define __SRT__Server__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -90,4 +90,4 @@ public:
     void run();
 };
 
-#endif /* defined(__CMSTest__Server__) */
+#endif /* defined(__SRT__Server__) */

@@ -1,5 +1,5 @@
-#ifndef CMSTest_B2DBulletFactory_h
-#define CMSTest_B2DBulletFactory_h
+#ifndef SRT_B2DBulletFactory_h
+#define SRT_B2DBulletFactory_h
 
 //   Copyright 2020 Roddie Kieley
 //

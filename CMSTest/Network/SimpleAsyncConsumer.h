@@ -1,5 +1,5 @@
-#ifndef __CMSTest__SimpleAsyncConsumer__
-#define __CMSTest__SimpleAsyncConsumer__
+#ifndef __SRT__SimpleAsyncConsumer__
+#define __SRT__SimpleAsyncConsumer__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -81,4 +81,4 @@ public:
     void SetMessageListener(cms::MessageListener* pMessageListener);
 };
 
-#endif /* defined(__CMSTest__SimpleAsyncConsumer__) */
+#endif /* defined(__SRT__SimpleAsyncConsumer__) */

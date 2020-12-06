@@ -1,5 +1,5 @@
-#ifndef CMSTest_B2DPodFactory_h
-#define CMSTest_B2DPodFactory_h
+#ifndef SRT_B2DPodFactory_h
+#define SRT_B2DPodFactory_h
 
 //   Copyright 2020 Roddie Kieley
 //

@@ -1,5 +1,5 @@
-#ifndef __CMSTest__Bullet_Factory__
-#define __CMSTest__Bullet_Factory__
+#ifndef __SRT__Bullet_Factory__
+#define __SRT__Bullet_Factory__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -43,4 +43,4 @@ public:
     void Destroy(Bullet*& pBullet);
 };
 
-#endif /* defined(__CMSTest__Bullet_Factory__) */
+#endif /* defined(__SRT__Bullet_Factory__) */

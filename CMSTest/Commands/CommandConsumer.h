@@ -1,5 +1,5 @@
-#ifndef __CMSTest__CommandConsumer__
-#define __CMSTest__CommandConsumer__
+#ifndef __SRT__CommandConsumer__
+#define __SRT__CommandConsumer__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -84,4 +84,4 @@ public:
     void HandleReceivedCMSMessageEvent(const void* pSender, Poco::Tuple<cms::BytesMessage*>*& pTuple);
 };
 
-#endif /* defined(__CMSTest__CommandConsumer__) */
+#endif /* defined(__SRT__CommandConsumer__) */

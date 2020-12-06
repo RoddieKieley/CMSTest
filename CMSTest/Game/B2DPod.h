@@ -1,5 +1,5 @@
-#ifndef __CMSTest__B2DPod__
-#define __CMSTest__B2DPod__
+#ifndef __SRT__B2DPod__
+#define __SRT__B2DPod__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -57,4 +57,4 @@ public:
     void Update();
 };
 
-#endif /* defined(__CMSTest__B2DPod__) */
+#endif /* defined(__SRT__B2DPod__) */

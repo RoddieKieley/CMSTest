@@ -1,5 +1,5 @@
-#ifndef __CMSTest__SecurityCommand__
-#define __CMSTest__SecurityCommand__
+#ifndef __SRT__SecurityCommand__
+#define __SRT__SecurityCommand__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -62,4 +62,4 @@ public:
     virtual void Execute() = 0;
 };
 
-#endif /* defined(__CMSTest__SecurityCommand__) */
+#endif /* defined(__SRT__SecurityCommand__) */

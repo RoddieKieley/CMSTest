@@ -1,5 +1,5 @@
-#ifndef __CMSTest__B2DWorld__
-#define __CMSTest__B2DWorld__
+#ifndef __SRT__B2DWorld__
+#define __SRT__B2DWorld__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -97,4 +97,4 @@ public:
     void Step();
 };
 
-#endif /* defined(__CMSTest__B2DWorld__) */
+#endif /* defined(__SRT__B2DWorld__) */

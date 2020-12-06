@@ -1,5 +1,5 @@
-#ifndef __CMSTest__DualStickRawInputCommand__
-#define __CMSTest__DualStickRawInputCommand__
+#ifndef __SRT__DualStickRawInputCommand__
+#define __SRT__DualStickRawInputCommand__
 
 //   Copyright 2020 Roddie Kieley
 //
@@ -46,4 +46,4 @@ public:
 };
 
 
-#endif /* defined(__CMSTest__DualStickRawInputCommand__) */
+#endif /* defined(__SRT__DualStickRawInputCommand__) */

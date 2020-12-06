@@ -1,5 +1,5 @@
-#ifndef CMSTest_PodFactory_h
-#define CMSTest_PodFactory_h
+#ifndef SRT_PodFactory_h
+#define SRT_PodFactory_h
 
 //   Copyright 2020 Roddie Kieley
 //
