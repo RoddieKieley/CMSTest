@@ -2,7 +2,7 @@
 # Command line:
 #    mulle-xcode-to-cmake export CMSTest.xcodeproj
 
-project( CMSTest)
+project(srt-game-server)
 
 cmake_minimum_required (VERSION 3.4)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") # enable C++11 standard
@@ -70,7 +70,7 @@ endif()
 
 
 ##
-## CMSTest Files
+## srt-game-server Files
 ##
 
 # uncomment this for mulle-objc to search libraries first
@@ -150,10 +150,10 @@ ${SSL_1_0_2_LIBRARY}
 
 
 ##
-## CMSTest
+## srt-game-server
 ##
 
-add_executable( CMSTest MACOSX_BUNDLE
+add_executable(srt-game-server MACOSX_BUNDLE
 ${SOURCES}
 ${PUBLIC_HEADERS}
 ${PROJECT_HEADERS}
@@ -161,7 +161,7 @@ ${PRIVATE_HEADERS}
 ${RESOURCES}
 )
 
-target_include_directories( CMSTest
+target_include_directories(srt-game-server
    PUBLIC SYSTEM
         /usr/local/include/activemq-cpp
         /usr/include/activemq-cpp-3.9.4
@@ -171,7 +171,7 @@ target_include_directories( CMSTest
         /opt/local/include/apr-1
 )
 
-target_link_libraries( CMSTest
+target_link_libraries(srt-game-server
 ${BEGIN_ALL_LOAD}
 ${STATIC_DEPENDENCIES}
 ${END_ALL_LOAD}
