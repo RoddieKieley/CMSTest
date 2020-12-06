@@ -39,7 +39,7 @@ JoinSecurityCommand::~JoinSecurityCommand()
 // Method(s)
 void JoinSecurityCommand::Execute()
 {
-    using namespace usx::geofactions;
+    using namespace redhatgamedev::srt;
     
     assert(m_pBytesMessage);
     assert(m_pCommandBuffer);

@@ -23,8 +23,8 @@ namespace protobuf_SecurityCommandBuffer_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_SecurityCommandBuffer_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_JoinSecurityCommandBuffer;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_SecurityCommandBuffer_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_LeaveSecurityCommandBuffer;
 }  // namespace protobuf_SecurityCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class JoinSecurityCommandBufferDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<JoinSecurityCommandBuffer>
@@ -40,18 +40,18 @@ class SecurityCommandBufferDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<SecurityCommandBuffer>
       _instance;
 } _SecurityCommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace protobuf_SecurityCommandBuffer_2eproto {
 static void InitDefaultsJoinSecurityCommandBuffer() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::usx::geofactions::_JoinSecurityCommandBuffer_default_instance_;
-    new (ptr) ::usx::geofactions::JoinSecurityCommandBuffer();
+    void* ptr = &::redhatgamedev::srt::_JoinSecurityCommandBuffer_default_instance_;
+    new (ptr) ::redhatgamedev::srt::JoinSecurityCommandBuffer();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::usx::geofactions::JoinSecurityCommandBuffer::InitAsDefaultInstance();
+  ::redhatgamedev::srt::JoinSecurityCommandBuffer::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_JoinSecurityCommandBuffer =
@@ -61,11 +61,11 @@ static void InitDefaultsLeaveSecurityCommandBuffer() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::usx::geofactions::_LeaveSecurityCommandBuffer_default_instance_;
-    new (ptr) ::usx::geofactions::LeaveSecurityCommandBuffer();
+    void* ptr = &::redhatgamedev::srt::_LeaveSecurityCommandBuffer_default_instance_;
+    new (ptr) ::redhatgamedev::srt::LeaveSecurityCommandBuffer();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::usx::geofactions::LeaveSecurityCommandBuffer::InitAsDefaultInstance();
+  ::redhatgamedev::srt::LeaveSecurityCommandBuffer::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_LeaveSecurityCommandBuffer =
@@ -75,11 +75,11 @@ static void InitDefaultsSecurityCommandBuffer() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::usx::geofactions::_SecurityCommandBuffer_default_instance_;
-    new (ptr) ::usx::geofactions::SecurityCommandBuffer();
+    void* ptr = &::redhatgamedev::srt::_SecurityCommandBuffer_default_instance_;
+    new (ptr) ::redhatgamedev::srt::SecurityCommandBuffer();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::usx::geofactions::SecurityCommandBuffer::InitAsDefaultInstance();
+  ::redhatgamedev::srt::SecurityCommandBuffer::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<2> scc_info_SecurityCommandBuffer =
@@ -97,42 +97,42 @@ void InitDefaults() {
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::JoinSecurityCommandBuffer, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::JoinSecurityCommandBuffer, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::JoinSecurityCommandBuffer, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::JoinSecurityCommandBuffer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::LeaveSecurityCommandBuffer, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::LeaveSecurityCommandBuffer, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::LeaveSecurityCommandBuffer, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::LeaveSecurityCommandBuffer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::LeaveSecurityCommandBuffer, uuid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::LeaveSecurityCommandBuffer, uuid_),
   0,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, uuid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, joinsecuritycommandbuffer_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::SecurityCommandBuffer, leavesecuritycommandbuffer_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, uuid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, joinsecuritycommandbuffer_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::SecurityCommandBuffer, leavesecuritycommandbuffer_),
   3,
   0,
   1,
   2,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 5, sizeof(::usx::geofactions::JoinSecurityCommandBuffer)},
-  { 5, 11, sizeof(::usx::geofactions::LeaveSecurityCommandBuffer)},
-  { 12, 21, sizeof(::usx::geofactions::SecurityCommandBuffer)},
+  { 0, 5, sizeof(::redhatgamedev::srt::JoinSecurityCommandBuffer)},
+  { 5, 11, sizeof(::redhatgamedev::srt::LeaveSecurityCommandBuffer)},
+  { 12, 21, sizeof(::redhatgamedev::srt::SecurityCommandBuffer)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::usx::geofactions::_JoinSecurityCommandBuffer_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::usx::geofactions::_LeaveSecurityCommandBuffer_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::usx::geofactions::_SecurityCommandBuffer_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::redhatgamedev::srt::_JoinSecurityCommandBuffer_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::redhatgamedev::srt::_LeaveSecurityCommandBuffer_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::redhatgamedev::srt::_SecurityCommandBuffer_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -156,21 +156,21 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\033SecurityCommandBuffer.proto\022\017usx.geofa"
-      "ctions\"\033\n\031JoinSecurityCommandBuffer\"*\n\032L"
-      "eaveSecurityCommandBuffer\022\014\n\004UUID\030\001 \002(\t\""
-      "\335\002\n\025SecurityCommandBuffer\022W\n\004type\030\001 \002(\0162"
-      "@.usx.geofactions.SecurityCommandBuffer."
-      "SecurityCommandBufferType:\007UNKNOWN\022\014\n\004UU"
-      "ID\030\002 \001(\t\022M\n\031joinSecurityCommandBuffer\030\003 "
-      "\001(\0132*.usx.geofactions.JoinSecurityComman"
-      "dBuffer\022O\n\032leaveSecurityCommandBuffer\030\004 "
-      "\001(\0132+.usx.geofactions.LeaveSecurityComma"
-      "ndBuffer\"=\n\031SecurityCommandBufferType\022\013\n"
-      "\007UNKNOWN\020\000\022\010\n\004JOIN\020\001\022\t\n\005LEAVE\020\002"
+      "\n\033SecurityCommandBuffer.proto\022\021redhatgam"
+      "edev.srt\"\033\n\031JoinSecurityCommandBuffer\"*\n"
+      "\032LeaveSecurityCommandBuffer\022\014\n\004UUID\030\001 \002("
+      "\t\"\343\002\n\025SecurityCommandBuffer\022Y\n\004type\030\001 \002("
+      "\0162B.redhatgamedev.srt.SecurityCommandBuf"
+      "fer.SecurityCommandBufferType:\007UNKNOWN\022\014"
+      "\n\004UUID\030\002 \001(\t\022O\n\031joinSecurityCommandBuffe"
+      "r\030\003 \001(\0132,.redhatgamedev.srt.JoinSecurity"
+      "CommandBuffer\022Q\n\032leaveSecurityCommandBuf"
+      "fer\030\004 \001(\0132-.redhatgamedev.srt.LeaveSecur"
+      "ityCommandBuffer\"=\n\031SecurityCommandBuffe"
+      "rType\022\013\n\007UNKNOWN\020\000\022\010\n\004JOIN\020\001\022\t\n\005LEAVE\020\002"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 471);
+      descriptor, 479);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "SecurityCommandBuffer.proto", &protobuf_RegisterTypes);
 }
@@ -186,8 +186,8 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_SecurityCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 const ::google::protobuf::EnumDescriptor* SecurityCommandBuffer_SecurityCommandBufferType_descriptor() {
   protobuf_SecurityCommandBuffer_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_SecurityCommandBuffer_2eproto::file_level_enum_descriptors[0];
@@ -224,21 +224,21 @@ JoinSecurityCommandBuffer::JoinSecurityCommandBuffer()
   ::google::protobuf::internal::InitSCC(
       &protobuf_SecurityCommandBuffer_2eproto::scc_info_JoinSecurityCommandBuffer.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(constructor:redhatgamedev.srt.JoinSecurityCommandBuffer)
 }
 JoinSecurityCommandBuffer::JoinSecurityCommandBuffer(const JoinSecurityCommandBuffer& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(copy_constructor:redhatgamedev.srt.JoinSecurityCommandBuffer)
 }
 
 void JoinSecurityCommandBuffer::SharedCtor() {
 }
 
 JoinSecurityCommandBuffer::~JoinSecurityCommandBuffer() {
-  // @@protoc_insertion_point(destructor:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(destructor:redhatgamedev.srt.JoinSecurityCommandBuffer)
   SharedDtor();
 }
 
@@ -260,7 +260,7 @@ const JoinSecurityCommandBuffer& JoinSecurityCommandBuffer::default_instance() {
 
 
 void JoinSecurityCommandBuffer::Clear() {
-// @@protoc_insertion_point(message_clear_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(message_clear_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -273,7 +273,7 @@ bool JoinSecurityCommandBuffer::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -286,17 +286,17 @@ bool JoinSecurityCommandBuffer::MergePartialFromCodedStream(
           input, tag, _internal_metadata_.mutable_unknown_fields()));
   }
 success:
-  // @@protoc_insertion_point(parse_success:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_success:redhatgamedev.srt.JoinSecurityCommandBuffer)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_failure:redhatgamedev.srt.JoinSecurityCommandBuffer)
   return false;
 #undef DO_
 }
 
 void JoinSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -304,13 +304,13 @@ void JoinSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_end:redhatgamedev.srt.JoinSecurityCommandBuffer)
 }
 
 ::google::protobuf::uint8* JoinSecurityCommandBuffer::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -318,12 +318,12 @@ void JoinSecurityCommandBuffer::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_end:redhatgamedev.srt.JoinSecurityCommandBuffer)
   return target;
 }
 
 size_t JoinSecurityCommandBuffer::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(message_byte_size_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -337,22 +337,22 @@ size_t JoinSecurityCommandBuffer::ByteSizeLong() const {
 }
 
 void JoinSecurityCommandBuffer::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_merge_from_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   const JoinSecurityCommandBuffer* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const JoinSecurityCommandBuffer>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:redhatgamedev.srt.JoinSecurityCommandBuffer)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:redhatgamedev.srt.JoinSecurityCommandBuffer)
     MergeFrom(*source);
   }
 }
 
 void JoinSecurityCommandBuffer::MergeFrom(const JoinSecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_merge_from_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -361,14 +361,14 @@ void JoinSecurityCommandBuffer::MergeFrom(const JoinSecurityCommandBuffer& from)
 }
 
 void JoinSecurityCommandBuffer::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_copy_from_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void JoinSecurityCommandBuffer::CopyFrom(const JoinSecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:usx.geofactions.JoinSecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_copy_from_start:redhatgamedev.srt.JoinSecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -407,7 +407,7 @@ LeaveSecurityCommandBuffer::LeaveSecurityCommandBuffer()
   ::google::protobuf::internal::InitSCC(
       &protobuf_SecurityCommandBuffer_2eproto::scc_info_LeaveSecurityCommandBuffer.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(constructor:redhatgamedev.srt.LeaveSecurityCommandBuffer)
 }
 LeaveSecurityCommandBuffer::LeaveSecurityCommandBuffer(const LeaveSecurityCommandBuffer& from)
   : ::google::protobuf::Message(),
@@ -418,7 +418,7 @@ LeaveSecurityCommandBuffer::LeaveSecurityCommandBuffer(const LeaveSecurityComman
   if (from.has_uuid()) {
     uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
   }
-  // @@protoc_insertion_point(copy_constructor:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(copy_constructor:redhatgamedev.srt.LeaveSecurityCommandBuffer)
 }
 
 void LeaveSecurityCommandBuffer::SharedCtor() {
@@ -426,7 +426,7 @@ void LeaveSecurityCommandBuffer::SharedCtor() {
 }
 
 LeaveSecurityCommandBuffer::~LeaveSecurityCommandBuffer() {
-  // @@protoc_insertion_point(destructor:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(destructor:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   SharedDtor();
 }
 
@@ -449,7 +449,7 @@ const LeaveSecurityCommandBuffer& LeaveSecurityCommandBuffer::default_instance()
 
 
 void LeaveSecurityCommandBuffer::Clear() {
-// @@protoc_insertion_point(message_clear_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(message_clear_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -466,7 +466,7 @@ bool LeaveSecurityCommandBuffer::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -481,7 +481,7 @@ bool LeaveSecurityCommandBuffer::MergePartialFromCodedStream(
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->uuid().data(), static_cast<int>(this->uuid().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "usx.geofactions.LeaveSecurityCommandBuffer.UUID");
+            "redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID");
         } else {
           goto handle_unusual;
         }
@@ -500,17 +500,17 @@ bool LeaveSecurityCommandBuffer::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_success:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_failure:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   return false;
 #undef DO_
 }
 
 void LeaveSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -520,7 +520,7 @@ void LeaveSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.LeaveSecurityCommandBuffer.UUID");
+      "redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->uuid(), output);
   }
@@ -529,13 +529,13 @@ void LeaveSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_end:redhatgamedev.srt.LeaveSecurityCommandBuffer)
 }
 
 ::google::protobuf::uint8* LeaveSecurityCommandBuffer::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -545,7 +545,7 @@ void LeaveSecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.LeaveSecurityCommandBuffer.UUID");
+      "redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->uuid(), target);
@@ -555,12 +555,12 @@ void LeaveSecurityCommandBuffer::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_end:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   return target;
 }
 
 size_t LeaveSecurityCommandBuffer::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(message_byte_size_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -580,22 +580,22 @@ size_t LeaveSecurityCommandBuffer::ByteSizeLong() const {
 }
 
 void LeaveSecurityCommandBuffer::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_merge_from_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   const LeaveSecurityCommandBuffer* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const LeaveSecurityCommandBuffer>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:redhatgamedev.srt.LeaveSecurityCommandBuffer)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:redhatgamedev.srt.LeaveSecurityCommandBuffer)
     MergeFrom(*source);
   }
 }
 
 void LeaveSecurityCommandBuffer::MergeFrom(const LeaveSecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_merge_from_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -608,14 +608,14 @@ void LeaveSecurityCommandBuffer::MergeFrom(const LeaveSecurityCommandBuffer& fro
 }
 
 void LeaveSecurityCommandBuffer::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_copy_from_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LeaveSecurityCommandBuffer::CopyFrom(const LeaveSecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:usx.geofactions.LeaveSecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_copy_from_start:redhatgamedev.srt.LeaveSecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -647,10 +647,10 @@ void LeaveSecurityCommandBuffer::InternalSwap(LeaveSecurityCommandBuffer* other)
 // ===================================================================
 
 void SecurityCommandBuffer::InitAsDefaultInstance() {
-  ::usx::geofactions::_SecurityCommandBuffer_default_instance_._instance.get_mutable()->joinsecuritycommandbuffer_ = const_cast< ::usx::geofactions::JoinSecurityCommandBuffer*>(
-      ::usx::geofactions::JoinSecurityCommandBuffer::internal_default_instance());
-  ::usx::geofactions::_SecurityCommandBuffer_default_instance_._instance.get_mutable()->leavesecuritycommandbuffer_ = const_cast< ::usx::geofactions::LeaveSecurityCommandBuffer*>(
-      ::usx::geofactions::LeaveSecurityCommandBuffer::internal_default_instance());
+  ::redhatgamedev::srt::_SecurityCommandBuffer_default_instance_._instance.get_mutable()->joinsecuritycommandbuffer_ = const_cast< ::redhatgamedev::srt::JoinSecurityCommandBuffer*>(
+      ::redhatgamedev::srt::JoinSecurityCommandBuffer::internal_default_instance());
+  ::redhatgamedev::srt::_SecurityCommandBuffer_default_instance_._instance.get_mutable()->leavesecuritycommandbuffer_ = const_cast< ::redhatgamedev::srt::LeaveSecurityCommandBuffer*>(
+      ::redhatgamedev::srt::LeaveSecurityCommandBuffer::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int SecurityCommandBuffer::kTypeFieldNumber;
@@ -664,7 +664,7 @@ SecurityCommandBuffer::SecurityCommandBuffer()
   ::google::protobuf::internal::InitSCC(
       &protobuf_SecurityCommandBuffer_2eproto::scc_info_SecurityCommandBuffer.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(constructor:redhatgamedev.srt.SecurityCommandBuffer)
 }
 SecurityCommandBuffer::SecurityCommandBuffer(const SecurityCommandBuffer& from)
   : ::google::protobuf::Message(),
@@ -676,17 +676,17 @@ SecurityCommandBuffer::SecurityCommandBuffer(const SecurityCommandBuffer& from)
     uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
   }
   if (from.has_joinsecuritycommandbuffer()) {
-    joinsecuritycommandbuffer_ = new ::usx::geofactions::JoinSecurityCommandBuffer(*from.joinsecuritycommandbuffer_);
+    joinsecuritycommandbuffer_ = new ::redhatgamedev::srt::JoinSecurityCommandBuffer(*from.joinsecuritycommandbuffer_);
   } else {
     joinsecuritycommandbuffer_ = NULL;
   }
   if (from.has_leavesecuritycommandbuffer()) {
-    leavesecuritycommandbuffer_ = new ::usx::geofactions::LeaveSecurityCommandBuffer(*from.leavesecuritycommandbuffer_);
+    leavesecuritycommandbuffer_ = new ::redhatgamedev::srt::LeaveSecurityCommandBuffer(*from.leavesecuritycommandbuffer_);
   } else {
     leavesecuritycommandbuffer_ = NULL;
   }
   type_ = from.type_;
-  // @@protoc_insertion_point(copy_constructor:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(copy_constructor:redhatgamedev.srt.SecurityCommandBuffer)
 }
 
 void SecurityCommandBuffer::SharedCtor() {
@@ -697,7 +697,7 @@ void SecurityCommandBuffer::SharedCtor() {
 }
 
 SecurityCommandBuffer::~SecurityCommandBuffer() {
-  // @@protoc_insertion_point(destructor:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(destructor:redhatgamedev.srt.SecurityCommandBuffer)
   SharedDtor();
 }
 
@@ -722,7 +722,7 @@ const SecurityCommandBuffer& SecurityCommandBuffer::default_instance() {
 
 
 void SecurityCommandBuffer::Clear() {
-// @@protoc_insertion_point(message_clear_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(message_clear_start:redhatgamedev.srt.SecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -750,13 +750,13 @@ bool SecurityCommandBuffer::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_start:redhatgamedev.srt.SecurityCommandBuffer)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+      // required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
@@ -764,8 +764,8 @@ bool SecurityCommandBuffer::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          if (::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_IsValid(value)) {
-            set_type(static_cast< ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType >(value));
+          if (::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_IsValid(value)) {
+            set_type(static_cast< ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType >(value));
           } else {
             mutable_unknown_fields()->AddVarint(
                 1, static_cast< ::google::protobuf::uint64>(value));
@@ -785,14 +785,14 @@ bool SecurityCommandBuffer::MergePartialFromCodedStream(
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->uuid().data(), static_cast<int>(this->uuid().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "usx.geofactions.SecurityCommandBuffer.UUID");
+            "redhatgamedev.srt.SecurityCommandBuffer.UUID");
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+      // optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
@@ -804,7 +804,7 @@ bool SecurityCommandBuffer::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+      // optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
@@ -828,22 +828,22 @@ bool SecurityCommandBuffer::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_success:redhatgamedev.srt.SecurityCommandBuffer)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(parse_failure:redhatgamedev.srt.SecurityCommandBuffer)
   return false;
 #undef DO_
 }
 
 void SecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_start:redhatgamedev.srt.SecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
   if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->type(), output);
@@ -854,18 +854,18 @@ void SecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.SecurityCommandBuffer.UUID");
+      "redhatgamedev.srt.SecurityCommandBuffer.UUID");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->uuid(), output);
   }
 
-  // optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+  // optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
   if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, this->_internal_joinsecuritycommandbuffer(), output);
   }
 
-  // optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+  // optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
   if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->_internal_leavesecuritycommandbuffer(), output);
@@ -875,18 +875,18 @@ void SecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_end:redhatgamedev.srt.SecurityCommandBuffer)
 }
 
 ::google::protobuf::uint8* SecurityCommandBuffer::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_start:redhatgamedev.srt.SecurityCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
   if (cached_has_bits & 0x00000008u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->type(), target);
@@ -897,20 +897,20 @@ void SecurityCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.SecurityCommandBuffer.UUID");
+      "redhatgamedev.srt.SecurityCommandBuffer.UUID");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->uuid(), target);
   }
 
-  // optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+  // optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
   if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         3, this->_internal_joinsecuritycommandbuffer(), deterministic, target);
   }
 
-  // optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+  // optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
   if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -921,12 +921,12 @@ void SecurityCommandBuffer::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_end:redhatgamedev.srt.SecurityCommandBuffer)
   return target;
 }
 
 size_t SecurityCommandBuffer::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(message_byte_size_start:redhatgamedev.srt.SecurityCommandBuffer)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -934,7 +934,7 @@ size_t SecurityCommandBuffer::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  // required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
   if (has_type()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
@@ -947,14 +947,14 @@ size_t SecurityCommandBuffer::ByteSizeLong() const {
           this->uuid());
     }
 
-    // optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+    // optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
     if (has_joinsecuritycommandbuffer()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           *joinsecuritycommandbuffer_);
     }
 
-    // optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+    // optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
     if (has_leavesecuritycommandbuffer()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -968,22 +968,22 @@ size_t SecurityCommandBuffer::ByteSizeLong() const {
 }
 
 void SecurityCommandBuffer::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_merge_from_start:redhatgamedev.srt.SecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   const SecurityCommandBuffer* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const SecurityCommandBuffer>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:redhatgamedev.srt.SecurityCommandBuffer)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:redhatgamedev.srt.SecurityCommandBuffer)
     MergeFrom(*source);
   }
 }
 
 void SecurityCommandBuffer::MergeFrom(const SecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_merge_from_start:redhatgamedev.srt.SecurityCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -996,10 +996,10 @@ void SecurityCommandBuffer::MergeFrom(const SecurityCommandBuffer& from) {
       uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
     }
     if (cached_has_bits & 0x00000002u) {
-      mutable_joinsecuritycommandbuffer()->::usx::geofactions::JoinSecurityCommandBuffer::MergeFrom(from.joinsecuritycommandbuffer());
+      mutable_joinsecuritycommandbuffer()->::redhatgamedev::srt::JoinSecurityCommandBuffer::MergeFrom(from.joinsecuritycommandbuffer());
     }
     if (cached_has_bits & 0x00000004u) {
-      mutable_leavesecuritycommandbuffer()->::usx::geofactions::LeaveSecurityCommandBuffer::MergeFrom(from.leavesecuritycommandbuffer());
+      mutable_leavesecuritycommandbuffer()->::redhatgamedev::srt::LeaveSecurityCommandBuffer::MergeFrom(from.leavesecuritycommandbuffer());
     }
     if (cached_has_bits & 0x00000008u) {
       type_ = from.type_;
@@ -1009,14 +1009,14 @@ void SecurityCommandBuffer::MergeFrom(const SecurityCommandBuffer& from) {
 }
 
 void SecurityCommandBuffer::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(generalized_copy_from_start:redhatgamedev.srt.SecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void SecurityCommandBuffer::CopyFrom(const SecurityCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:usx.geofactions.SecurityCommandBuffer)
+// @@protoc_insertion_point(class_specific_copy_from_start:redhatgamedev.srt.SecurityCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1052,18 +1052,18 @@ void SecurityCommandBuffer::InternalSwap(SecurityCommandBuffer* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::usx::geofactions::JoinSecurityCommandBuffer* Arena::CreateMaybeMessage< ::usx::geofactions::JoinSecurityCommandBuffer >(Arena* arena) {
-  return Arena::CreateInternal< ::usx::geofactions::JoinSecurityCommandBuffer >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::redhatgamedev::srt::JoinSecurityCommandBuffer* Arena::CreateMaybeMessage< ::redhatgamedev::srt::JoinSecurityCommandBuffer >(Arena* arena) {
+  return Arena::CreateInternal< ::redhatgamedev::srt::JoinSecurityCommandBuffer >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::usx::geofactions::LeaveSecurityCommandBuffer* Arena::CreateMaybeMessage< ::usx::geofactions::LeaveSecurityCommandBuffer >(Arena* arena) {
-  return Arena::CreateInternal< ::usx::geofactions::LeaveSecurityCommandBuffer >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::redhatgamedev::srt::LeaveSecurityCommandBuffer* Arena::CreateMaybeMessage< ::redhatgamedev::srt::LeaveSecurityCommandBuffer >(Arena* arena) {
+  return Arena::CreateInternal< ::redhatgamedev::srt::LeaveSecurityCommandBuffer >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::usx::geofactions::SecurityCommandBuffer* Arena::CreateMaybeMessage< ::usx::geofactions::SecurityCommandBuffer >(Arena* arena) {
-  return Arena::CreateInternal< ::usx::geofactions::SecurityCommandBuffer >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::redhatgamedev::srt::SecurityCommandBuffer* Arena::CreateMaybeMessage< ::redhatgamedev::srt::SecurityCommandBuffer >(Arena* arena) {
+  return Arena::CreateInternal< ::redhatgamedev::srt::SecurityCommandBuffer >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

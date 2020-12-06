@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
     MessageConsumer::_Dependencies      theMessageConsumerDependencies(pSimpleAsyncConsumer);
     MessageConsumer&                    theMessageConsumer = MessageConsumer::Instance(&theMessageConsumerDependencies);
 
-    auto&                               theSecurityCommandBufferFactory = FactoryT<usx::geofactions::CommandBuffer, SecurityCommand_Dependencies>::Instance();
+    auto&                               theSecurityCommandBufferFactory = FactoryT<redhatgamedev::srt::CommandBuffer, SecurityCommand_Dependencies>::Instance();
     CommandConsumer::_Dependencies      theCommandConsumerDependencies(&theMessageConsumer, theSecurityCommandBufferFactory);
     CommandConsumer&                    theCommandConsumer = CommandConsumer::Instance(&theCommandConsumerDependencies);
     

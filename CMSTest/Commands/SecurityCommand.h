@@ -43,7 +43,7 @@ public:
     protected:
     public:
         // Constructor
-        _SecurityDependencies(usx::geofactions::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage);
+        _SecurityDependencies(redhatgamedev::srt::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage);
         
         // Destructor
         ~_SecurityDependencies();

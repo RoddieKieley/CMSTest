@@ -26,7 +26,7 @@
 #include <Poco/Delegate.h>
 #include <assert.h>
 
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 using namespace google::protobuf;
 
 
@@ -35,8 +35,8 @@ EventDispatcher::
 _Dependencies::
 _Dependencies(PodFactory& aPodFactory,
               BulletFactory& aBulletFactory,
-              FactoryT<usx::geofactions::GameEventBuffer, EntityGameEvent_Dependencies>& anEntityGameEventFactory,
-              FactoryT<usx::geofactions::GameEventBuffer, SecurityGameEvent_Dependencies>& aSecurityGameEventFactory) :
+              FactoryT<redhatgamedev::srt::GameEventBuffer, EntityGameEvent_Dependencies>& anEntityGameEventFactory,
+              FactoryT<redhatgamedev::srt::GameEventBuffer, SecurityGameEvent_Dependencies>& aSecurityGameEventFactory) :
     m_aPodFactory(aPodFactory),
     m_aBulletFactory(aBulletFactory),
     m_anEntityGameEventFactory(anEntityGameEventFactory),

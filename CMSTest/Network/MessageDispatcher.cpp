@@ -88,7 +88,7 @@ std::pair<const unsigned char*, unsigned long>* MessageDispatcher::MessageToPair
     assert(pMessage);
 
     using namespace std;
-    using namespace usx::geofactions;
+    using namespace redhatgamedev::srt;
     
     pair<const unsigned char*, unsigned long>*      pMessagePair = NULL;
     const unsigned char*                            pucMessageBytes = NULL;

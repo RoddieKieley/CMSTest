@@ -48,20 +48,20 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_CommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class CommandBuffer;
 class CommandBufferDefaultTypeInternal;
 extern CommandBufferDefaultTypeInternal _CommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> ::usx::geofactions::CommandBuffer* Arena::CreateMaybeMessage<::usx::geofactions::CommandBuffer>(Arena*);
+template<> ::redhatgamedev::srt::CommandBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::CommandBuffer>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 
 enum CommandBuffer_CommandBufferType {
   CommandBuffer_CommandBufferType_UNKNOWN = 0,
@@ -85,7 +85,7 @@ inline bool CommandBuffer_CommandBufferType_Parse(
 }
 // ===================================================================
 
-class CommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.CommandBuffer) */ {
+class CommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.CommandBuffer) */ {
  public:
   CommandBuffer();
   virtual ~CommandBuffer();
@@ -207,38 +207,38 @@ class CommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // optional .usx.geofactions.SecurityCommandBuffer securityCommandBuffer = 2;
+  // optional .redhatgamedev.srt.SecurityCommandBuffer securityCommandBuffer = 2;
   bool has_securitycommandbuffer() const;
   void clear_securitycommandbuffer();
   static const int kSecurityCommandBufferFieldNumber = 2;
   private:
-  const ::usx::geofactions::SecurityCommandBuffer& _internal_securitycommandbuffer() const;
+  const ::redhatgamedev::srt::SecurityCommandBuffer& _internal_securitycommandbuffer() const;
   public:
-  const ::usx::geofactions::SecurityCommandBuffer& securitycommandbuffer() const;
-  ::usx::geofactions::SecurityCommandBuffer* release_securitycommandbuffer();
-  ::usx::geofactions::SecurityCommandBuffer* mutable_securitycommandbuffer();
-  void set_allocated_securitycommandbuffer(::usx::geofactions::SecurityCommandBuffer* securitycommandbuffer);
+  const ::redhatgamedev::srt::SecurityCommandBuffer& securitycommandbuffer() const;
+  ::redhatgamedev::srt::SecurityCommandBuffer* release_securitycommandbuffer();
+  ::redhatgamedev::srt::SecurityCommandBuffer* mutable_securitycommandbuffer();
+  void set_allocated_securitycommandbuffer(::redhatgamedev::srt::SecurityCommandBuffer* securitycommandbuffer);
 
-  // optional .usx.geofactions.RawInputCommandBuffer rawInputCommandBuffer = 3;
+  // optional .redhatgamedev.srt.RawInputCommandBuffer rawInputCommandBuffer = 3;
   bool has_rawinputcommandbuffer() const;
   void clear_rawinputcommandbuffer();
   static const int kRawInputCommandBufferFieldNumber = 3;
   private:
-  const ::usx::geofactions::RawInputCommandBuffer& _internal_rawinputcommandbuffer() const;
+  const ::redhatgamedev::srt::RawInputCommandBuffer& _internal_rawinputcommandbuffer() const;
   public:
-  const ::usx::geofactions::RawInputCommandBuffer& rawinputcommandbuffer() const;
-  ::usx::geofactions::RawInputCommandBuffer* release_rawinputcommandbuffer();
-  ::usx::geofactions::RawInputCommandBuffer* mutable_rawinputcommandbuffer();
-  void set_allocated_rawinputcommandbuffer(::usx::geofactions::RawInputCommandBuffer* rawinputcommandbuffer);
+  const ::redhatgamedev::srt::RawInputCommandBuffer& rawinputcommandbuffer() const;
+  ::redhatgamedev::srt::RawInputCommandBuffer* release_rawinputcommandbuffer();
+  ::redhatgamedev::srt::RawInputCommandBuffer* mutable_rawinputcommandbuffer();
+  void set_allocated_rawinputcommandbuffer(::redhatgamedev::srt::RawInputCommandBuffer* rawinputcommandbuffer);
 
-  // required .usx.geofactions.CommandBuffer.CommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.CommandBuffer.CommandBufferType type = 1 [default = UNKNOWN];
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::usx::geofactions::CommandBuffer_CommandBufferType type() const;
-  void set_type(::usx::geofactions::CommandBuffer_CommandBufferType value);
+  ::redhatgamedev::srt::CommandBuffer_CommandBufferType type() const;
+  void set_type(::redhatgamedev::srt::CommandBuffer_CommandBufferType value);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.CommandBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.CommandBuffer)
  private:
   void set_has_type();
   void clear_has_type();
@@ -250,8 +250,8 @@ class CommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  ::usx::geofactions::SecurityCommandBuffer* securitycommandbuffer_;
-  ::usx::geofactions::RawInputCommandBuffer* rawinputcommandbuffer_;
+  ::redhatgamedev::srt::SecurityCommandBuffer* securitycommandbuffer_;
+  ::redhatgamedev::srt::RawInputCommandBuffer* rawinputcommandbuffer_;
   int type_;
   friend struct ::protobuf_CommandBuffer_2eproto::TableStruct;
 };
@@ -266,7 +266,7 @@ class CommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_p
 #endif  // __GNUC__
 // CommandBuffer
 
-// required .usx.geofactions.CommandBuffer.CommandBufferType type = 1 [default = UNKNOWN];
+// required .redhatgamedev.srt.CommandBuffer.CommandBufferType type = 1 [default = UNKNOWN];
 inline bool CommandBuffer::has_type() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -280,18 +280,18 @@ inline void CommandBuffer::clear_type() {
   type_ = 0;
   clear_has_type();
 }
-inline ::usx::geofactions::CommandBuffer_CommandBufferType CommandBuffer::type() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.CommandBuffer.type)
-  return static_cast< ::usx::geofactions::CommandBuffer_CommandBufferType >(type_);
+inline ::redhatgamedev::srt::CommandBuffer_CommandBufferType CommandBuffer::type() const {
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.CommandBuffer.type)
+  return static_cast< ::redhatgamedev::srt::CommandBuffer_CommandBufferType >(type_);
 }
-inline void CommandBuffer::set_type(::usx::geofactions::CommandBuffer_CommandBufferType value) {
-  assert(::usx::geofactions::CommandBuffer_CommandBufferType_IsValid(value));
+inline void CommandBuffer::set_type(::redhatgamedev::srt::CommandBuffer_CommandBufferType value) {
+  assert(::redhatgamedev::srt::CommandBuffer_CommandBufferType_IsValid(value));
   set_has_type();
   type_ = value;
-  // @@protoc_insertion_point(field_set:usx.geofactions.CommandBuffer.type)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.CommandBuffer.type)
 }
 
-// optional .usx.geofactions.SecurityCommandBuffer securityCommandBuffer = 2;
+// optional .redhatgamedev.srt.SecurityCommandBuffer securityCommandBuffer = 2;
 inline bool CommandBuffer::has_securitycommandbuffer() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -301,32 +301,32 @@ inline void CommandBuffer::set_has_securitycommandbuffer() {
 inline void CommandBuffer::clear_has_securitycommandbuffer() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const ::usx::geofactions::SecurityCommandBuffer& CommandBuffer::_internal_securitycommandbuffer() const {
+inline const ::redhatgamedev::srt::SecurityCommandBuffer& CommandBuffer::_internal_securitycommandbuffer() const {
   return *securitycommandbuffer_;
 }
-inline const ::usx::geofactions::SecurityCommandBuffer& CommandBuffer::securitycommandbuffer() const {
-  const ::usx::geofactions::SecurityCommandBuffer* p = securitycommandbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.CommandBuffer.securityCommandBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::SecurityCommandBuffer*>(
-      &::usx::geofactions::_SecurityCommandBuffer_default_instance_);
+inline const ::redhatgamedev::srt::SecurityCommandBuffer& CommandBuffer::securitycommandbuffer() const {
+  const ::redhatgamedev::srt::SecurityCommandBuffer* p = securitycommandbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.CommandBuffer.securityCommandBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::SecurityCommandBuffer*>(
+      &::redhatgamedev::srt::_SecurityCommandBuffer_default_instance_);
 }
-inline ::usx::geofactions::SecurityCommandBuffer* CommandBuffer::release_securitycommandbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.CommandBuffer.securityCommandBuffer)
+inline ::redhatgamedev::srt::SecurityCommandBuffer* CommandBuffer::release_securitycommandbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.CommandBuffer.securityCommandBuffer)
   clear_has_securitycommandbuffer();
-  ::usx::geofactions::SecurityCommandBuffer* temp = securitycommandbuffer_;
+  ::redhatgamedev::srt::SecurityCommandBuffer* temp = securitycommandbuffer_;
   securitycommandbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::SecurityCommandBuffer* CommandBuffer::mutable_securitycommandbuffer() {
+inline ::redhatgamedev::srt::SecurityCommandBuffer* CommandBuffer::mutable_securitycommandbuffer() {
   set_has_securitycommandbuffer();
   if (securitycommandbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::SecurityCommandBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::SecurityCommandBuffer>(GetArenaNoVirtual());
     securitycommandbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.CommandBuffer.securityCommandBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.CommandBuffer.securityCommandBuffer)
   return securitycommandbuffer_;
 }
-inline void CommandBuffer::set_allocated_securitycommandbuffer(::usx::geofactions::SecurityCommandBuffer* securitycommandbuffer) {
+inline void CommandBuffer::set_allocated_securitycommandbuffer(::redhatgamedev::srt::SecurityCommandBuffer* securitycommandbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(securitycommandbuffer_);
@@ -342,10 +342,10 @@ inline void CommandBuffer::set_allocated_securitycommandbuffer(::usx::geofaction
     clear_has_securitycommandbuffer();
   }
   securitycommandbuffer_ = securitycommandbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.CommandBuffer.securityCommandBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.CommandBuffer.securityCommandBuffer)
 }
 
-// optional .usx.geofactions.RawInputCommandBuffer rawInputCommandBuffer = 3;
+// optional .redhatgamedev.srt.RawInputCommandBuffer rawInputCommandBuffer = 3;
 inline bool CommandBuffer::has_rawinputcommandbuffer() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -355,32 +355,32 @@ inline void CommandBuffer::set_has_rawinputcommandbuffer() {
 inline void CommandBuffer::clear_has_rawinputcommandbuffer() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::usx::geofactions::RawInputCommandBuffer& CommandBuffer::_internal_rawinputcommandbuffer() const {
+inline const ::redhatgamedev::srt::RawInputCommandBuffer& CommandBuffer::_internal_rawinputcommandbuffer() const {
   return *rawinputcommandbuffer_;
 }
-inline const ::usx::geofactions::RawInputCommandBuffer& CommandBuffer::rawinputcommandbuffer() const {
-  const ::usx::geofactions::RawInputCommandBuffer* p = rawinputcommandbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.CommandBuffer.rawInputCommandBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::RawInputCommandBuffer*>(
-      &::usx::geofactions::_RawInputCommandBuffer_default_instance_);
+inline const ::redhatgamedev::srt::RawInputCommandBuffer& CommandBuffer::rawinputcommandbuffer() const {
+  const ::redhatgamedev::srt::RawInputCommandBuffer* p = rawinputcommandbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.CommandBuffer.rawInputCommandBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::RawInputCommandBuffer*>(
+      &::redhatgamedev::srt::_RawInputCommandBuffer_default_instance_);
 }
-inline ::usx::geofactions::RawInputCommandBuffer* CommandBuffer::release_rawinputcommandbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.CommandBuffer.rawInputCommandBuffer)
+inline ::redhatgamedev::srt::RawInputCommandBuffer* CommandBuffer::release_rawinputcommandbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.CommandBuffer.rawInputCommandBuffer)
   clear_has_rawinputcommandbuffer();
-  ::usx::geofactions::RawInputCommandBuffer* temp = rawinputcommandbuffer_;
+  ::redhatgamedev::srt::RawInputCommandBuffer* temp = rawinputcommandbuffer_;
   rawinputcommandbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::RawInputCommandBuffer* CommandBuffer::mutable_rawinputcommandbuffer() {
+inline ::redhatgamedev::srt::RawInputCommandBuffer* CommandBuffer::mutable_rawinputcommandbuffer() {
   set_has_rawinputcommandbuffer();
   if (rawinputcommandbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::RawInputCommandBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::RawInputCommandBuffer>(GetArenaNoVirtual());
     rawinputcommandbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.CommandBuffer.rawInputCommandBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.CommandBuffer.rawInputCommandBuffer)
   return rawinputcommandbuffer_;
 }
-inline void CommandBuffer::set_allocated_rawinputcommandbuffer(::usx::geofactions::RawInputCommandBuffer* rawinputcommandbuffer) {
+inline void CommandBuffer::set_allocated_rawinputcommandbuffer(::redhatgamedev::srt::RawInputCommandBuffer* rawinputcommandbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(rawinputcommandbuffer_);
@@ -396,7 +396,7 @@ inline void CommandBuffer::set_allocated_rawinputcommandbuffer(::usx::geofaction
     clear_has_rawinputcommandbuffer();
   }
   rawinputcommandbuffer_ = rawinputcommandbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.CommandBuffer.rawInputCommandBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.CommandBuffer.rawInputCommandBuffer)
 }
 
 #ifdef __GNUC__
@@ -405,16 +405,16 @@ inline void CommandBuffer::set_allocated_rawinputcommandbuffer(::usx::geofaction
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::usx::geofactions::CommandBuffer_CommandBufferType> : ::std::true_type {};
+template <> struct is_proto_enum< ::redhatgamedev::srt::CommandBuffer_CommandBufferType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::usx::geofactions::CommandBuffer_CommandBufferType>() {
-  return ::usx::geofactions::CommandBuffer_CommandBufferType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::redhatgamedev::srt::CommandBuffer_CommandBufferType>() {
+  return ::redhatgamedev::srt::CommandBuffer_CommandBufferType_descriptor();
 }
 
 }  // namespace protobuf

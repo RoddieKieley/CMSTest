@@ -21,7 +21,7 @@
 #include <string>
 #include <assert.h>
 
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 
 //class ASecurity;
 

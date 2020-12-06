@@ -46,11 +46,11 @@ AEntity::_Dependencies::_Dependencies(const std::string& strUUID, AB2DEntity* pB
     assert(pB2DEntity);
 }
 
-void AEntity::_Serializer::Serialize(const AEntity* pEntity, usx::geofactions::EntityGameEventBuffer* pEntityGameEvent)
+void AEntity::_Serializer::Serialize(const AEntity* pEntity, redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent)
 {
     //using namespace std;
     using namespace box2d;
-    using namespace usx::geofactions;
+    using namespace redhatgamedev::srt;
     
     assert(pEntityGameEvent);
     
@@ -72,7 +72,7 @@ void AEntity::_Serializer::Serialize(const AEntity* pEntity, usx::geofactions::E
     pEntity->m_pB2DEntity->Serializer.Serialize(pEntity->m_pB2DEntity, pEntityGameEvent);
 }
 
-void AEntity::_Serializer::Deserialisze(const usx::geofactions::EntityGameEventBuffer* pEntityGameEvent, AEntity*& pEntity)
+void AEntity::_Serializer::Deserialisze(const redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent, AEntity*& pEntity)
 {
     
     

@@ -19,7 +19,7 @@
 // Constructor
 ACommand::
 _Dependencies::
-_Dependencies(usx::geofactions::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
+_Dependencies(redhatgamedev::srt::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
     m_pCommandBuffer(pCommandBuffer),
     m_pBytesMessage(pBytesMessage)
 {

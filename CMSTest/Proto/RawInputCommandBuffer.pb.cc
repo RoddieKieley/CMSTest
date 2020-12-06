@@ -22,25 +22,25 @@
 namespace protobuf_DualStickRawInputCommandBuffer_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_DualStickRawInputCommandBuffer_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_DualStickRawInputCommandBuffer;
 }  // namespace protobuf_DualStickRawInputCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class RawInputCommandBufferDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<RawInputCommandBuffer>
       _instance;
 } _RawInputCommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace protobuf_RawInputCommandBuffer_2eproto {
 static void InitDefaultsRawInputCommandBuffer() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::usx::geofactions::_RawInputCommandBuffer_default_instance_;
-    new (ptr) ::usx::geofactions::RawInputCommandBuffer();
+    void* ptr = &::redhatgamedev::srt::_RawInputCommandBuffer_default_instance_;
+    new (ptr) ::redhatgamedev::srt::RawInputCommandBuffer();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::usx::geofactions::RawInputCommandBuffer::InitAsDefaultInstance();
+  ::redhatgamedev::srt::RawInputCommandBuffer::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_RawInputCommandBuffer =
@@ -55,24 +55,24 @@ void InitDefaults() {
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::RawInputCommandBuffer, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::RawInputCommandBuffer, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::RawInputCommandBuffer, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::RawInputCommandBuffer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::RawInputCommandBuffer, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::RawInputCommandBuffer, uuid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::RawInputCommandBuffer, dualstickrawinputcommandbuffer_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::RawInputCommandBuffer, type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::RawInputCommandBuffer, uuid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::RawInputCommandBuffer, dualstickrawinputcommandbuffer_),
   2,
   0,
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, sizeof(::usx::geofactions::RawInputCommandBuffer)},
+  { 0, 8, sizeof(::redhatgamedev::srt::RawInputCommandBuffer)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::usx::geofactions::_RawInputCommandBuffer_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::redhatgamedev::srt::_RawInputCommandBuffer_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -96,18 +96,19 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\033RawInputCommandBuffer.proto\022\017usx.geofa"
-      "ctions\032$DualStickRawInputCommandBuffer.p"
-      "roto\"\220\002\n\025RawInputCommandBuffer\022W\n\004type\030\001"
-      " \002(\0162@.usx.geofactions.RawInputCommandBu"
-      "ffer.RawInputCommandBufferType:\007UNKNOWN\022"
-      "\014\n\004UUID\030\002 \002(\t\022W\n\036dualStickRawInputComman"
-      "dBuffer\030\003 \001(\0132/.usx.geofactions.DualStic"
-      "kRawInputCommandBuffer\"7\n\031RawInputComman"
-      "dBufferType\022\013\n\007UNKNOWN\020\000\022\r\n\tDUALSTICK\020\001"
+      "\n\033RawInputCommandBuffer.proto\022\021redhatgam"
+      "edev.srt\032$DualStickRawInputCommandBuffer"
+      ".proto\"\224\002\n\025RawInputCommandBuffer\022Y\n\004type"
+      "\030\001 \002(\0162B.redhatgamedev.srt.RawInputComma"
+      "ndBuffer.RawInputCommandBufferType:\007UNKN"
+      "OWN\022\014\n\004UUID\030\002 \002(\t\022Y\n\036dualStickRawInputCo"
+      "mmandBuffer\030\003 \001(\01321.redhatgamedev.srt.Du"
+      "alStickRawInputCommandBuffer\"7\n\031RawInput"
+      "CommandBufferType\022\013\n\007UNKNOWN\020\000\022\r\n\tDUALST"
+      "ICK\020\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 359);
+      descriptor, 365);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "RawInputCommandBuffer.proto", &protobuf_RegisterTypes);
   ::protobuf_DualStickRawInputCommandBuffer_2eproto::AddDescriptors();
@@ -124,8 +125,8 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_RawInputCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 const ::google::protobuf::EnumDescriptor* RawInputCommandBuffer_RawInputCommandBufferType_descriptor() {
   protobuf_RawInputCommandBuffer_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_RawInputCommandBuffer_2eproto::file_level_enum_descriptors[0];
@@ -151,8 +152,8 @@ const int RawInputCommandBuffer::RawInputCommandBufferType_ARRAYSIZE;
 // ===================================================================
 
 void RawInputCommandBuffer::InitAsDefaultInstance() {
-  ::usx::geofactions::_RawInputCommandBuffer_default_instance_._instance.get_mutable()->dualstickrawinputcommandbuffer_ = const_cast< ::usx::geofactions::DualStickRawInputCommandBuffer*>(
-      ::usx::geofactions::DualStickRawInputCommandBuffer::internal_default_instance());
+  ::redhatgamedev::srt::_RawInputCommandBuffer_default_instance_._instance.get_mutable()->dualstickrawinputcommandbuffer_ = const_cast< ::redhatgamedev::srt::DualStickRawInputCommandBuffer*>(
+      ::redhatgamedev::srt::DualStickRawInputCommandBuffer::internal_default_instance());
 }
 void RawInputCommandBuffer::clear_dualstickrawinputcommandbuffer() {
   if (dualstickrawinputcommandbuffer_ != NULL) dualstickrawinputcommandbuffer_->Clear();
@@ -169,7 +170,7 @@ RawInputCommandBuffer::RawInputCommandBuffer()
   ::google::protobuf::internal::InitSCC(
       &protobuf_RawInputCommandBuffer_2eproto::scc_info_RawInputCommandBuffer.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(constructor:redhatgamedev.srt.RawInputCommandBuffer)
 }
 RawInputCommandBuffer::RawInputCommandBuffer(const RawInputCommandBuffer& from)
   : ::google::protobuf::Message(),
@@ -181,12 +182,12 @@ RawInputCommandBuffer::RawInputCommandBuffer(const RawInputCommandBuffer& from)
     uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
   }
   if (from.has_dualstickrawinputcommandbuffer()) {
-    dualstickrawinputcommandbuffer_ = new ::usx::geofactions::DualStickRawInputCommandBuffer(*from.dualstickrawinputcommandbuffer_);
+    dualstickrawinputcommandbuffer_ = new ::redhatgamedev::srt::DualStickRawInputCommandBuffer(*from.dualstickrawinputcommandbuffer_);
   } else {
     dualstickrawinputcommandbuffer_ = NULL;
   }
   type_ = from.type_;
-  // @@protoc_insertion_point(copy_constructor:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(copy_constructor:redhatgamedev.srt.RawInputCommandBuffer)
 }
 
 void RawInputCommandBuffer::SharedCtor() {
@@ -197,7 +198,7 @@ void RawInputCommandBuffer::SharedCtor() {
 }
 
 RawInputCommandBuffer::~RawInputCommandBuffer() {
-  // @@protoc_insertion_point(destructor:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(destructor:redhatgamedev.srt.RawInputCommandBuffer)
   SharedDtor();
 }
 
@@ -221,7 +222,7 @@ const RawInputCommandBuffer& RawInputCommandBuffer::default_instance() {
 
 
 void RawInputCommandBuffer::Clear() {
-// @@protoc_insertion_point(message_clear_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(message_clear_start:redhatgamedev.srt.RawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -245,13 +246,13 @@ bool RawInputCommandBuffer::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_start:redhatgamedev.srt.RawInputCommandBuffer)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .usx.geofactions.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
+      // required .redhatgamedev.srt.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
@@ -259,8 +260,8 @@ bool RawInputCommandBuffer::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          if (::usx::geofactions::RawInputCommandBuffer_RawInputCommandBufferType_IsValid(value)) {
-            set_type(static_cast< ::usx::geofactions::RawInputCommandBuffer_RawInputCommandBufferType >(value));
+          if (::redhatgamedev::srt::RawInputCommandBuffer_RawInputCommandBufferType_IsValid(value)) {
+            set_type(static_cast< ::redhatgamedev::srt::RawInputCommandBuffer_RawInputCommandBufferType >(value));
           } else {
             mutable_unknown_fields()->AddVarint(
                 1, static_cast< ::google::protobuf::uint64>(value));
@@ -280,14 +281,14 @@ bool RawInputCommandBuffer::MergePartialFromCodedStream(
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->uuid().data(), static_cast<int>(this->uuid().length()),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "usx.geofactions.RawInputCommandBuffer.UUID");
+            "redhatgamedev.srt.RawInputCommandBuffer.UUID");
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional .usx.geofactions.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
+      // optional .redhatgamedev.srt.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
@@ -311,22 +312,22 @@ bool RawInputCommandBuffer::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_success:redhatgamedev.srt.RawInputCommandBuffer)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_failure:redhatgamedev.srt.RawInputCommandBuffer)
   return false;
 #undef DO_
 }
 
 void RawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_start:redhatgamedev.srt.RawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required .usx.geofactions.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
   if (cached_has_bits & 0x00000004u) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->type(), output);
@@ -337,12 +338,12 @@ void RawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.RawInputCommandBuffer.UUID");
+      "redhatgamedev.srt.RawInputCommandBuffer.UUID");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->uuid(), output);
   }
 
-  // optional .usx.geofactions.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
+  // optional .redhatgamedev.srt.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
   if (cached_has_bits & 0x00000002u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, this->_internal_dualstickrawinputcommandbuffer(), output);
@@ -352,18 +353,18 @@ void RawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_end:redhatgamedev.srt.RawInputCommandBuffer)
 }
 
 ::google::protobuf::uint8* RawInputCommandBuffer::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_start:redhatgamedev.srt.RawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required .usx.geofactions.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
   if (cached_has_bits & 0x00000004u) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->type(), target);
@@ -374,13 +375,13 @@ void RawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->uuid().data(), static_cast<int>(this->uuid().length()),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "usx.geofactions.RawInputCommandBuffer.UUID");
+      "redhatgamedev.srt.RawInputCommandBuffer.UUID");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->uuid(), target);
   }
 
-  // optional .usx.geofactions.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
+  // optional .redhatgamedev.srt.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
   if (cached_has_bits & 0x00000002u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -391,12 +392,12 @@ void RawInputCommandBuffer::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_end:redhatgamedev.srt.RawInputCommandBuffer)
   return target;
 }
 
 size_t RawInputCommandBuffer::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:redhatgamedev.srt.RawInputCommandBuffer)
   size_t total_size = 0;
 
   if (has_uuid()) {
@@ -407,7 +408,7 @@ size_t RawInputCommandBuffer::RequiredFieldsByteSizeFallback() const {
   }
 
   if (has_type()) {
-    // required .usx.geofactions.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
+    // required .redhatgamedev.srt.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
   }
@@ -415,7 +416,7 @@ size_t RawInputCommandBuffer::RequiredFieldsByteSizeFallback() const {
   return total_size;
 }
 size_t RawInputCommandBuffer::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(message_byte_size_start:redhatgamedev.srt.RawInputCommandBuffer)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -429,14 +430,14 @@ size_t RawInputCommandBuffer::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->uuid());
 
-    // required .usx.geofactions.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
+    // required .redhatgamedev.srt.RawInputCommandBuffer.RawInputCommandBufferType type = 1 [default = UNKNOWN];
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
   }
-  // optional .usx.geofactions.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
+  // optional .redhatgamedev.srt.DualStickRawInputCommandBuffer dualStickRawInputCommandBuffer = 3;
   if (has_dualstickrawinputcommandbuffer()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -449,22 +450,22 @@ size_t RawInputCommandBuffer::ByteSizeLong() const {
 }
 
 void RawInputCommandBuffer::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(generalized_merge_from_start:redhatgamedev.srt.RawInputCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   const RawInputCommandBuffer* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const RawInputCommandBuffer>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:redhatgamedev.srt.RawInputCommandBuffer)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:usx.geofactions.RawInputCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:redhatgamedev.srt.RawInputCommandBuffer)
     MergeFrom(*source);
   }
 }
 
 void RawInputCommandBuffer::MergeFrom(const RawInputCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(class_specific_merge_from_start:redhatgamedev.srt.RawInputCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -477,7 +478,7 @@ void RawInputCommandBuffer::MergeFrom(const RawInputCommandBuffer& from) {
       uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
     }
     if (cached_has_bits & 0x00000002u) {
-      mutable_dualstickrawinputcommandbuffer()->::usx::geofactions::DualStickRawInputCommandBuffer::MergeFrom(from.dualstickrawinputcommandbuffer());
+      mutable_dualstickrawinputcommandbuffer()->::redhatgamedev::srt::DualStickRawInputCommandBuffer::MergeFrom(from.dualstickrawinputcommandbuffer());
     }
     if (cached_has_bits & 0x00000004u) {
       type_ = from.type_;
@@ -487,14 +488,14 @@ void RawInputCommandBuffer::MergeFrom(const RawInputCommandBuffer& from) {
 }
 
 void RawInputCommandBuffer::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(generalized_copy_from_start:redhatgamedev.srt.RawInputCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void RawInputCommandBuffer::CopyFrom(const RawInputCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:usx.geofactions.RawInputCommandBuffer)
+// @@protoc_insertion_point(class_specific_copy_from_start:redhatgamedev.srt.RawInputCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -529,12 +530,12 @@ void RawInputCommandBuffer::InternalSwap(RawInputCommandBuffer* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::usx::geofactions::RawInputCommandBuffer* Arena::CreateMaybeMessage< ::usx::geofactions::RawInputCommandBuffer >(Arena* arena) {
-  return Arena::CreateInternal< ::usx::geofactions::RawInputCommandBuffer >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::redhatgamedev::srt::RawInputCommandBuffer* Arena::CreateMaybeMessage< ::redhatgamedev::srt::RawInputCommandBuffer >(Arena* arena) {
+  return Arena::CreateInternal< ::redhatgamedev::srt::RawInputCommandBuffer >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

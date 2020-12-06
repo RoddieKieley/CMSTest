@@ -39,7 +39,7 @@ LeaveSecurityCommand::~LeaveSecurityCommand()
 // Method(s)
 void LeaveSecurityCommand::Execute()
 {
-    using namespace usx::geofactions;
+    using namespace redhatgamedev::srt;
     
     assert(m_pCommandBuffer);
     

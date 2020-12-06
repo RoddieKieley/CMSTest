@@ -21,7 +21,7 @@
 // Constructor
 RawInputCommand::
 _RawInputDependencies::
-_RawInputDependencies(usx::geofactions::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
+_RawInputDependencies(redhatgamedev::srt::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
     ACommand::_Dependencies(pCommandBuffer, pBytesMessage)
 {
 }

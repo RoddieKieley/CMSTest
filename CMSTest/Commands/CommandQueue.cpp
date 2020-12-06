@@ -81,43 +81,43 @@ void CommandQueue::Execute()
 // CommandConsumer Event response
 void CommandQueue::HandleCommandConsumedEvent(const void* pSender, Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>*& pTuple)
 {
-    usx::geofactions::CommandBuffer* pCommandBuffer = dynamic_cast<usx::geofactions::CommandBuffer*>(pTuple->get<1>());
+    redhatgamedev::srt::CommandBuffer* pCommandBuffer = dynamic_cast<redhatgamedev::srt::CommandBuffer*>(pTuple->get<1>());
     cms::BytesMessage* pBytesMessage = pTuple->get<0>();
     
     ACommand* pCommand = NULL;
 
-    if (usx::geofactions::CommandBuffer_CommandBufferType_SECURITY == pCommandBuffer->type())
+    if (redhatgamedev::srt::CommandBuffer_CommandBufferType_SECURITY == pCommandBuffer->type())
     {
         const SecurityCommandBuffer& aSecurityCommandBuffer = pCommandBuffer->securitycommandbuffer();
-        if (usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_JOIN == aSecurityCommandBuffer.type())
+        if (redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_JOIN == aSecurityCommandBuffer.type())
         {
             JoinSecurityCommand::_SecurityDependencies theJoinSecurityCommandDependencies(pCommandBuffer, pBytesMessage);
             pCommand = m_aJoinSecurityCommandFactory.Create(theJoinSecurityCommandDependencies);
         }
-        else if (usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_LEAVE == aSecurityCommandBuffer.type())
+        else if (redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_LEAVE == aSecurityCommandBuffer.type())
         {
             LeaveSecurityCommand::_SecurityDependencies theLeaveSecurityCommandDependencies(pCommandBuffer, pBytesMessage);
             pCommand = m_aLeaveSecurityCommandFactory.Create(theLeaveSecurityCommandDependencies);
         }
-        else //usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_UNKNOWN
+        else //redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_UNKNOWN
         {
             assert(false);
         }
     }
-    else if (usx::geofactions::CommandBuffer_CommandBufferType_RAWINPUT == pCommandBuffer->type())
+    else if (redhatgamedev::srt::CommandBuffer_CommandBufferType_RAWINPUT == pCommandBuffer->type())
     {
         const RawInputCommandBuffer& aRawInputCommandBuffer = pCommandBuffer->rawinputcommandbuffer();
-        if (usx::geofactions::RawInputCommandBuffer_RawInputCommandBufferType_DUALSTICK == aRawInputCommandBuffer.type())
+        if (redhatgamedev::srt::RawInputCommandBuffer_RawInputCommandBufferType_DUALSTICK == aRawInputCommandBuffer.type())
         {
             DualStickRawInputCommand::_RawInputDependencies theDualStickRawInputCommandDependencies(pCommandBuffer, pBytesMessage);
             pCommand = m_aDualStickRawInputCommandFactory.Create(theDualStickRawInputCommandDependencies);
         }
-        else //usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_UNKNOWN
+        else //redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_UNKNOWN
         {
             assert(false);
         }
     }
-    else //usx::geofactions::CommandBuffer_CommandBufferType_UNKNOWN:
+    else //redhatgamedev::srt::CommandBuffer_CommandBufferType_UNKNOWN:
     {
         assert(false);
     }

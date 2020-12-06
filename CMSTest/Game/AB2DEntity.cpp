@@ -27,10 +27,10 @@
 
 AB2DEntity::_Serializer                 AB2DEntity::Serializer;
 
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 
 
-void AB2DEntity::_Serializer::Serialize(const AB2DEntity* pB2DEntity, usx::geofactions::EntityGameEventBuffer* pEntityGameEvent)
+void AB2DEntity::_Serializer::Serialize(const AB2DEntity* pB2DEntity, redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent)
 {
     using namespace box2d;
     
@@ -90,7 +90,7 @@ void AB2DEntity::_Serializer::Serialize(const AB2DEntity* pB2DEntity, usx::geofa
     }
 }
 
-void AB2DEntity::_Serializer::Deserialisze(const usx::geofactions::EntityGameEventBuffer* pEntityGameEvent, AB2DEntity*& pEntity)
+void AB2DEntity::_Serializer::Deserialisze(const redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent, AB2DEntity*& pEntity)
 {
     
     

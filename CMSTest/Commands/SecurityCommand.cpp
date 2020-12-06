@@ -27,7 +27,7 @@
 // Constructor
 SecurityCommand::
 _SecurityDependencies::
-_SecurityDependencies(usx::geofactions::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
+_SecurityDependencies(redhatgamedev::srt::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage) :
     ACommand::_Dependencies(pCommandBuffer, pBytesMessage)
 {    
 }

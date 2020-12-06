@@ -26,9 +26,9 @@
 //#include "../../../ThirdParty/box2d/Box2D/Box2D/Box2D.h"
 #include <Box2D/Box2D.h>
 
-namespace usx
+namespace redhatgamedev
 {
-    namespace geofactions
+    namespace srt
     {
         class EntityGameEventBuffer;
     }
@@ -78,8 +78,8 @@ protected:
     class _Serializer
     {
     public:
-        void Serialize(const AB2DEntity* anEntity, usx::geofactions::EntityGameEventBuffer* pEntityGameEvent);
-        void Deserialisze(const usx::geofactions::EntityGameEventBuffer* pEntityGameEvent, AB2DEntity*& anEntity);
+        void Serialize(const AB2DEntity* anEntity, redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent);
+        void Deserialisze(const redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent, AB2DEntity*& anEntity);
     };
     
     b2Body*         m_pb2Body;

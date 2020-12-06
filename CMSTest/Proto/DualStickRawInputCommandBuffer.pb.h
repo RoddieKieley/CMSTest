@@ -46,24 +46,24 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_DualStickRawInputCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class DualStickRawInputCommandBuffer;
 class DualStickRawInputCommandBufferDefaultTypeInternal;
 extern DualStickRawInputCommandBufferDefaultTypeInternal _DualStickRawInputCommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> ::usx::geofactions::DualStickRawInputCommandBuffer* Arena::CreateMaybeMessage<::usx::geofactions::DualStickRawInputCommandBuffer>(Arena*);
+template<> ::redhatgamedev::srt::DualStickRawInputCommandBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::DualStickRawInputCommandBuffer>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 
 // ===================================================================
 
-class DualStickRawInputCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.DualStickRawInputCommandBuffer) */ {
+class DualStickRawInputCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.DualStickRawInputCommandBuffer) */ {
  public:
   DualStickRawInputCommandBuffer();
   virtual ~DualStickRawInputCommandBuffer();
@@ -181,7 +181,7 @@ class DualStickRawInputCommandBuffer : public ::google::protobuf::Message /* @@p
   ::box2d::PbVec2* mutable_pbv2shoot();
   void set_allocated_pbv2shoot(::box2d::PbVec2* pbv2shoot);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.DualStickRawInputCommandBuffer)
  private:
   void set_has_pbv2move();
   void clear_has_pbv2move();
@@ -224,12 +224,12 @@ inline const ::box2d::PbVec2& DualStickRawInputCommandBuffer::_internal_pbv2move
 }
 inline const ::box2d::PbVec2& DualStickRawInputCommandBuffer::pbv2move() const {
   const ::box2d::PbVec2* p = pbv2move_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Move)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Move)
   return p != NULL ? *p : *reinterpret_cast<const ::box2d::PbVec2*>(
       &::box2d::_PbVec2_default_instance_);
 }
 inline ::box2d::PbVec2* DualStickRawInputCommandBuffer::release_pbv2move() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Move)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Move)
   clear_has_pbv2move();
   ::box2d::PbVec2* temp = pbv2move_;
   pbv2move_ = NULL;
@@ -241,7 +241,7 @@ inline ::box2d::PbVec2* DualStickRawInputCommandBuffer::mutable_pbv2move() {
     auto* p = CreateMaybeMessage<::box2d::PbVec2>(GetArenaNoVirtual());
     pbv2move_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Move)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Move)
   return pbv2move_;
 }
 inline void DualStickRawInputCommandBuffer::set_allocated_pbv2move(::box2d::PbVec2* pbv2move) {
@@ -260,7 +260,7 @@ inline void DualStickRawInputCommandBuffer::set_allocated_pbv2move(::box2d::PbVe
     clear_has_pbv2move();
   }
   pbv2move_ = pbv2move;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Move)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Move)
 }
 
 // required .box2d.PbVec2 pbv2Shoot = 2;
@@ -278,12 +278,12 @@ inline const ::box2d::PbVec2& DualStickRawInputCommandBuffer::_internal_pbv2shoo
 }
 inline const ::box2d::PbVec2& DualStickRawInputCommandBuffer::pbv2shoot() const {
   const ::box2d::PbVec2* p = pbv2shoot_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Shoot)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Shoot)
   return p != NULL ? *p : *reinterpret_cast<const ::box2d::PbVec2*>(
       &::box2d::_PbVec2_default_instance_);
 }
 inline ::box2d::PbVec2* DualStickRawInputCommandBuffer::release_pbv2shoot() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Shoot)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Shoot)
   clear_has_pbv2shoot();
   ::box2d::PbVec2* temp = pbv2shoot_;
   pbv2shoot_ = NULL;
@@ -295,7 +295,7 @@ inline ::box2d::PbVec2* DualStickRawInputCommandBuffer::mutable_pbv2shoot() {
     auto* p = CreateMaybeMessage<::box2d::PbVec2>(GetArenaNoVirtual());
     pbv2shoot_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Shoot)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Shoot)
   return pbv2shoot_;
 }
 inline void DualStickRawInputCommandBuffer::set_allocated_pbv2shoot(::box2d::PbVec2* pbv2shoot) {
@@ -314,7 +314,7 @@ inline void DualStickRawInputCommandBuffer::set_allocated_pbv2shoot(::box2d::PbV
     clear_has_pbv2shoot();
   }
   pbv2shoot_ = pbv2shoot;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.DualStickRawInputCommandBuffer.pbv2Shoot)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.DualStickRawInputCommandBuffer.pbv2Shoot)
 }
 
 #ifdef __GNUC__
@@ -323,8 +323,8 @@ inline void DualStickRawInputCommandBuffer::set_allocated_pbv2shoot(::box2d::PbV
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 
 // @@protoc_insertion_point(global_scope)
 

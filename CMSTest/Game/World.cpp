@@ -32,7 +32,7 @@ B2DWorld*               World::m_pB2DWorld = NULL;
 using namespace decaf::lang;
 using namespace decaf::util::concurrent;
 using namespace box2d;
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 using namespace cms;
 
 

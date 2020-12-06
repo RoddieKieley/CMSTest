@@ -47,8 +47,8 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_GameEventBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class GameEventBuffer;
 class GameEventBufferDefaultTypeInternal;
 extern GameEventBufferDefaultTypeInternal _GameEventBuffer_default_instance_;
@@ -61,18 +61,18 @@ extern LeaveSecurityGameEventBufferDefaultTypeInternal _LeaveSecurityGameEventBu
 class SecurityGameEventBuffer;
 class SecurityGameEventBufferDefaultTypeInternal;
 extern SecurityGameEventBufferDefaultTypeInternal _SecurityGameEventBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> ::usx::geofactions::GameEventBuffer* Arena::CreateMaybeMessage<::usx::geofactions::GameEventBuffer>(Arena*);
-template<> ::usx::geofactions::JoinSecurityGameEventBuffer* Arena::CreateMaybeMessage<::usx::geofactions::JoinSecurityGameEventBuffer>(Arena*);
-template<> ::usx::geofactions::LeaveSecurityGameEventBuffer* Arena::CreateMaybeMessage<::usx::geofactions::LeaveSecurityGameEventBuffer>(Arena*);
-template<> ::usx::geofactions::SecurityGameEventBuffer* Arena::CreateMaybeMessage<::usx::geofactions::SecurityGameEventBuffer>(Arena*);
+template<> ::redhatgamedev::srt::GameEventBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::GameEventBuffer>(Arena*);
+template<> ::redhatgamedev::srt::JoinSecurityGameEventBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::JoinSecurityGameEventBuffer>(Arena*);
+template<> ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::LeaveSecurityGameEventBuffer>(Arena*);
+template<> ::redhatgamedev::srt::SecurityGameEventBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::SecurityGameEventBuffer>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 
 enum SecurityGameEventBuffer_SecurityGameEventBufferType {
   SecurityGameEventBuffer_SecurityGameEventBufferType_UNKNOWN = 0,
@@ -116,7 +116,7 @@ inline bool GameEventBuffer_GameEventBufferType_Parse(
 }
 // ===================================================================
 
-class JoinSecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.JoinSecurityGameEventBuffer) */ {
+class JoinSecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.JoinSecurityGameEventBuffer) */ {
  public:
   JoinSecurityGameEventBuffer();
   virtual ~JoinSecurityGameEventBuffer();
@@ -225,7 +225,7 @@ class JoinSecurityGameEventBuffer : public ::google::protobuf::Message /* @@prot
   ::std::string* release_uuid();
   void set_allocated_uuid(::std::string* uuid);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.JoinSecurityGameEventBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.JoinSecurityGameEventBuffer)
  private:
   void set_has_uuid();
   void clear_has_uuid();
@@ -238,7 +238,7 @@ class JoinSecurityGameEventBuffer : public ::google::protobuf::Message /* @@prot
 };
 // -------------------------------------------------------------------
 
-class LeaveSecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.LeaveSecurityGameEventBuffer) */ {
+class LeaveSecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.LeaveSecurityGameEventBuffer) */ {
  public:
   LeaveSecurityGameEventBuffer();
   virtual ~LeaveSecurityGameEventBuffer();
@@ -347,7 +347,7 @@ class LeaveSecurityGameEventBuffer : public ::google::protobuf::Message /* @@pro
   ::std::string* release_uuid();
   void set_allocated_uuid(::std::string* uuid);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.LeaveSecurityGameEventBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.LeaveSecurityGameEventBuffer)
  private:
   void set_has_uuid();
   void clear_has_uuid();
@@ -360,7 +360,7 @@ class LeaveSecurityGameEventBuffer : public ::google::protobuf::Message /* @@pro
 };
 // -------------------------------------------------------------------
 
-class SecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.SecurityGameEventBuffer) */ {
+class SecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.SecurityGameEventBuffer) */ {
  public:
   SecurityGameEventBuffer();
   virtual ~SecurityGameEventBuffer();
@@ -482,38 +482,38 @@ class SecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_i
 
   // accessors -------------------------------------------------------
 
-  // optional .usx.geofactions.JoinSecurityGameEventBuffer joinSecurityGameEventBuffer = 3;
+  // optional .redhatgamedev.srt.JoinSecurityGameEventBuffer joinSecurityGameEventBuffer = 3;
   bool has_joinsecuritygameeventbuffer() const;
   void clear_joinsecuritygameeventbuffer();
   static const int kJoinSecurityGameEventBufferFieldNumber = 3;
   private:
-  const ::usx::geofactions::JoinSecurityGameEventBuffer& _internal_joinsecuritygameeventbuffer() const;
+  const ::redhatgamedev::srt::JoinSecurityGameEventBuffer& _internal_joinsecuritygameeventbuffer() const;
   public:
-  const ::usx::geofactions::JoinSecurityGameEventBuffer& joinsecuritygameeventbuffer() const;
-  ::usx::geofactions::JoinSecurityGameEventBuffer* release_joinsecuritygameeventbuffer();
-  ::usx::geofactions::JoinSecurityGameEventBuffer* mutable_joinsecuritygameeventbuffer();
-  void set_allocated_joinsecuritygameeventbuffer(::usx::geofactions::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer);
+  const ::redhatgamedev::srt::JoinSecurityGameEventBuffer& joinsecuritygameeventbuffer() const;
+  ::redhatgamedev::srt::JoinSecurityGameEventBuffer* release_joinsecuritygameeventbuffer();
+  ::redhatgamedev::srt::JoinSecurityGameEventBuffer* mutable_joinsecuritygameeventbuffer();
+  void set_allocated_joinsecuritygameeventbuffer(::redhatgamedev::srt::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer);
 
-  // optional .usx.geofactions.LeaveSecurityGameEventBuffer leaveSecurityGameEventBuffer = 4;
+  // optional .redhatgamedev.srt.LeaveSecurityGameEventBuffer leaveSecurityGameEventBuffer = 4;
   bool has_leavesecuritygameeventbuffer() const;
   void clear_leavesecuritygameeventbuffer();
   static const int kLeaveSecurityGameEventBufferFieldNumber = 4;
   private:
-  const ::usx::geofactions::LeaveSecurityGameEventBuffer& _internal_leavesecuritygameeventbuffer() const;
+  const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer& _internal_leavesecuritygameeventbuffer() const;
   public:
-  const ::usx::geofactions::LeaveSecurityGameEventBuffer& leavesecuritygameeventbuffer() const;
-  ::usx::geofactions::LeaveSecurityGameEventBuffer* release_leavesecuritygameeventbuffer();
-  ::usx::geofactions::LeaveSecurityGameEventBuffer* mutable_leavesecuritygameeventbuffer();
-  void set_allocated_leavesecuritygameeventbuffer(::usx::geofactions::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer);
+  const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer& leavesecuritygameeventbuffer() const;
+  ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* release_leavesecuritygameeventbuffer();
+  ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* mutable_leavesecuritygameeventbuffer();
+  void set_allocated_leavesecuritygameeventbuffer(::redhatgamedev::srt::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer);
 
-  // required .usx.geofactions.SecurityGameEventBuffer.SecurityGameEventBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.SecurityGameEventBuffer.SecurityGameEventBufferType type = 1 [default = UNKNOWN];
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType type() const;
-  void set_type(::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType value);
+  ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType type() const;
+  void set_type(::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType value);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.SecurityGameEventBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.SecurityGameEventBuffer)
  private:
   void set_has_type();
   void clear_has_type();
@@ -525,14 +525,14 @@ class SecurityGameEventBuffer : public ::google::protobuf::Message /* @@protoc_i
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  ::usx::geofactions::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer_;
-  ::usx::geofactions::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer_;
+  ::redhatgamedev::srt::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer_;
+  ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer_;
   int type_;
   friend struct ::protobuf_GameEventBuffer_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class GameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.GameEventBuffer) */ {
+class GameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.GameEventBuffer) */ {
  public:
   GameEventBuffer();
   virtual ~GameEventBuffer();
@@ -654,38 +654,38 @@ class GameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // optional .usx.geofactions.EntityGameEventBuffer entityGameEventBuffer = 2;
+  // optional .redhatgamedev.srt.EntityGameEventBuffer entityGameEventBuffer = 2;
   bool has_entitygameeventbuffer() const;
   void clear_entitygameeventbuffer();
   static const int kEntityGameEventBufferFieldNumber = 2;
   private:
-  const ::usx::geofactions::EntityGameEventBuffer& _internal_entitygameeventbuffer() const;
+  const ::redhatgamedev::srt::EntityGameEventBuffer& _internal_entitygameeventbuffer() const;
   public:
-  const ::usx::geofactions::EntityGameEventBuffer& entitygameeventbuffer() const;
-  ::usx::geofactions::EntityGameEventBuffer* release_entitygameeventbuffer();
-  ::usx::geofactions::EntityGameEventBuffer* mutable_entitygameeventbuffer();
-  void set_allocated_entitygameeventbuffer(::usx::geofactions::EntityGameEventBuffer* entitygameeventbuffer);
+  const ::redhatgamedev::srt::EntityGameEventBuffer& entitygameeventbuffer() const;
+  ::redhatgamedev::srt::EntityGameEventBuffer* release_entitygameeventbuffer();
+  ::redhatgamedev::srt::EntityGameEventBuffer* mutable_entitygameeventbuffer();
+  void set_allocated_entitygameeventbuffer(::redhatgamedev::srt::EntityGameEventBuffer* entitygameeventbuffer);
 
-  // optional .usx.geofactions.SecurityGameEventBuffer securityGameEventBuffer = 3;
+  // optional .redhatgamedev.srt.SecurityGameEventBuffer securityGameEventBuffer = 3;
   bool has_securitygameeventbuffer() const;
   void clear_securitygameeventbuffer();
   static const int kSecurityGameEventBufferFieldNumber = 3;
   private:
-  const ::usx::geofactions::SecurityGameEventBuffer& _internal_securitygameeventbuffer() const;
+  const ::redhatgamedev::srt::SecurityGameEventBuffer& _internal_securitygameeventbuffer() const;
   public:
-  const ::usx::geofactions::SecurityGameEventBuffer& securitygameeventbuffer() const;
-  ::usx::geofactions::SecurityGameEventBuffer* release_securitygameeventbuffer();
-  ::usx::geofactions::SecurityGameEventBuffer* mutable_securitygameeventbuffer();
-  void set_allocated_securitygameeventbuffer(::usx::geofactions::SecurityGameEventBuffer* securitygameeventbuffer);
+  const ::redhatgamedev::srt::SecurityGameEventBuffer& securitygameeventbuffer() const;
+  ::redhatgamedev::srt::SecurityGameEventBuffer* release_securitygameeventbuffer();
+  ::redhatgamedev::srt::SecurityGameEventBuffer* mutable_securitygameeventbuffer();
+  void set_allocated_securitygameeventbuffer(::redhatgamedev::srt::SecurityGameEventBuffer* securitygameeventbuffer);
 
-  // required .usx.geofactions.GameEventBuffer.GameEventBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.GameEventBuffer.GameEventBufferType type = 1 [default = UNKNOWN];
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::usx::geofactions::GameEventBuffer_GameEventBufferType type() const;
-  void set_type(::usx::geofactions::GameEventBuffer_GameEventBufferType value);
+  ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType type() const;
+  void set_type(::redhatgamedev::srt::GameEventBuffer_GameEventBufferType value);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.GameEventBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.GameEventBuffer)
  private:
   void set_has_type();
   void clear_has_type();
@@ -697,8 +697,8 @@ class GameEventBuffer : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  ::usx::geofactions::EntityGameEventBuffer* entitygameeventbuffer_;
-  ::usx::geofactions::SecurityGameEventBuffer* securitygameeventbuffer_;
+  ::redhatgamedev::srt::EntityGameEventBuffer* entitygameeventbuffer_;
+  ::redhatgamedev::srt::SecurityGameEventBuffer* securitygameeventbuffer_;
   int type_;
   friend struct ::protobuf_GameEventBuffer_2eproto::TableStruct;
 };
@@ -728,41 +728,41 @@ inline void JoinSecurityGameEventBuffer::clear_uuid() {
   clear_has_uuid();
 }
 inline const ::std::string& JoinSecurityGameEventBuffer::uuid() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
   return uuid_.GetNoArena();
 }
 inline void JoinSecurityGameEventBuffer::set_uuid(const ::std::string& value) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
 }
 #if LANG_CXX11
 inline void JoinSecurityGameEventBuffer::set_uuid(::std::string&& value) {
   set_has_uuid();
   uuid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_rvalue:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
 }
 #endif
 inline void JoinSecurityGameEventBuffer::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_char:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
 }
 inline void JoinSecurityGameEventBuffer::set_uuid(const char* value, size_t size) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_pointer:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
 }
 inline ::std::string* JoinSecurityGameEventBuffer::mutable_uuid() {
   set_has_uuid();
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
   return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* JoinSecurityGameEventBuffer::release_uuid() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
   if (!has_uuid()) {
     return NULL;
   }
@@ -776,7 +776,7 @@ inline void JoinSecurityGameEventBuffer::set_allocated_uuid(::std::string* uuid)
     clear_has_uuid();
   }
   uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.JoinSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.JoinSecurityGameEventBuffer.UUID)
 }
 
 // -------------------------------------------------------------------
@@ -798,41 +798,41 @@ inline void LeaveSecurityGameEventBuffer::clear_uuid() {
   clear_has_uuid();
 }
 inline const ::std::string& LeaveSecurityGameEventBuffer::uuid() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
   return uuid_.GetNoArena();
 }
 inline void LeaveSecurityGameEventBuffer::set_uuid(const ::std::string& value) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
 }
 #if LANG_CXX11
 inline void LeaveSecurityGameEventBuffer::set_uuid(::std::string&& value) {
   set_has_uuid();
   uuid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_rvalue:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
 }
 #endif
 inline void LeaveSecurityGameEventBuffer::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_char:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
 }
 inline void LeaveSecurityGameEventBuffer::set_uuid(const char* value, size_t size) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_pointer:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
 }
 inline ::std::string* LeaveSecurityGameEventBuffer::mutable_uuid() {
   set_has_uuid();
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
   return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* LeaveSecurityGameEventBuffer::release_uuid() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
   if (!has_uuid()) {
     return NULL;
   }
@@ -846,14 +846,14 @@ inline void LeaveSecurityGameEventBuffer::set_allocated_uuid(::std::string* uuid
     clear_has_uuid();
   }
   uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.LeaveSecurityGameEventBuffer.UUID)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.LeaveSecurityGameEventBuffer.UUID)
 }
 
 // -------------------------------------------------------------------
 
 // SecurityGameEventBuffer
 
-// required .usx.geofactions.SecurityGameEventBuffer.SecurityGameEventBufferType type = 1 [default = UNKNOWN];
+// required .redhatgamedev.srt.SecurityGameEventBuffer.SecurityGameEventBufferType type = 1 [default = UNKNOWN];
 inline bool SecurityGameEventBuffer::has_type() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -867,18 +867,18 @@ inline void SecurityGameEventBuffer::clear_type() {
   type_ = 0;
   clear_has_type();
 }
-inline ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType SecurityGameEventBuffer::type() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityGameEventBuffer.type)
-  return static_cast< ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType >(type_);
+inline ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType SecurityGameEventBuffer::type() const {
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityGameEventBuffer.type)
+  return static_cast< ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType >(type_);
 }
-inline void SecurityGameEventBuffer::set_type(::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType value) {
-  assert(::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType_IsValid(value));
+inline void SecurityGameEventBuffer::set_type(::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType value) {
+  assert(::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType_IsValid(value));
   set_has_type();
   type_ = value;
-  // @@protoc_insertion_point(field_set:usx.geofactions.SecurityGameEventBuffer.type)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.SecurityGameEventBuffer.type)
 }
 
-// optional .usx.geofactions.JoinSecurityGameEventBuffer joinSecurityGameEventBuffer = 3;
+// optional .redhatgamedev.srt.JoinSecurityGameEventBuffer joinSecurityGameEventBuffer = 3;
 inline bool SecurityGameEventBuffer::has_joinsecuritygameeventbuffer() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -892,32 +892,32 @@ inline void SecurityGameEventBuffer::clear_joinsecuritygameeventbuffer() {
   if (joinsecuritygameeventbuffer_ != NULL) joinsecuritygameeventbuffer_->Clear();
   clear_has_joinsecuritygameeventbuffer();
 }
-inline const ::usx::geofactions::JoinSecurityGameEventBuffer& SecurityGameEventBuffer::_internal_joinsecuritygameeventbuffer() const {
+inline const ::redhatgamedev::srt::JoinSecurityGameEventBuffer& SecurityGameEventBuffer::_internal_joinsecuritygameeventbuffer() const {
   return *joinsecuritygameeventbuffer_;
 }
-inline const ::usx::geofactions::JoinSecurityGameEventBuffer& SecurityGameEventBuffer::joinsecuritygameeventbuffer() const {
-  const ::usx::geofactions::JoinSecurityGameEventBuffer* p = joinsecuritygameeventbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::JoinSecurityGameEventBuffer*>(
-      &::usx::geofactions::_JoinSecurityGameEventBuffer_default_instance_);
+inline const ::redhatgamedev::srt::JoinSecurityGameEventBuffer& SecurityGameEventBuffer::joinsecuritygameeventbuffer() const {
+  const ::redhatgamedev::srt::JoinSecurityGameEventBuffer* p = joinsecuritygameeventbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::JoinSecurityGameEventBuffer*>(
+      &::redhatgamedev::srt::_JoinSecurityGameEventBuffer_default_instance_);
 }
-inline ::usx::geofactions::JoinSecurityGameEventBuffer* SecurityGameEventBuffer::release_joinsecuritygameeventbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
+inline ::redhatgamedev::srt::JoinSecurityGameEventBuffer* SecurityGameEventBuffer::release_joinsecuritygameeventbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
   clear_has_joinsecuritygameeventbuffer();
-  ::usx::geofactions::JoinSecurityGameEventBuffer* temp = joinsecuritygameeventbuffer_;
+  ::redhatgamedev::srt::JoinSecurityGameEventBuffer* temp = joinsecuritygameeventbuffer_;
   joinsecuritygameeventbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::JoinSecurityGameEventBuffer* SecurityGameEventBuffer::mutable_joinsecuritygameeventbuffer() {
+inline ::redhatgamedev::srt::JoinSecurityGameEventBuffer* SecurityGameEventBuffer::mutable_joinsecuritygameeventbuffer() {
   set_has_joinsecuritygameeventbuffer();
   if (joinsecuritygameeventbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::JoinSecurityGameEventBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::JoinSecurityGameEventBuffer>(GetArenaNoVirtual());
     joinsecuritygameeventbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
   return joinsecuritygameeventbuffer_;
 }
-inline void SecurityGameEventBuffer::set_allocated_joinsecuritygameeventbuffer(::usx::geofactions::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer) {
+inline void SecurityGameEventBuffer::set_allocated_joinsecuritygameeventbuffer(::redhatgamedev::srt::JoinSecurityGameEventBuffer* joinsecuritygameeventbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete joinsecuritygameeventbuffer_;
@@ -933,10 +933,10 @@ inline void SecurityGameEventBuffer::set_allocated_joinsecuritygameeventbuffer(:
     clear_has_joinsecuritygameeventbuffer();
   }
   joinsecuritygameeventbuffer_ = joinsecuritygameeventbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.SecurityGameEventBuffer.joinSecurityGameEventBuffer)
 }
 
-// optional .usx.geofactions.LeaveSecurityGameEventBuffer leaveSecurityGameEventBuffer = 4;
+// optional .redhatgamedev.srt.LeaveSecurityGameEventBuffer leaveSecurityGameEventBuffer = 4;
 inline bool SecurityGameEventBuffer::has_leavesecuritygameeventbuffer() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -950,32 +950,32 @@ inline void SecurityGameEventBuffer::clear_leavesecuritygameeventbuffer() {
   if (leavesecuritygameeventbuffer_ != NULL) leavesecuritygameeventbuffer_->Clear();
   clear_has_leavesecuritygameeventbuffer();
 }
-inline const ::usx::geofactions::LeaveSecurityGameEventBuffer& SecurityGameEventBuffer::_internal_leavesecuritygameeventbuffer() const {
+inline const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer& SecurityGameEventBuffer::_internal_leavesecuritygameeventbuffer() const {
   return *leavesecuritygameeventbuffer_;
 }
-inline const ::usx::geofactions::LeaveSecurityGameEventBuffer& SecurityGameEventBuffer::leavesecuritygameeventbuffer() const {
-  const ::usx::geofactions::LeaveSecurityGameEventBuffer* p = leavesecuritygameeventbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::LeaveSecurityGameEventBuffer*>(
-      &::usx::geofactions::_LeaveSecurityGameEventBuffer_default_instance_);
+inline const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer& SecurityGameEventBuffer::leavesecuritygameeventbuffer() const {
+  const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* p = leavesecuritygameeventbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::LeaveSecurityGameEventBuffer*>(
+      &::redhatgamedev::srt::_LeaveSecurityGameEventBuffer_default_instance_);
 }
-inline ::usx::geofactions::LeaveSecurityGameEventBuffer* SecurityGameEventBuffer::release_leavesecuritygameeventbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
+inline ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* SecurityGameEventBuffer::release_leavesecuritygameeventbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
   clear_has_leavesecuritygameeventbuffer();
-  ::usx::geofactions::LeaveSecurityGameEventBuffer* temp = leavesecuritygameeventbuffer_;
+  ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* temp = leavesecuritygameeventbuffer_;
   leavesecuritygameeventbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::LeaveSecurityGameEventBuffer* SecurityGameEventBuffer::mutable_leavesecuritygameeventbuffer() {
+inline ::redhatgamedev::srt::LeaveSecurityGameEventBuffer* SecurityGameEventBuffer::mutable_leavesecuritygameeventbuffer() {
   set_has_leavesecuritygameeventbuffer();
   if (leavesecuritygameeventbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::LeaveSecurityGameEventBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::LeaveSecurityGameEventBuffer>(GetArenaNoVirtual());
     leavesecuritygameeventbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
   return leavesecuritygameeventbuffer_;
 }
-inline void SecurityGameEventBuffer::set_allocated_leavesecuritygameeventbuffer(::usx::geofactions::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer) {
+inline void SecurityGameEventBuffer::set_allocated_leavesecuritygameeventbuffer(::redhatgamedev::srt::LeaveSecurityGameEventBuffer* leavesecuritygameeventbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete leavesecuritygameeventbuffer_;
@@ -991,14 +991,14 @@ inline void SecurityGameEventBuffer::set_allocated_leavesecuritygameeventbuffer(
     clear_has_leavesecuritygameeventbuffer();
   }
   leavesecuritygameeventbuffer_ = leavesecuritygameeventbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.SecurityGameEventBuffer.leaveSecurityGameEventBuffer)
 }
 
 // -------------------------------------------------------------------
 
 // GameEventBuffer
 
-// required .usx.geofactions.GameEventBuffer.GameEventBufferType type = 1 [default = UNKNOWN];
+// required .redhatgamedev.srt.GameEventBuffer.GameEventBufferType type = 1 [default = UNKNOWN];
 inline bool GameEventBuffer::has_type() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -1012,18 +1012,18 @@ inline void GameEventBuffer::clear_type() {
   type_ = 0;
   clear_has_type();
 }
-inline ::usx::geofactions::GameEventBuffer_GameEventBufferType GameEventBuffer::type() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.GameEventBuffer.type)
-  return static_cast< ::usx::geofactions::GameEventBuffer_GameEventBufferType >(type_);
+inline ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType GameEventBuffer::type() const {
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.GameEventBuffer.type)
+  return static_cast< ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType >(type_);
 }
-inline void GameEventBuffer::set_type(::usx::geofactions::GameEventBuffer_GameEventBufferType value) {
-  assert(::usx::geofactions::GameEventBuffer_GameEventBufferType_IsValid(value));
+inline void GameEventBuffer::set_type(::redhatgamedev::srt::GameEventBuffer_GameEventBufferType value) {
+  assert(::redhatgamedev::srt::GameEventBuffer_GameEventBufferType_IsValid(value));
   set_has_type();
   type_ = value;
-  // @@protoc_insertion_point(field_set:usx.geofactions.GameEventBuffer.type)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.GameEventBuffer.type)
 }
 
-// optional .usx.geofactions.EntityGameEventBuffer entityGameEventBuffer = 2;
+// optional .redhatgamedev.srt.EntityGameEventBuffer entityGameEventBuffer = 2;
 inline bool GameEventBuffer::has_entitygameeventbuffer() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -1033,32 +1033,32 @@ inline void GameEventBuffer::set_has_entitygameeventbuffer() {
 inline void GameEventBuffer::clear_has_entitygameeventbuffer() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const ::usx::geofactions::EntityGameEventBuffer& GameEventBuffer::_internal_entitygameeventbuffer() const {
+inline const ::redhatgamedev::srt::EntityGameEventBuffer& GameEventBuffer::_internal_entitygameeventbuffer() const {
   return *entitygameeventbuffer_;
 }
-inline const ::usx::geofactions::EntityGameEventBuffer& GameEventBuffer::entitygameeventbuffer() const {
-  const ::usx::geofactions::EntityGameEventBuffer* p = entitygameeventbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.GameEventBuffer.entityGameEventBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::EntityGameEventBuffer*>(
-      &::usx::geofactions::_EntityGameEventBuffer_default_instance_);
+inline const ::redhatgamedev::srt::EntityGameEventBuffer& GameEventBuffer::entitygameeventbuffer() const {
+  const ::redhatgamedev::srt::EntityGameEventBuffer* p = entitygameeventbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.GameEventBuffer.entityGameEventBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::EntityGameEventBuffer*>(
+      &::redhatgamedev::srt::_EntityGameEventBuffer_default_instance_);
 }
-inline ::usx::geofactions::EntityGameEventBuffer* GameEventBuffer::release_entitygameeventbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.GameEventBuffer.entityGameEventBuffer)
+inline ::redhatgamedev::srt::EntityGameEventBuffer* GameEventBuffer::release_entitygameeventbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.GameEventBuffer.entityGameEventBuffer)
   clear_has_entitygameeventbuffer();
-  ::usx::geofactions::EntityGameEventBuffer* temp = entitygameeventbuffer_;
+  ::redhatgamedev::srt::EntityGameEventBuffer* temp = entitygameeventbuffer_;
   entitygameeventbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::EntityGameEventBuffer* GameEventBuffer::mutable_entitygameeventbuffer() {
+inline ::redhatgamedev::srt::EntityGameEventBuffer* GameEventBuffer::mutable_entitygameeventbuffer() {
   set_has_entitygameeventbuffer();
   if (entitygameeventbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::EntityGameEventBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::EntityGameEventBuffer>(GetArenaNoVirtual());
     entitygameeventbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.GameEventBuffer.entityGameEventBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.GameEventBuffer.entityGameEventBuffer)
   return entitygameeventbuffer_;
 }
-inline void GameEventBuffer::set_allocated_entitygameeventbuffer(::usx::geofactions::EntityGameEventBuffer* entitygameeventbuffer) {
+inline void GameEventBuffer::set_allocated_entitygameeventbuffer(::redhatgamedev::srt::EntityGameEventBuffer* entitygameeventbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete reinterpret_cast< ::google::protobuf::MessageLite*>(entitygameeventbuffer_);
@@ -1074,10 +1074,10 @@ inline void GameEventBuffer::set_allocated_entitygameeventbuffer(::usx::geofacti
     clear_has_entitygameeventbuffer();
   }
   entitygameeventbuffer_ = entitygameeventbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.GameEventBuffer.entityGameEventBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.GameEventBuffer.entityGameEventBuffer)
 }
 
-// optional .usx.geofactions.SecurityGameEventBuffer securityGameEventBuffer = 3;
+// optional .redhatgamedev.srt.SecurityGameEventBuffer securityGameEventBuffer = 3;
 inline bool GameEventBuffer::has_securitygameeventbuffer() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -1091,32 +1091,32 @@ inline void GameEventBuffer::clear_securitygameeventbuffer() {
   if (securitygameeventbuffer_ != NULL) securitygameeventbuffer_->Clear();
   clear_has_securitygameeventbuffer();
 }
-inline const ::usx::geofactions::SecurityGameEventBuffer& GameEventBuffer::_internal_securitygameeventbuffer() const {
+inline const ::redhatgamedev::srt::SecurityGameEventBuffer& GameEventBuffer::_internal_securitygameeventbuffer() const {
   return *securitygameeventbuffer_;
 }
-inline const ::usx::geofactions::SecurityGameEventBuffer& GameEventBuffer::securitygameeventbuffer() const {
-  const ::usx::geofactions::SecurityGameEventBuffer* p = securitygameeventbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.GameEventBuffer.securityGameEventBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::SecurityGameEventBuffer*>(
-      &::usx::geofactions::_SecurityGameEventBuffer_default_instance_);
+inline const ::redhatgamedev::srt::SecurityGameEventBuffer& GameEventBuffer::securitygameeventbuffer() const {
+  const ::redhatgamedev::srt::SecurityGameEventBuffer* p = securitygameeventbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.GameEventBuffer.securityGameEventBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::SecurityGameEventBuffer*>(
+      &::redhatgamedev::srt::_SecurityGameEventBuffer_default_instance_);
 }
-inline ::usx::geofactions::SecurityGameEventBuffer* GameEventBuffer::release_securitygameeventbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.GameEventBuffer.securityGameEventBuffer)
+inline ::redhatgamedev::srt::SecurityGameEventBuffer* GameEventBuffer::release_securitygameeventbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.GameEventBuffer.securityGameEventBuffer)
   clear_has_securitygameeventbuffer();
-  ::usx::geofactions::SecurityGameEventBuffer* temp = securitygameeventbuffer_;
+  ::redhatgamedev::srt::SecurityGameEventBuffer* temp = securitygameeventbuffer_;
   securitygameeventbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::SecurityGameEventBuffer* GameEventBuffer::mutable_securitygameeventbuffer() {
+inline ::redhatgamedev::srt::SecurityGameEventBuffer* GameEventBuffer::mutable_securitygameeventbuffer() {
   set_has_securitygameeventbuffer();
   if (securitygameeventbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::SecurityGameEventBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::SecurityGameEventBuffer>(GetArenaNoVirtual());
     securitygameeventbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.GameEventBuffer.securityGameEventBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.GameEventBuffer.securityGameEventBuffer)
   return securitygameeventbuffer_;
 }
-inline void GameEventBuffer::set_allocated_securitygameeventbuffer(::usx::geofactions::SecurityGameEventBuffer* securitygameeventbuffer) {
+inline void GameEventBuffer::set_allocated_securitygameeventbuffer(::redhatgamedev::srt::SecurityGameEventBuffer* securitygameeventbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete securitygameeventbuffer_;
@@ -1132,7 +1132,7 @@ inline void GameEventBuffer::set_allocated_securitygameeventbuffer(::usx::geofac
     clear_has_securitygameeventbuffer();
   }
   securitygameeventbuffer_ = securitygameeventbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.GameEventBuffer.securityGameEventBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.GameEventBuffer.securityGameEventBuffer)
 }
 
 #ifdef __GNUC__
@@ -1147,21 +1147,21 @@ inline void GameEventBuffer::set_allocated_securitygameeventbuffer(::usx::geofac
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType> : ::std::true_type {};
+template <> struct is_proto_enum< ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType>() {
-  return ::usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType>() {
+  return ::redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType_descriptor();
 }
-template <> struct is_proto_enum< ::usx::geofactions::GameEventBuffer_GameEventBufferType> : ::std::true_type {};
+template <> struct is_proto_enum< ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::usx::geofactions::GameEventBuffer_GameEventBufferType>() {
-  return ::usx::geofactions::GameEventBuffer_GameEventBufferType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType>() {
+  return ::redhatgamedev::srt::GameEventBuffer_GameEventBufferType_descriptor();
 }
 
 }  // namespace protobuf

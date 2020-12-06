@@ -34,7 +34,7 @@ DualStickRawInputCommand::~DualStickRawInputCommand()
 // Method(s)
 void DualStickRawInputCommand::Execute()
 {
-    using namespace usx::geofactions;
+    using namespace redhatgamedev::srt;
     
     assert(m_pBytesMessage);
     assert(m_pCommandBuffer);

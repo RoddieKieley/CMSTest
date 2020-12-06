@@ -15,9 +15,9 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-namespace usx
+namespace redhatgamedev
 {
-    namespace geofactions
+    namespace srt
     {
         class CommandBuffer;
     }
@@ -45,10 +45,10 @@ public:
     protected:
     public:
         const cms::BytesMessage*                        m_pBytesMessage;
-        usx::geofactions::CommandBuffer*                m_pCommandBuffer;
+        redhatgamedev::srt::CommandBuffer*                m_pCommandBuffer;
         
         // Constructor
-        _Dependencies(usx::geofactions::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage);
+        _Dependencies(redhatgamedev::srt::CommandBuffer* pCommandBuffer, const cms::BytesMessage* pBytesMessage);
         
         // Destructor
         virtual ~_Dependencies();
@@ -56,7 +56,7 @@ public:
     
 protected:
     const cms::BytesMessage*                        m_pBytesMessage;
-    usx::geofactions::CommandBuffer*                m_pCommandBuffer;
+    redhatgamedev::srt::CommandBuffer*                m_pCommandBuffer;
     
     // Constructor
     ACommand(_Dependencies& theDependencies);

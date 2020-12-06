@@ -1,5 +1,5 @@
 syntax = "proto2";
-package usx.geofactions;
+package redhatgamedev.srt;
 
 import "SecurityCommandBuffer.proto";
 import "RawInputCommandBuffer.proto";

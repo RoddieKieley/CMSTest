@@ -76,8 +76,8 @@ protected:
     class _Serializer
     {
     public:
-        void Serialize(const AEntity* anEntity, usx::geofactions::EntityGameEventBuffer* pEntityGameEvent);
-        void Deserialisze(const usx::geofactions::EntityGameEventBuffer* pEntityGameEvent, AEntity*& anEntity);
+        void Serialize(const AEntity* anEntity, redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent);
+        void Deserialisze(const redhatgamedev::srt::EntityGameEventBuffer* pEntityGameEvent, AEntity*& anEntity);
     };
     
     // Class data

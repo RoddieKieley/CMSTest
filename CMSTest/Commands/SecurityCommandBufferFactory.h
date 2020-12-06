@@ -21,7 +21,7 @@
 #include <string>
 #include <assert.h>
 
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 
 
 class SecurityCommand_Dependencies
@@ -92,7 +92,7 @@ public:
         
         pCommand->set_type(CommandBuffer_CommandBufferType_SECURITY);
         
-        usx::geofactions::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
+        redhatgamedev::srt::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
         assert(NULL != pSecurityCommand);
         pSecurityCommand->set_type(theSecurityCommand_Dependencies.m_anSecurityCommandBufferType);
         
@@ -190,12 +190,12 @@ public:
         
         pCommand->set_type(CommandBuffer_CommandBufferType_SECURITY);
         
-        usx::geofactions::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
+        redhatgamedev::srt::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
         assert(NULL != pSecurityCommand);
         //pSecurityCommand->set_type(theSecurityCommand_Dependencies.m_anSecurityCommandBufferType);
         pSecurityCommand->set_type(SecurityCommandBuffer_SecurityCommandBufferType_JOIN);
         
-        usx::geofactions::JoinSecurityCommandBuffer* pJoinSecurityCommand = pSecurityCommand->mutable_joinsecuritycommandbuffer();
+        redhatgamedev::srt::JoinSecurityCommandBuffer* pJoinSecurityCommand = pSecurityCommand->mutable_joinsecuritycommandbuffer();
         
         CreatedEvent(this, pCommand);
         return pCommand;
@@ -269,12 +269,12 @@ public:
         
         pCommand->set_type(CommandBuffer_CommandBufferType_SECURITY);
         
-        usx::geofactions::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
+        redhatgamedev::srt::SecurityCommandBuffer* pSecurityCommand = pCommand->mutable_securitycommandbuffer();
         assert(NULL != pSecurityCommand);
         //pSecurityCommand->set_type(theSecurityCommand_Dependencies.m_anSecurityCommandBufferType);
         pSecurityCommand->set_type(SecurityCommandBuffer_SecurityCommandBufferType_LEAVE);
         
-        usx::geofactions::LeaveSecurityCommandBuffer* pLeaveSecurityCommand = pSecurityCommand->mutable_leavesecuritycommandbuffer();
+        redhatgamedev::srt::LeaveSecurityCommandBuffer* pLeaveSecurityCommand = pSecurityCommand->mutable_leavesecuritycommandbuffer();
         
         // TODO: 071413 Add UUID to the SecurityCommandDependencies and fix this!
         //pLeaveSecurityCommand->set_uuid("test");

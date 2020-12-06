@@ -21,7 +21,7 @@
 #include "../Game/AEntity.h"
 #include <assert.h>
 
-using namespace usx::geofactions;
+using namespace redhatgamedev::srt;
 
 class AEntity;
 

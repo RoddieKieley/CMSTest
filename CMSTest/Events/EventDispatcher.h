@@ -52,14 +52,14 @@ public:
     public:
         PodFactory&                     m_aPodFactory;
         BulletFactory&                  m_aBulletFactory;
-        FactoryT<usx::geofactions::GameEventBuffer, EntityGameEvent_Dependencies>&         m_anEntityGameEventFactory;
-        FactoryT<usx::geofactions::GameEventBuffer, SecurityGameEvent_Dependencies>&       m_aSecurityGameEventFactory;
+        FactoryT<redhatgamedev::srt::GameEventBuffer, EntityGameEvent_Dependencies>&         m_anEntityGameEventFactory;
+        FactoryT<redhatgamedev::srt::GameEventBuffer, SecurityGameEvent_Dependencies>&       m_aSecurityGameEventFactory;
         
         // Constructor
         _Dependencies(PodFactory& aPodFactory,
                       BulletFactory& aBulletFactory,
-                      FactoryT<usx::geofactions::GameEventBuffer, EntityGameEvent_Dependencies>& pEntityGameEventFactory,
-                      FactoryT<usx::geofactions::GameEventBuffer, SecurityGameEvent_Dependencies>& aSecurityGameEventFactory);
+                      FactoryT<redhatgamedev::srt::GameEventBuffer, EntityGameEvent_Dependencies>& pEntityGameEventFactory,
+                      FactoryT<redhatgamedev::srt::GameEventBuffer, SecurityGameEvent_Dependencies>& aSecurityGameEventFactory);
         
         // Destructor
         ~_Dependencies();
@@ -69,17 +69,17 @@ private:
 protected:
     PodFactory&                     m_aPodFactory;
     BulletFactory&                  m_aBulletFactory;
-    FactoryT<usx::geofactions::GameEventBuffer, EntityGameEvent_Dependencies>&              m_anEntityGameEventFactory;
-    FactoryT<usx::geofactions::GameEventBuffer, SecurityGameEvent_Dependencies>&            m_aSecurityGameEventFactory;
+    FactoryT<redhatgamedev::srt::GameEventBuffer, EntityGameEvent_Dependencies>&              m_anEntityGameEventFactory;
+    FactoryT<redhatgamedev::srt::GameEventBuffer, SecurityGameEvent_Dependencies>&            m_aSecurityGameEventFactory;
     
     decaf::util::StlQueue<google::protobuf::Message*>       m_anEventQueue;
 
     // Helper(s)
     void                            Enqueue(google::protobuf::Message* pMessage);
     google::protobuf::Message*      Dequeue();
-    usx::geofactions::GameEventBuffer*           CreateGameEvent(usx::geofactions::EntityGameEventBuffer_EntityGameEventBufferType eEntityGameEvent_EntityGameEventBufferType, AEntity* pEntity);
+    redhatgamedev::srt::GameEventBuffer*           CreateGameEvent(redhatgamedev::srt::EntityGameEventBuffer_EntityGameEventBufferType eEntityGameEvent_EntityGameEventBufferType, AEntity* pEntity);
 
-    usx::geofactions::GameEventBuffer*           CreateGameEvent(usx::geofactions::SecurityGameEventBuffer_SecurityGameEventBufferType eSecurityGameEvent_SecurityGameEventBufferType, const std::string& strUUID);
+    redhatgamedev::srt::GameEventBuffer*           CreateGameEvent(redhatgamedev::srt::SecurityGameEventBuffer_SecurityGameEventBufferType eSecurityGameEvent_SecurityGameEventBufferType, const std::string& strUUID);
     
     // Constructor(s)
     EventDispatcher(_Dependencies* pDependencies);

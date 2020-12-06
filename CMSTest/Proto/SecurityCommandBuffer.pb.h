@@ -46,8 +46,8 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_SecurityCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class JoinSecurityCommandBuffer;
 class JoinSecurityCommandBufferDefaultTypeInternal;
 extern JoinSecurityCommandBufferDefaultTypeInternal _JoinSecurityCommandBuffer_default_instance_;
@@ -57,17 +57,17 @@ extern LeaveSecurityCommandBufferDefaultTypeInternal _LeaveSecurityCommandBuffer
 class SecurityCommandBuffer;
 class SecurityCommandBufferDefaultTypeInternal;
 extern SecurityCommandBufferDefaultTypeInternal _SecurityCommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> ::usx::geofactions::JoinSecurityCommandBuffer* Arena::CreateMaybeMessage<::usx::geofactions::JoinSecurityCommandBuffer>(Arena*);
-template<> ::usx::geofactions::LeaveSecurityCommandBuffer* Arena::CreateMaybeMessage<::usx::geofactions::LeaveSecurityCommandBuffer>(Arena*);
-template<> ::usx::geofactions::SecurityCommandBuffer* Arena::CreateMaybeMessage<::usx::geofactions::SecurityCommandBuffer>(Arena*);
+template<> ::redhatgamedev::srt::JoinSecurityCommandBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::JoinSecurityCommandBuffer>(Arena*);
+template<> ::redhatgamedev::srt::LeaveSecurityCommandBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::LeaveSecurityCommandBuffer>(Arena*);
+template<> ::redhatgamedev::srt::SecurityCommandBuffer* Arena::CreateMaybeMessage<::redhatgamedev::srt::SecurityCommandBuffer>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 
 enum SecurityCommandBuffer_SecurityCommandBufferType {
   SecurityCommandBuffer_SecurityCommandBufferType_UNKNOWN = 0,
@@ -91,7 +91,7 @@ inline bool SecurityCommandBuffer_SecurityCommandBufferType_Parse(
 }
 // ===================================================================
 
-class JoinSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.JoinSecurityCommandBuffer) */ {
+class JoinSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.JoinSecurityCommandBuffer) */ {
  public:
   JoinSecurityCommandBuffer();
   virtual ~JoinSecurityCommandBuffer();
@@ -185,7 +185,7 @@ class JoinSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.JoinSecurityCommandBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.JoinSecurityCommandBuffer)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -195,7 +195,7 @@ class JoinSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc
 };
 // -------------------------------------------------------------------
 
-class LeaveSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.LeaveSecurityCommandBuffer) */ {
+class LeaveSecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.LeaveSecurityCommandBuffer) */ {
  public:
   LeaveSecurityCommandBuffer();
   virtual ~LeaveSecurityCommandBuffer();
@@ -304,7 +304,7 @@ class LeaveSecurityCommandBuffer : public ::google::protobuf::Message /* @@proto
   ::std::string* release_uuid();
   void set_allocated_uuid(::std::string* uuid);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.LeaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.LeaveSecurityCommandBuffer)
  private:
   void set_has_uuid();
   void clear_has_uuid();
@@ -317,7 +317,7 @@ class LeaveSecurityCommandBuffer : public ::google::protobuf::Message /* @@proto
 };
 // -------------------------------------------------------------------
 
-class SecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:usx.geofactions.SecurityCommandBuffer) */ {
+class SecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:redhatgamedev.srt.SecurityCommandBuffer) */ {
  public:
   SecurityCommandBuffer();
   virtual ~SecurityCommandBuffer();
@@ -454,38 +454,38 @@ class SecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_ins
   ::std::string* release_uuid();
   void set_allocated_uuid(::std::string* uuid);
 
-  // optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+  // optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
   bool has_joinsecuritycommandbuffer() const;
   void clear_joinsecuritycommandbuffer();
   static const int kJoinSecurityCommandBufferFieldNumber = 3;
   private:
-  const ::usx::geofactions::JoinSecurityCommandBuffer& _internal_joinsecuritycommandbuffer() const;
+  const ::redhatgamedev::srt::JoinSecurityCommandBuffer& _internal_joinsecuritycommandbuffer() const;
   public:
-  const ::usx::geofactions::JoinSecurityCommandBuffer& joinsecuritycommandbuffer() const;
-  ::usx::geofactions::JoinSecurityCommandBuffer* release_joinsecuritycommandbuffer();
-  ::usx::geofactions::JoinSecurityCommandBuffer* mutable_joinsecuritycommandbuffer();
-  void set_allocated_joinsecuritycommandbuffer(::usx::geofactions::JoinSecurityCommandBuffer* joinsecuritycommandbuffer);
+  const ::redhatgamedev::srt::JoinSecurityCommandBuffer& joinsecuritycommandbuffer() const;
+  ::redhatgamedev::srt::JoinSecurityCommandBuffer* release_joinsecuritycommandbuffer();
+  ::redhatgamedev::srt::JoinSecurityCommandBuffer* mutable_joinsecuritycommandbuffer();
+  void set_allocated_joinsecuritycommandbuffer(::redhatgamedev::srt::JoinSecurityCommandBuffer* joinsecuritycommandbuffer);
 
-  // optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+  // optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
   bool has_leavesecuritycommandbuffer() const;
   void clear_leavesecuritycommandbuffer();
   static const int kLeaveSecurityCommandBufferFieldNumber = 4;
   private:
-  const ::usx::geofactions::LeaveSecurityCommandBuffer& _internal_leavesecuritycommandbuffer() const;
+  const ::redhatgamedev::srt::LeaveSecurityCommandBuffer& _internal_leavesecuritycommandbuffer() const;
   public:
-  const ::usx::geofactions::LeaveSecurityCommandBuffer& leavesecuritycommandbuffer() const;
-  ::usx::geofactions::LeaveSecurityCommandBuffer* release_leavesecuritycommandbuffer();
-  ::usx::geofactions::LeaveSecurityCommandBuffer* mutable_leavesecuritycommandbuffer();
-  void set_allocated_leavesecuritycommandbuffer(::usx::geofactions::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer);
+  const ::redhatgamedev::srt::LeaveSecurityCommandBuffer& leavesecuritycommandbuffer() const;
+  ::redhatgamedev::srt::LeaveSecurityCommandBuffer* release_leavesecuritycommandbuffer();
+  ::redhatgamedev::srt::LeaveSecurityCommandBuffer* mutable_leavesecuritycommandbuffer();
+  void set_allocated_leavesecuritycommandbuffer(::redhatgamedev::srt::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer);
 
-  // required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+  // required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType type() const;
-  void set_type(::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType value);
+  ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType type() const;
+  void set_type(::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType value);
 
-  // @@protoc_insertion_point(class_scope:usx.geofactions.SecurityCommandBuffer)
+  // @@protoc_insertion_point(class_scope:redhatgamedev.srt.SecurityCommandBuffer)
  private:
   void set_has_type();
   void clear_has_type();
@@ -500,8 +500,8 @@ class SecurityCommandBuffer : public ::google::protobuf::Message /* @@protoc_ins
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr uuid_;
-  ::usx::geofactions::JoinSecurityCommandBuffer* joinsecuritycommandbuffer_;
-  ::usx::geofactions::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer_;
+  ::redhatgamedev::srt::JoinSecurityCommandBuffer* joinsecuritycommandbuffer_;
+  ::redhatgamedev::srt::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer_;
   int type_;
   friend struct ::protobuf_SecurityCommandBuffer_2eproto::TableStruct;
 };
@@ -535,41 +535,41 @@ inline void LeaveSecurityCommandBuffer::clear_uuid() {
   clear_has_uuid();
 }
 inline const ::std::string& LeaveSecurityCommandBuffer::uuid() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
   return uuid_.GetNoArena();
 }
 inline void LeaveSecurityCommandBuffer::set_uuid(const ::std::string& value) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
 }
 #if LANG_CXX11
 inline void LeaveSecurityCommandBuffer::set_uuid(::std::string&& value) {
   set_has_uuid();
   uuid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_rvalue:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
 }
 #endif
 inline void LeaveSecurityCommandBuffer::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_char:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
 }
 inline void LeaveSecurityCommandBuffer::set_uuid(const char* value, size_t size) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_pointer:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
 }
 inline ::std::string* LeaveSecurityCommandBuffer::mutable_uuid() {
   set_has_uuid();
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
   return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* LeaveSecurityCommandBuffer::release_uuid() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
   if (!has_uuid()) {
     return NULL;
   }
@@ -583,14 +583,14 @@ inline void LeaveSecurityCommandBuffer::set_allocated_uuid(::std::string* uuid) 
     clear_has_uuid();
   }
   uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.LeaveSecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.LeaveSecurityCommandBuffer.UUID)
 }
 
 // -------------------------------------------------------------------
 
 // SecurityCommandBuffer
 
-// required .usx.geofactions.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
+// required .redhatgamedev.srt.SecurityCommandBuffer.SecurityCommandBufferType type = 1 [default = UNKNOWN];
 inline bool SecurityCommandBuffer::has_type() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -604,15 +604,15 @@ inline void SecurityCommandBuffer::clear_type() {
   type_ = 0;
   clear_has_type();
 }
-inline ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType SecurityCommandBuffer::type() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityCommandBuffer.type)
-  return static_cast< ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType >(type_);
+inline ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType SecurityCommandBuffer::type() const {
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityCommandBuffer.type)
+  return static_cast< ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType >(type_);
 }
-inline void SecurityCommandBuffer::set_type(::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType value) {
-  assert(::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_IsValid(value));
+inline void SecurityCommandBuffer::set_type(::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType value) {
+  assert(::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_IsValid(value));
   set_has_type();
   type_ = value;
-  // @@protoc_insertion_point(field_set:usx.geofactions.SecurityCommandBuffer.type)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.SecurityCommandBuffer.type)
 }
 
 // optional string UUID = 2;
@@ -630,41 +630,41 @@ inline void SecurityCommandBuffer::clear_uuid() {
   clear_has_uuid();
 }
 inline const ::std::string& SecurityCommandBuffer::uuid() const {
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityCommandBuffer.UUID)
   return uuid_.GetNoArena();
 }
 inline void SecurityCommandBuffer::set_uuid(const ::std::string& value) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set:redhatgamedev.srt.SecurityCommandBuffer.UUID)
 }
 #if LANG_CXX11
 inline void SecurityCommandBuffer::set_uuid(::std::string&& value) {
   set_has_uuid();
   uuid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_rvalue:redhatgamedev.srt.SecurityCommandBuffer.UUID)
 }
 #endif
 inline void SecurityCommandBuffer::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_char:redhatgamedev.srt.SecurityCommandBuffer.UUID)
 }
 inline void SecurityCommandBuffer::set_uuid(const char* value, size_t size) {
   set_has_uuid();
   uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_pointer:redhatgamedev.srt.SecurityCommandBuffer.UUID)
 }
 inline ::std::string* SecurityCommandBuffer::mutable_uuid() {
   set_has_uuid();
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.SecurityCommandBuffer.UUID)
   return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SecurityCommandBuffer::release_uuid() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.SecurityCommandBuffer.UUID)
   if (!has_uuid()) {
     return NULL;
   }
@@ -678,10 +678,10 @@ inline void SecurityCommandBuffer::set_allocated_uuid(::std::string* uuid) {
     clear_has_uuid();
   }
   uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.SecurityCommandBuffer.UUID)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.SecurityCommandBuffer.UUID)
 }
 
-// optional .usx.geofactions.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
+// optional .redhatgamedev.srt.JoinSecurityCommandBuffer joinSecurityCommandBuffer = 3;
 inline bool SecurityCommandBuffer::has_joinsecuritycommandbuffer() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -695,32 +695,32 @@ inline void SecurityCommandBuffer::clear_joinsecuritycommandbuffer() {
   if (joinsecuritycommandbuffer_ != NULL) joinsecuritycommandbuffer_->Clear();
   clear_has_joinsecuritycommandbuffer();
 }
-inline const ::usx::geofactions::JoinSecurityCommandBuffer& SecurityCommandBuffer::_internal_joinsecuritycommandbuffer() const {
+inline const ::redhatgamedev::srt::JoinSecurityCommandBuffer& SecurityCommandBuffer::_internal_joinsecuritycommandbuffer() const {
   return *joinsecuritycommandbuffer_;
 }
-inline const ::usx::geofactions::JoinSecurityCommandBuffer& SecurityCommandBuffer::joinsecuritycommandbuffer() const {
-  const ::usx::geofactions::JoinSecurityCommandBuffer* p = joinsecuritycommandbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityCommandBuffer.joinSecurityCommandBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::JoinSecurityCommandBuffer*>(
-      &::usx::geofactions::_JoinSecurityCommandBuffer_default_instance_);
+inline const ::redhatgamedev::srt::JoinSecurityCommandBuffer& SecurityCommandBuffer::joinsecuritycommandbuffer() const {
+  const ::redhatgamedev::srt::JoinSecurityCommandBuffer* p = joinsecuritycommandbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityCommandBuffer.joinSecurityCommandBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::JoinSecurityCommandBuffer*>(
+      &::redhatgamedev::srt::_JoinSecurityCommandBuffer_default_instance_);
 }
-inline ::usx::geofactions::JoinSecurityCommandBuffer* SecurityCommandBuffer::release_joinsecuritycommandbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.SecurityCommandBuffer.joinSecurityCommandBuffer)
+inline ::redhatgamedev::srt::JoinSecurityCommandBuffer* SecurityCommandBuffer::release_joinsecuritycommandbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.SecurityCommandBuffer.joinSecurityCommandBuffer)
   clear_has_joinsecuritycommandbuffer();
-  ::usx::geofactions::JoinSecurityCommandBuffer* temp = joinsecuritycommandbuffer_;
+  ::redhatgamedev::srt::JoinSecurityCommandBuffer* temp = joinsecuritycommandbuffer_;
   joinsecuritycommandbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::JoinSecurityCommandBuffer* SecurityCommandBuffer::mutable_joinsecuritycommandbuffer() {
+inline ::redhatgamedev::srt::JoinSecurityCommandBuffer* SecurityCommandBuffer::mutable_joinsecuritycommandbuffer() {
   set_has_joinsecuritycommandbuffer();
   if (joinsecuritycommandbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::JoinSecurityCommandBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::JoinSecurityCommandBuffer>(GetArenaNoVirtual());
     joinsecuritycommandbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.SecurityCommandBuffer.joinSecurityCommandBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.SecurityCommandBuffer.joinSecurityCommandBuffer)
   return joinsecuritycommandbuffer_;
 }
-inline void SecurityCommandBuffer::set_allocated_joinsecuritycommandbuffer(::usx::geofactions::JoinSecurityCommandBuffer* joinsecuritycommandbuffer) {
+inline void SecurityCommandBuffer::set_allocated_joinsecuritycommandbuffer(::redhatgamedev::srt::JoinSecurityCommandBuffer* joinsecuritycommandbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete joinsecuritycommandbuffer_;
@@ -736,10 +736,10 @@ inline void SecurityCommandBuffer::set_allocated_joinsecuritycommandbuffer(::usx
     clear_has_joinsecuritycommandbuffer();
   }
   joinsecuritycommandbuffer_ = joinsecuritycommandbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.SecurityCommandBuffer.joinSecurityCommandBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.SecurityCommandBuffer.joinSecurityCommandBuffer)
 }
 
-// optional .usx.geofactions.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
+// optional .redhatgamedev.srt.LeaveSecurityCommandBuffer leaveSecurityCommandBuffer = 4;
 inline bool SecurityCommandBuffer::has_leavesecuritycommandbuffer() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
@@ -753,32 +753,32 @@ inline void SecurityCommandBuffer::clear_leavesecuritycommandbuffer() {
   if (leavesecuritycommandbuffer_ != NULL) leavesecuritycommandbuffer_->Clear();
   clear_has_leavesecuritycommandbuffer();
 }
-inline const ::usx::geofactions::LeaveSecurityCommandBuffer& SecurityCommandBuffer::_internal_leavesecuritycommandbuffer() const {
+inline const ::redhatgamedev::srt::LeaveSecurityCommandBuffer& SecurityCommandBuffer::_internal_leavesecuritycommandbuffer() const {
   return *leavesecuritycommandbuffer_;
 }
-inline const ::usx::geofactions::LeaveSecurityCommandBuffer& SecurityCommandBuffer::leavesecuritycommandbuffer() const {
-  const ::usx::geofactions::LeaveSecurityCommandBuffer* p = leavesecuritycommandbuffer_;
-  // @@protoc_insertion_point(field_get:usx.geofactions.SecurityCommandBuffer.leaveSecurityCommandBuffer)
-  return p != NULL ? *p : *reinterpret_cast<const ::usx::geofactions::LeaveSecurityCommandBuffer*>(
-      &::usx::geofactions::_LeaveSecurityCommandBuffer_default_instance_);
+inline const ::redhatgamedev::srt::LeaveSecurityCommandBuffer& SecurityCommandBuffer::leavesecuritycommandbuffer() const {
+  const ::redhatgamedev::srt::LeaveSecurityCommandBuffer* p = leavesecuritycommandbuffer_;
+  // @@protoc_insertion_point(field_get:redhatgamedev.srt.SecurityCommandBuffer.leaveSecurityCommandBuffer)
+  return p != NULL ? *p : *reinterpret_cast<const ::redhatgamedev::srt::LeaveSecurityCommandBuffer*>(
+      &::redhatgamedev::srt::_LeaveSecurityCommandBuffer_default_instance_);
 }
-inline ::usx::geofactions::LeaveSecurityCommandBuffer* SecurityCommandBuffer::release_leavesecuritycommandbuffer() {
-  // @@protoc_insertion_point(field_release:usx.geofactions.SecurityCommandBuffer.leaveSecurityCommandBuffer)
+inline ::redhatgamedev::srt::LeaveSecurityCommandBuffer* SecurityCommandBuffer::release_leavesecuritycommandbuffer() {
+  // @@protoc_insertion_point(field_release:redhatgamedev.srt.SecurityCommandBuffer.leaveSecurityCommandBuffer)
   clear_has_leavesecuritycommandbuffer();
-  ::usx::geofactions::LeaveSecurityCommandBuffer* temp = leavesecuritycommandbuffer_;
+  ::redhatgamedev::srt::LeaveSecurityCommandBuffer* temp = leavesecuritycommandbuffer_;
   leavesecuritycommandbuffer_ = NULL;
   return temp;
 }
-inline ::usx::geofactions::LeaveSecurityCommandBuffer* SecurityCommandBuffer::mutable_leavesecuritycommandbuffer() {
+inline ::redhatgamedev::srt::LeaveSecurityCommandBuffer* SecurityCommandBuffer::mutable_leavesecuritycommandbuffer() {
   set_has_leavesecuritycommandbuffer();
   if (leavesecuritycommandbuffer_ == NULL) {
-    auto* p = CreateMaybeMessage<::usx::geofactions::LeaveSecurityCommandBuffer>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::redhatgamedev::srt::LeaveSecurityCommandBuffer>(GetArenaNoVirtual());
     leavesecuritycommandbuffer_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:usx.geofactions.SecurityCommandBuffer.leaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(field_mutable:redhatgamedev.srt.SecurityCommandBuffer.leaveSecurityCommandBuffer)
   return leavesecuritycommandbuffer_;
 }
-inline void SecurityCommandBuffer::set_allocated_leavesecuritycommandbuffer(::usx::geofactions::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer) {
+inline void SecurityCommandBuffer::set_allocated_leavesecuritycommandbuffer(::redhatgamedev::srt::LeaveSecurityCommandBuffer* leavesecuritycommandbuffer) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete leavesecuritycommandbuffer_;
@@ -794,7 +794,7 @@ inline void SecurityCommandBuffer::set_allocated_leavesecuritycommandbuffer(::us
     clear_has_leavesecuritycommandbuffer();
   }
   leavesecuritycommandbuffer_ = leavesecuritycommandbuffer;
-  // @@protoc_insertion_point(field_set_allocated:usx.geofactions.SecurityCommandBuffer.leaveSecurityCommandBuffer)
+  // @@protoc_insertion_point(field_set_allocated:redhatgamedev.srt.SecurityCommandBuffer.leaveSecurityCommandBuffer)
 }
 
 #ifdef __GNUC__
@@ -807,16 +807,16 @@ inline void SecurityCommandBuffer::set_allocated_leavesecuritycommandbuffer(::us
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType> : ::std::true_type {};
+template <> struct is_proto_enum< ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType>() {
-  return ::usx::geofactions::SecurityCommandBuffer_SecurityCommandBufferType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType>() {
+  return ::redhatgamedev::srt::SecurityCommandBuffer_SecurityCommandBufferType_descriptor();
 }
 
 }  // namespace protobuf

@@ -22,25 +22,25 @@
 namespace protobuf_box2d_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_box2d_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_PbVec2;
 }  // namespace protobuf_box2d_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 class DualStickRawInputCommandBufferDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<DualStickRawInputCommandBuffer>
       _instance;
 } _DualStickRawInputCommandBuffer_default_instance_;
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace protobuf_DualStickRawInputCommandBuffer_2eproto {
 static void InitDefaultsDualStickRawInputCommandBuffer() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::usx::geofactions::_DualStickRawInputCommandBuffer_default_instance_;
-    new (ptr) ::usx::geofactions::DualStickRawInputCommandBuffer();
+    void* ptr = &::redhatgamedev::srt::_DualStickRawInputCommandBuffer_default_instance_;
+    new (ptr) ::redhatgamedev::srt::DualStickRawInputCommandBuffer();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::usx::geofactions::DualStickRawInputCommandBuffer::InitAsDefaultInstance();
+  ::redhatgamedev::srt::DualStickRawInputCommandBuffer::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_DualStickRawInputCommandBuffer =
@@ -54,22 +54,22 @@ void InitDefaults() {
 ::google::protobuf::Metadata file_level_metadata[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::DualStickRawInputCommandBuffer, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::DualStickRawInputCommandBuffer, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::DualStickRawInputCommandBuffer, _has_bits_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::DualStickRawInputCommandBuffer, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::DualStickRawInputCommandBuffer, pbv2move_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::usx::geofactions::DualStickRawInputCommandBuffer, pbv2shoot_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::DualStickRawInputCommandBuffer, pbv2move_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::redhatgamedev::srt::DualStickRawInputCommandBuffer, pbv2shoot_),
   0,
   1,
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, sizeof(::usx::geofactions::DualStickRawInputCommandBuffer)},
+  { 0, 7, sizeof(::redhatgamedev::srt::DualStickRawInputCommandBuffer)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::usx::geofactions::_DualStickRawInputCommandBuffer_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::redhatgamedev::srt::_DualStickRawInputCommandBuffer_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -93,14 +93,14 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n$DualStickRawInputCommandBuffer.proto\022\017"
-      "usx.geofactions\032\013box2d.proto\"c\n\036DualStic"
-      "kRawInputCommandBuffer\022\037\n\010pbv2Move\030\001 \002(\013"
-      "2\r.box2d.PbVec2\022 \n\tpbv2Shoot\030\002 \002(\0132\r.box"
-      "2d.PbVec2"
+      "\n$DualStickRawInputCommandBuffer.proto\022\021"
+      "redhatgamedev.srt\032\013box2d.proto\"c\n\036DualSt"
+      "ickRawInputCommandBuffer\022\037\n\010pbv2Move\030\001 \002"
+      "(\0132\r.box2d.PbVec2\022 \n\tpbv2Shoot\030\002 \002(\0132\r.b"
+      "ox2d.PbVec2"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 169);
+      descriptor, 171);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "DualStickRawInputCommandBuffer.proto", &protobuf_RegisterTypes);
   ::protobuf_box2d_2eproto::AddDescriptors();
@@ -117,15 +117,15 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_DualStickRawInputCommandBuffer_2eproto
-namespace usx {
-namespace geofactions {
+namespace redhatgamedev {
+namespace srt {
 
 // ===================================================================
 
 void DualStickRawInputCommandBuffer::InitAsDefaultInstance() {
-  ::usx::geofactions::_DualStickRawInputCommandBuffer_default_instance_._instance.get_mutable()->pbv2move_ = const_cast< ::box2d::PbVec2*>(
+  ::redhatgamedev::srt::_DualStickRawInputCommandBuffer_default_instance_._instance.get_mutable()->pbv2move_ = const_cast< ::box2d::PbVec2*>(
       ::box2d::PbVec2::internal_default_instance());
-  ::usx::geofactions::_DualStickRawInputCommandBuffer_default_instance_._instance.get_mutable()->pbv2shoot_ = const_cast< ::box2d::PbVec2*>(
+  ::redhatgamedev::srt::_DualStickRawInputCommandBuffer_default_instance_._instance.get_mutable()->pbv2shoot_ = const_cast< ::box2d::PbVec2*>(
       ::box2d::PbVec2::internal_default_instance());
 }
 void DualStickRawInputCommandBuffer::clear_pbv2move() {
@@ -146,7 +146,7 @@ DualStickRawInputCommandBuffer::DualStickRawInputCommandBuffer()
   ::google::protobuf::internal::InitSCC(
       &protobuf_DualStickRawInputCommandBuffer_2eproto::scc_info_DualStickRawInputCommandBuffer.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(constructor:redhatgamedev.srt.DualStickRawInputCommandBuffer)
 }
 DualStickRawInputCommandBuffer::DualStickRawInputCommandBuffer(const DualStickRawInputCommandBuffer& from)
   : ::google::protobuf::Message(),
@@ -163,7 +163,7 @@ DualStickRawInputCommandBuffer::DualStickRawInputCommandBuffer(const DualStickRa
   } else {
     pbv2shoot_ = NULL;
   }
-  // @@protoc_insertion_point(copy_constructor:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(copy_constructor:redhatgamedev.srt.DualStickRawInputCommandBuffer)
 }
 
 void DualStickRawInputCommandBuffer::SharedCtor() {
@@ -173,7 +173,7 @@ void DualStickRawInputCommandBuffer::SharedCtor() {
 }
 
 DualStickRawInputCommandBuffer::~DualStickRawInputCommandBuffer() {
-  // @@protoc_insertion_point(destructor:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(destructor:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   SharedDtor();
 }
 
@@ -197,7 +197,7 @@ const DualStickRawInputCommandBuffer& DualStickRawInputCommandBuffer::default_in
 
 
 void DualStickRawInputCommandBuffer::Clear() {
-// @@protoc_insertion_point(message_clear_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(message_clear_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -221,7 +221,7 @@ bool DualStickRawInputCommandBuffer::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -263,17 +263,17 @@ bool DualStickRawInputCommandBuffer::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_success:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(parse_failure:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   return false;
 #undef DO_
 }
 
 void DualStickRawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -294,13 +294,13 @@ void DualStickRawInputCommandBuffer::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_end:redhatgamedev.srt.DualStickRawInputCommandBuffer)
 }
 
 ::google::protobuf::uint8* DualStickRawInputCommandBuffer::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -323,12 +323,12 @@ void DualStickRawInputCommandBuffer::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(serialize_to_array_end:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   return target;
 }
 
 size_t DualStickRawInputCommandBuffer::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   size_t total_size = 0;
 
   if (has_pbv2move()) {
@@ -348,7 +348,7 @@ size_t DualStickRawInputCommandBuffer::RequiredFieldsByteSizeFallback() const {
   return total_size;
 }
 size_t DualStickRawInputCommandBuffer::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(message_byte_size_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -376,22 +376,22 @@ size_t DualStickRawInputCommandBuffer::ByteSizeLong() const {
 }
 
 void DualStickRawInputCommandBuffer::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(generalized_merge_from_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   const DualStickRawInputCommandBuffer* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const DualStickRawInputCommandBuffer>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:redhatgamedev.srt.DualStickRawInputCommandBuffer)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:usx.geofactions.DualStickRawInputCommandBuffer)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:redhatgamedev.srt.DualStickRawInputCommandBuffer)
     MergeFrom(*source);
   }
 }
 
 void DualStickRawInputCommandBuffer::MergeFrom(const DualStickRawInputCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(class_specific_merge_from_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -409,14 +409,14 @@ void DualStickRawInputCommandBuffer::MergeFrom(const DualStickRawInputCommandBuf
 }
 
 void DualStickRawInputCommandBuffer::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(generalized_copy_from_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void DualStickRawInputCommandBuffer::CopyFrom(const DualStickRawInputCommandBuffer& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:usx.geofactions.DualStickRawInputCommandBuffer)
+// @@protoc_insertion_point(class_specific_copy_from_start:redhatgamedev.srt.DualStickRawInputCommandBuffer)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -452,12 +452,12 @@ void DualStickRawInputCommandBuffer::InternalSwap(DualStickRawInputCommandBuffer
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace geofactions
-}  // namespace usx
+}  // namespace srt
+}  // namespace redhatgamedev
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::usx::geofactions::DualStickRawInputCommandBuffer* Arena::CreateMaybeMessage< ::usx::geofactions::DualStickRawInputCommandBuffer >(Arena* arena) {
-  return Arena::CreateInternal< ::usx::geofactions::DualStickRawInputCommandBuffer >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::redhatgamedev::srt::DualStickRawInputCommandBuffer* Arena::CreateMaybeMessage< ::redhatgamedev::srt::DualStickRawInputCommandBuffer >(Arena* arena) {
+  return Arena::CreateInternal< ::redhatgamedev::srt::DualStickRawInputCommandBuffer >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
