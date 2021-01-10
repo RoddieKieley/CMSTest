@@ -20,29 +20,29 @@
 #include "../Proto/box2d.pb.h"
 //#include "../../../ThirdParty/xdispatch/include/xdispatch/dispatch.h"
 //#include "../../../ThirdParty/xdispatch/include/xdispatch/timer.h"
-#include <decaf/lang/Runnable.h>
+//#include <decaf/lang/Runnable.h>
 #include <decaf/util/StlQueue.h>
 #include <string>
 
-namespace decaf
-{
-    namespace lang
-    {
-        class Thread;
-    }
-    namespace util
-    {
-        class Timer;
-    }
-}
+//namespace decaf
+//{
+//    namespace lang
+//    {
+//        class Thread;
+//    }
+//    namespace util
+//    {
+//        class Timer;
+//    }
+//}
 class B2DWorld;
 
 
 class World
 {
 private:
-    class Simulation :
-        public decaf::lang::Runnable
+    class Simulation// :
+//        public decaf::lang::Runnable
     {
     private:
         World*      m_pWorld;
