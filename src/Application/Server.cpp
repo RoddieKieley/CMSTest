@@ -21,8 +21,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
+#include <chrono>
+#include <thread>
 #include <assert.h>
 #include "../Logging/loguru.hpp"
+
+//using namespace std::chrono_literals;
 
 
 // Constructor(s)
@@ -61,9 +65,8 @@ void Server::Setup()
     m_pWorld = new World();
     //m_pInput = new Input();
 
-    LOG_SCOPE_F(INFO, "Starting the server thread?");
-    m_pMainThread = new decaf::lang::Thread(this, strMainThreadName);
-    m_pMainThread->start();
+    LOG_SCOPE_F(INFO, "Starting the world producer");
+    m_pMainThread = new std::thread([this]() {run();});
 }
 
 void Server::Teardown()
@@ -110,6 +113,6 @@ void Server::run()
         m_theEventDispatcher.Dispatch();
         m_theMessageDispatcher.Dispatch();
         
-        decaf::lang::Thread::currentThread()->sleep(Configuration::Instance().ServerSleepCycle);
+        std::this_thread::sleep_for(std::chrono::milliseconds(Configuration::Instance().ServerSleepCycle));
     }
 }
