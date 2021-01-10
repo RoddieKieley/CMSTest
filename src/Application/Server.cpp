@@ -16,7 +16,6 @@
 #include "Server.h"
 #include "../Game/World.h"
 #include "../Game/AEntity.h"
-#include "decaf/lang/Thread.h"
 #include "decaf/lang/Runnable.h"
 #include <stdlib.h>
 #include <stdio.h>

@@ -23,30 +23,15 @@
 #include "../Game/B2DWorld.h"
 #include "../Game/Input.h"
 #include "../Proto/box2d.pb.h"
-//#include <decaf/lang/Runnable.h>
 #include <string>
 #include <thread>
 
-//namespace decaf
-//{
-//    namespace lang
-//    {
-//        class Thread;
-//    }
-//    namespace util
-//    {
-//        class Timer;
-//    }
-//}
 //class Security;
 class World;
 class Pod;
 
-//using namespace decaf::lang;
 
-
-class Server// :
-//    public decaf::lang::Runnable
+class Server
 {
 // Class
 private:
@@ -62,7 +47,6 @@ protected:
     //Input*                  m_pInput;
     World*                  m_pWorld;
     
-//    decaf::lang::Thread*    m_pMainThread;
     std::thread*            m_pMainThread;
     
     EventDispatcher&        m_theEventDispatcher;
@@ -88,7 +72,6 @@ public:
     ~Server();
     
     // Method(s)
-    // decaf::lang::Runnable implementation
     void run();
 };
 

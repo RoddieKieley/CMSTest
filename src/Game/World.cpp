@@ -23,15 +23,12 @@
 //#include "../../../ThirdParty/xdispatch/include/xdispatch/dispatch.h"
 #include <Poco/Delegate.h>
 #include <cms/CMSException.h>
-#include <decaf/lang/Thread.h>
 #include <assert.h>
 #include <iostream>
 #include "../Logging/loguru.hpp"
 
 B2DWorld*               World::m_pB2DWorld = NULL;
 
-//using namespace decaf::lang;
-//using namespace decaf::util::concurrent;
 using namespace box2d;
 using namespace redhatgamedev::srt;
 using namespace cms;

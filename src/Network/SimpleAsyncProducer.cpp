@@ -13,35 +13,19 @@
 //   limitations under the License.
 
 #include "SimpleAsyncProducer.h"
-#include "decaf/lang/Thread.h"
-//#include "decaf/lang/Runnable.h"
-#include "decaf/util/concurrent/CountDownLatch.h"
-#include "decaf/lang/Long.h"
-#include "decaf/util/Date.h"
 #include "activemq/core/ActiveMQConnectionFactory.h"
-#include "activemq/util/Config.h"
-#include "activemq/library/ActiveMQCPP.h"
-#include "cms/Connection.h"
 #include "cms/Session.h"
 #include "cms/TextMessage.h"
 #include "cms/BytesMessage.h"
-#include "cms/MapMessage.h"
 #include "cms/ExceptionListener.h"
-#include "cms/MessageListener.h"
 #include "cms/Destination.h"
 #include "cms/AsyncCallback.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <assert.h>
-#include <iostream>
 #include <memory>
 
 using namespace activemq;
 using namespace activemq::core;
-//using namespace decaf;
-//using namespace decaf::lang;
-//using namespace decaf::util;
-//using namespace decaf::util::concurrent;
 using namespace cms;
 using namespace std;
 
@@ -217,46 +201,6 @@ void SimpleAsyncProducer::Teardown()
 void SimpleAsyncProducer::close()
 {
     Teardown();
-}
-
-void SimpleAsyncProducer::run()
-{
-//    try
-//    {
-//        std::string text = "";
-//        TextMessage* message = NULL;
-//        int ix = 0;
-//        //for( unsigned int ix=0; ix<numMessages; ++ix )
-//        while (true)
-//        {
-//            // Receive incoming user commands
-//            
-//            // Run simulation step
-//            m_pB2DWorld->Update(text);
-//            
-//            // Check game rules
-//            
-//            // Update all object states
-//            
-//            //  if any client needs a world update
-//                // take world snapshot
-//                // Update clients if required
-//            message = m_pSession->createTextMessage( text );
-//            message->setIntProperty( "Integer", ix );
-//            //printf( "Sent message #%d from thread %s\n", ix+1, threadIdStr.c_str() );
-//            //printf("%s\n", message->getText().c_str());
-//            m_pMessageProducer->send( message );
-//            //Thread::currentThread()->yield();
-//            
-//            delete message;
-//            Thread::currentThread()->sleep(10);
-//            ++ix;
-//        }        
-//    }
-//    catch ( CMSException& e )
-//    {
-//        e.printStackTrace();
-//    }
 }
 
 void SimpleAsyncProducer::Send(std::string& strToSend, cms::AsyncCallback* pAsyncCallback)

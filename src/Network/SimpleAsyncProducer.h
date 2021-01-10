@@ -15,7 +15,6 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-//#include "decaf/lang/Runnable.h"
 #include <string>
 
 namespace cms
@@ -28,8 +27,7 @@ namespace cms
 }
 
 
-class SimpleAsyncProducer// :
-//    public decaf::lang::Runnable
+class SimpleAsyncProducer
 {
 private:
     
@@ -65,7 +63,6 @@ public:
     virtual ~SimpleAsyncProducer();
     
     // Method(s)
-    virtual void run();
     
     // Function(s)
     void close();
