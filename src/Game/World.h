@@ -24,25 +24,13 @@
 //#include <decaf/util/StlQueue.h>
 #include <string>
 
-//namespace decaf
-//{
-//    namespace lang
-//    {
-//        class Thread;
-//    }
-//    namespace util
-//    {
-//        class Timer;
-//    }
-//}
 class B2DWorld;
 
 
 class World
 {
 private:
-    class Simulation// :
-//        public decaf::lang::Runnable
+    class Simulation
     {
     private:
         World*      m_pWorld;
