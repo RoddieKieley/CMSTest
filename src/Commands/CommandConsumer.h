@@ -20,8 +20,9 @@
 #include "../Proto/SecurityCommandBuffer.pb.h"
 #include <Poco/BasicEvent.h>
 #include <Poco/Tuple.h>
-#include <decaf/util/StlQueue.h>
 #include <utility>
+#include <queue>
+#include <mutex>
 
 namespace cms
 {
@@ -53,8 +54,8 @@ private:
 protected:
     MessageConsumer*                                                                        m_pMessageConsumer;
     FactoryT<redhatgamedev::srt::CommandBuffer, SecurityCommand_Dependencies>&                m_aSecurityCommandFactory;
-    decaf::util::StlQueue<Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>* >    m_aTupleQueue;
-    
+    std::queue<Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>* >    m_aTupleQueue;
+    std::mutex                                                                   m_aTupleQueueMutex;
     
     // Helper(s)
     void                                                Enqueue(Poco::Tuple<cms::BytesMessage*>* pTuple);

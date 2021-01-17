@@ -22,7 +22,8 @@
 #include "RawInputCommand.h"
 #include "DualStickRawInputCommand.h"
 #include <Poco/Tuple.h>
-#include <decaf/util/StlQueue.h>
+#include <queue>
+#include <mutex>
 
 namespace google
 {
@@ -66,7 +67,8 @@ protected:
     FactoryT<JoinSecurityCommand, JoinSecurityCommand::_SecurityDependencies>&      m_aJoinSecurityCommandFactory;
     FactoryT<LeaveSecurityCommand, LeaveSecurityCommand::_SecurityDependencies>&    m_aLeaveSecurityCommandFactory;
     FactoryT<DualStickRawInputCommand, DualStickRawInputCommand::_RawInputDependencies>&    m_aDualStickRawInputCommandFactory;
-    decaf::util::StlQueue<ACommand*>                                                m_aCommandQueue;
+    std::queue<ACommand*>                                                m_aCommandQueue;
+    std::mutex                                                           m_aCommandQueueMutex;
 
 
     // Constructor

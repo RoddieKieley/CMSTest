@@ -80,9 +80,9 @@ void CommandConsumer::Enqueue(Poco::Tuple<cms::BytesMessage*>* pTuple)
     auto* pNewTuple = new Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>(pBytesMessage, pMessage);
     
     //pTuple->set<1>(pMessage);
-    m_aTupleQueue.lock();
+    m_aTupleQueueMutex.lock();
     m_aTupleQueue.push(pNewTuple);
-    m_aTupleQueue.unlock();
+    m_aTupleQueueMutex.unlock();
     
     //delete pMessagePair;
     delete pTuple;
@@ -110,13 +110,14 @@ std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(cms::By
 void CommandConsumer::Consume()
 {
     Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>* pTuple = NULL;
-    m_aTupleQueue.lock();
+    m_aTupleQueueMutex.lock();
     while (!m_aTupleQueue.empty())
     {
-        pTuple = m_aTupleQueue.pop();
+        pTuple = m_aTupleQueue.front();
+        m_aTupleQueue.pop();
         CommandConsumedEvent(this, pTuple);
     }
-    m_aTupleQueue.unlock();
+    m_aTupleQueueMutex.unlock();
 }
 
 // Event response

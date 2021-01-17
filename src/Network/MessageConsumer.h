@@ -18,9 +18,10 @@
 #include <Poco/BasicEvent.h>
 #include <Poco/Tuple.h>
 #include <cms/MessageListener.h>
-#include <decaf/util/StlQueue.h>
 #include <utility>
 #include <string>
+#include <queue>
+#include <mutex>
 
 namespace cms
 {
@@ -58,7 +59,8 @@ public:
     
 private:
 protected:
-    decaf::util::StlQueue<Poco::Tuple<cms::BytesMessage*>* >          m_aTupleQueue;
+    std::queue<Poco::Tuple<cms::BytesMessage*>* >                     m_aTupleQueue;
+    std::mutex                                                        m_aTupleQueueMutex;
     SimpleAsyncConsumer*                                              m_pSimpleAsyncConsumer;
     
     // Helper(s)

@@ -20,7 +20,6 @@
 #include "../Proto/box2d.pb.h"
 //#include "../../../ThirdParty/xdispatch/include/xdispatch/dispatch.h"
 //#include "../../../ThirdParty/xdispatch/include/xdispatch/timer.h"
-#include <decaf/util/StlQueue.h>
 #include <string>
 
 class B2DWorld;

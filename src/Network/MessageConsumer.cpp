@@ -66,9 +66,9 @@ void MessageConsumer::Enqueue(cms::BytesMessage* pBytesMessage)
     assert(pBytesMessage);
     
     Poco::Tuple<cms::BytesMessage*>*    pTuple = new Poco::Tuple<cms::BytesMessage*>(pBytesMessage);
-    m_aTupleQueue.lock();
+    m_aTupleQueueMutex.lock();
     m_aTupleQueue.push(pTuple);
-    m_aTupleQueue.unlock();
+    m_aTupleQueueMutex.unlock();
 }
 
 // cms::MessageListener implementation
@@ -90,13 +90,14 @@ void MessageConsumer::Dispatch()
     // TODO: Used ScopedLock (?)
     try
     {
-        m_aTupleQueue.lock();
+        m_aTupleQueueMutex.lock();
         while (!m_aTupleQueue.empty())
         {
-            Poco::Tuple<cms::BytesMessage*>*  pTuple = m_aTupleQueue.pop();
+            Poco::Tuple<cms::BytesMessage*>*  pTuple = m_aTupleQueue.front();
+            m_aTupleQueue.pop();
             ReceivedCMSMessageEvent(this, pTuple);
         }
-        m_aTupleQueue.unlock();
+        m_aTupleQueueMutex.unlock();
     }
     catch ( cms::CMSException& e )
     {

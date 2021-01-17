@@ -63,7 +63,6 @@ CommandQueue::~CommandQueue()
     using namespace Poco;
     using namespace cms;
 
-    m_aCommandQueue.clear();
     m_aCommandConsumer.CommandConsumedEvent -= Delegate<CommandQueue, Tuple<BytesMessage*, google::protobuf::Message*>*& >(this, &CommandQueue::HandleCommandConsumedEvent);
 }
 
@@ -71,13 +70,14 @@ CommandQueue::~CommandQueue()
 void CommandQueue::Execute()
 {
     ACommand* pCommand = NULL;
-    m_aCommandQueue.lock();
+    m_aCommandQueueMutex.lock();
     while (!m_aCommandQueue.empty())
     {
-        pCommand = m_aCommandQueue.pop();
+        pCommand = m_aCommandQueue.front();
+        m_aCommandQueue.pop();
         pCommand->Execute();
     }
-    m_aCommandQueue.unlock();
+    m_aCommandQueueMutex.unlock();
 }
 
 // CommandConsumer Event response
@@ -132,7 +132,7 @@ void CommandQueue::HandleCommandConsumedEvent(const void* pSender, Poco::Tuple<c
     }
     
     assert(pCommand);
-    m_aCommandQueue.lock();
+    m_aCommandQueueMutex.lock();
     m_aCommandQueue.push(pCommand);
-    m_aCommandQueue.unlock();
+    m_aCommandQueueMutex.unlock();
 }

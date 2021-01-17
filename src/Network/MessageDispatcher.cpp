@@ -65,9 +65,9 @@ MessageDispatcher::~MessageDispatcher()
 // Helper(s)
 void MessageDispatcher::Enqueue(std::pair<const unsigned char*, unsigned long>* pMessagePair)
 {
-    m_aMessageQueue.lock();
+    m_aMessageQueueMutex.lock();
     m_aMessageQueue.push(pMessagePair);
-    m_aMessageQueue.unlock();
+    m_aMessageQueueMutex.unlock();
 }
 
 void MessageDispatcher::Enqueue(google::protobuf::Message* pEventMessage)
@@ -129,12 +129,13 @@ std::pair<const unsigned char*, unsigned long>* MessageDispatcher::MessageToPair
 // via the configured simple async producer
 void MessageDispatcher::Dispatch()
 {
-    m_aMessageQueue.lock();
+    m_aMessageQueueMutex.lock();
     while (!m_aMessageQueue.empty())
     {
         try
         {
-            std::pair<const unsigned char*, unsigned long>* pMessagePair = m_aMessageQueue.pop();
+            std::pair<const unsigned char*, unsigned long>* pMessagePair = m_aMessageQueue.front();
+            m_aMessageQueue.pop();
             if (pMessagePair->second > 0)
             {
                 m_pSimpleAsyncProducer->Send(pMessagePair->first, (int)pMessagePair->second);
@@ -145,7 +146,7 @@ void MessageDispatcher::Dispatch()
             e.printStackTrace();
         }
     }
-    m_aMessageQueue.unlock();
+    m_aMessageQueueMutex.unlock();
 }
 
 // EventDispatcher event response

@@ -15,8 +15,9 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-#include <decaf/util/StlQueue.h>
 #include <utility>
+#include <queue>
+#include <mutex>
 
 namespace google
 {
@@ -47,7 +48,8 @@ public:
 
 private:
 protected:
-    decaf::util::StlQueue<std::pair<const unsigned char*, unsigned long>* >         m_aMessageQueue;
+    std::queue<std::pair<const unsigned char*, unsigned long>* >         m_aMessageQueue;
+    std::mutex                                                           m_aMessageQueueMutex;
     SimpleAsyncProducer*                                                            m_pSimpleAsyncProducer;
     
     // Helper(s)
