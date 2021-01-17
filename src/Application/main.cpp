@@ -126,10 +126,11 @@ int main(int argc, char* argv[])
     // Wait to exit.
     LOG_F(INFO, "press 'q' to quit");
     while( std::cin.get() != 'q') {}
+    pServer->stop();
+    activemq::library::ActiveMQCPP::shutdownLibrary();
 
     delete pServer;
     pServer = NULL;
-    
-    activemq::library::ActiveMQCPP::shutdownLibrary();
+
     return 0;
 }

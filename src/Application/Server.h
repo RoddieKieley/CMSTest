@@ -35,6 +35,7 @@ class Server
 {
 // Class
 private:
+    bool                    m_bStop;
     
 protected:
 
@@ -73,6 +74,7 @@ public:
     
     // Method(s)
     void run();
+    void stop();
 };
 
 #endif /* defined(__SRT__Server__) */

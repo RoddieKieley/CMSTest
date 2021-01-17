@@ -62,7 +62,8 @@ CommandQueue::~CommandQueue()
 {
     using namespace Poco;
     using namespace cms;
-    
+
+    m_aCommandQueue.clear();
     m_aCommandConsumer.CommandConsumedEvent -= Delegate<CommandQueue, Tuple<BytesMessage*, google::protobuf::Message*>*& >(this, &CommandQueue::HandleCommandConsumedEvent);
 }
 

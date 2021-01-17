@@ -36,6 +36,7 @@ Server::Server(EventDispatcher& theEventDispatcher,
     m_pWorld(NULL),
     //m_pInput(NULL),
     m_pMainThread(NULL),
+    m_bStop(false),
     m_theEventDispatcher(theEventDispatcher),
     m_theMessageDispatcher(theMessageDispatcher),
     m_theMessageConsumer(theMessageConsumer),
@@ -71,6 +72,7 @@ void Server::Teardown()
 {
     LOG_SCOPE_F(INFO, "Tearing down the server...");
 
+    m_pMainThread->join();
     delete m_pMainThread;
     m_pMainThread = NULL;
     
@@ -86,7 +88,7 @@ void Server::Teardown()
 // Method(s)
 void Server::run()
 {
-    while (true)
+    while (!m_bStop)
     {
 		LOG_SCOPE_FUNCTION(2);
         // Receive incoming user commands
@@ -113,4 +115,9 @@ void Server::run()
         
         std::this_thread::sleep_for(std::chrono::milliseconds(Configuration::Instance().ServerSleepCycle));
     }
+}
+
+void Server::stop()
+{
+    m_bStop = true;
 }
