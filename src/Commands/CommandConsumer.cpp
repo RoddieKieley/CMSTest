@@ -14,11 +14,13 @@
 
 #include "CommandConsumer.h"
 #include "../Network/MessageConsumer.h"
+#include <proton/message.hpp>
 #include <Poco/Delegate.h>
-#include <cms/BytesMessage.h>
-#include <cms/CMSException.h>
+//#include <cms/BytesMessage.h>
+//#include <cms/CMSException.h>
 #include <vector>
 #include <assert.h>
+//#include "../Logging/loguru.cpp"
 
 using namespace google::protobuf;
 
@@ -52,24 +54,24 @@ CommandConsumer::CommandConsumer(_Dependencies* pDependencies) :
     
     assert(m_pMessageConsumer);
     
-    m_pMessageConsumer->ReceivedCMSMessageEvent += Poco::Delegate<CommandConsumer, Poco::Tuple<cms::BytesMessage*>*& >(this, &CommandConsumer::HandleReceivedCMSMessageEvent);
+    m_pMessageConsumer->ReceivedCMSMessageEvent += Poco::Delegate<CommandConsumer, Poco::Tuple<proton::message*>*& >(this, &CommandConsumer::HandleReceivedCMSMessageEvent);
     
 }
 
 // Destructor
 CommandConsumer::~CommandConsumer()
 {
-    m_pMessageConsumer->ReceivedCMSMessageEvent -= Poco::Delegate<CommandConsumer, Poco::Tuple<cms::BytesMessage*>*& >(this, &CommandConsumer::HandleReceivedCMSMessageEvent);
+    m_pMessageConsumer->ReceivedCMSMessageEvent -= Poco::Delegate<CommandConsumer, Poco::Tuple<proton::message*>*& >(this, &CommandConsumer::HandleReceivedCMSMessageEvent);
 }
 
 // Helper(s)
-void CommandConsumer::Enqueue(Poco::Tuple<cms::BytesMessage*>* pTuple)
+void CommandConsumer::Enqueue(Poco::Tuple<proton::message*>* pTuple)
 {
     assert(pTuple);
     
     using namespace redhatgamedev::srt;
     
-    cms::BytesMessage* pBytesMessage = pTuple->get<0>();
+    proton::message* pBytesMessage = pTuple->get<0>();
     std::pair<unsigned char*, unsigned long>* pMessagePair = MessageToPair(pBytesMessage);
     assert(pMessagePair);
     
@@ -77,7 +79,7 @@ void CommandConsumer::Enqueue(Poco::Tuple<cms::BytesMessage*>* pTuple)
     /// Obviously need more general command factory depending on the type of message payload received
     google::protobuf::Message* pMessage = m_aSecurityCommandFactory.Create(pMessagePair);
     
-    auto* pNewTuple = new Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>(pBytesMessage, pMessage);
+    auto* pNewTuple = new Poco::Tuple<proton::message*, google::protobuf::Message*>(pBytesMessage, pMessage);
     
     //pTuple->set<1>(pMessage);
     m_aTupleQueueMutex.lock();
@@ -88,20 +90,22 @@ void CommandConsumer::Enqueue(Poco::Tuple<cms::BytesMessage*>* pTuple)
     delete pTuple;
 }
 
-std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(cms::BytesMessage* pBytesMessage)
+std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton::message* pBytesMessage)
 {
     assert(pBytesMessage);
     
     using namespace std;
-    using namespace cms;
+//    using namespace cms;
     
     pair<unsigned char*, unsigned long>*    pMessagePair = NULL;
-    
-    pBytesMessage->reset();
-    int iBodyLength = pBytesMessage->getBodyLength();
-    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
-    memcpy(pucBodyBytesCopy, pBytesMessage->getBodyBytes(), iBodyLength * sizeof(unsigned char));
-    pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);
+
+//    LOG_F(INFO, "TODO: CommandConsumer::MessageToPair proton::message impl required!");
+        // TODO: LOG_F(INFO, "TODO: CommandConsumer::MessageToPair proton::message impl required!");
+//    pBytesMessage->reset();
+//    int iBodyLength = pBytesMessage->getBodyLength();
+//    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
+//    memcpy(pucBodyBytesCopy, pBytesMessage->getBodyBytes(), iBodyLength * sizeof(unsigned char));
+//    pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);
     
     return pMessagePair;
 }
@@ -109,7 +113,7 @@ std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(cms::By
 // Method(s)
 void CommandConsumer::Consume()
 {
-    Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>* pTuple = NULL;
+    Poco::Tuple<proton::message*, google::protobuf::Message*>* pTuple = NULL;
     m_aTupleQueueMutex.lock();
     while (!m_aTupleQueue.empty())
     {
@@ -121,7 +125,7 @@ void CommandConsumer::Consume()
 }
 
 // Event response
-void CommandConsumer::HandleReceivedCMSMessageEvent(const void* pSender, Poco::Tuple<cms::BytesMessage*>*& pTuple)
+void CommandConsumer::HandleReceivedCMSMessageEvent(const void* pSender, Poco::Tuple<proton::message*>*& pTuple)
 {
     Enqueue(pTuple);
 }

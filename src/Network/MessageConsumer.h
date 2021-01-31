@@ -15,19 +15,20 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
+#include <proton/messaging_handler.hpp>
 #include <Poco/BasicEvent.h>
 #include <Poco/Tuple.h>
-#include <cms/MessageListener.h>
+//#include <cms/MessageListener.h>
 #include <utility>
 #include <string>
 #include <queue>
 #include <mutex>
 
-namespace cms
-{
-    class Message;
-    class BytesMessage;
-}
+//namespace proton
+//{
+//    class message;
+////    class BytesMessage;
+//}
 namespace google
 {
     namespace protobuf
@@ -40,7 +41,7 @@ class AEntity;
 
 
 class MessageConsumer :
-    cms::MessageListener
+        proton::messaging_handler
 {
 public:
     class _Dependencies
@@ -59,12 +60,12 @@ public:
     
 private:
 protected:
-    std::queue<Poco::Tuple<cms::BytesMessage*>* >                     m_aTupleQueue;
+    std::queue<Poco::Tuple<proton::message*>* >                       m_aTupleQueue;
     std::mutex                                                        m_aTupleQueueMutex;
     SimpleAsyncConsumer*                                              m_pSimpleAsyncConsumer;
     
     // Helper(s)
-    void                                                Enqueue(cms::BytesMessage* pBytesMessage);
+    void                                                Enqueue(proton::message* pBytesMessage);
     
     // Constructor
     MessageConsumer(_Dependencies* pDependencies);
@@ -73,7 +74,7 @@ protected:
     ~MessageConsumer();
     
 public:
-    Poco::BasicEvent<Poco::Tuple<cms::BytesMessage*>*& >              ReceivedCMSMessageEvent;
+    Poco::BasicEvent<Poco::Tuple<proton::message*>*& >              ReceivedCMSMessageEvent;
     
     // Singleton
     static MessageConsumer& Instance(_Dependencies* pDependencies)//unsigned int uiCapacity)
@@ -87,8 +88,8 @@ public:
     // via the configured simple async producer
     void Dispatch();
     
-    // MessageListener implementation
-    virtual void onMessage(const cms::Message* pMessage);
+    // messaging_handler implementation
+    virtual void on_message(proton::delivery &d, proton::message &response);
 };
 
 #endif /* defined(__SRT__MessageConsumer__) */

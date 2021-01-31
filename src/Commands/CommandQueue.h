@@ -32,9 +32,9 @@ namespace google
         class Message;
     }
 }
-namespace cms
+namespace proton
 {
-    class BytesMessage;
+    class message;
 }
 class CommandConsumer;
 
@@ -89,7 +89,7 @@ public:
     void Execute();
     
     // CommandConsumer Event response
-    void HandleCommandConsumedEvent(const void* pSender, Poco::Tuple<cms::BytesMessage*, google::protobuf::Message*>*& pTuple);
+    void HandleCommandConsumedEvent(const void* pSender, Poco::Tuple<proton::message*, google::protobuf::Message*>*& pTuple);
     
 };
 

@@ -14,13 +14,13 @@
 
 #include "MessageConsumer.h"
 #include "SimpleAsyncConsumer.h"
-#include <cms/BytesMessage.h>
-#include <cms/CMSException.h>
+//#include <cms/BytesMessage.h>
+//#include <cms/CMSException.h>
 #include <google/protobuf/message.h>
 #include <string.h>
 #include <string>
 #include <assert.h>
-
+//#include "../Logging/loguru.cpp"
 
 // Constructor
 MessageConsumer::
@@ -44,12 +44,15 @@ _Dependencies::
 MessageConsumer::MessageConsumer(_Dependencies* pDependencies)
 {
     assert(pDependencies);
-    
+
+//    LOG_F(INFO, "MessageConsumer::MessageConsumer TODO");
+    // TODO: LOG_F(INFO, "TODO MessageConsumer::MessageConsumer");
+
     m_pSimpleAsyncConsumer = pDependencies->m_pSimpleAsyncConsumer;
     
     assert(m_pSimpleAsyncConsumer);
     m_pSimpleAsyncConsumer->runConsumer();
-    m_pSimpleAsyncConsumer->SetMessageListener(this);
+//    m_pSimpleAsyncConsumer->SetMessageListener(this);
 }
 
 // Destructor
@@ -61,25 +64,29 @@ MessageConsumer::~MessageConsumer()
 }
 
 // Helper(s)
-void MessageConsumer::Enqueue(cms::BytesMessage* pBytesMessage)
+void MessageConsumer::Enqueue(proton::message* pBytesMessage)
 {
     assert(pBytesMessage);
     
-    Poco::Tuple<cms::BytesMessage*>*    pTuple = new Poco::Tuple<cms::BytesMessage*>(pBytesMessage);
+    Poco::Tuple<proton::message*>*    pTuple = new Poco::Tuple<proton::message*>(pBytesMessage);
     m_aTupleQueueMutex.lock();
     m_aTupleQueue.push(pTuple);
     m_aTupleQueueMutex.unlock();
 }
 
 // cms::MessageListener implementation
-void MessageConsumer::onMessage(const cms::Message* pMessage)
+//void MessageConsumer::onMessage(const cms::Message* pMessage)
+void MessageConsumer::on_message(proton::delivery &d, proton::message &response)
 {
-    assert(pMessage);
-    
-    cms::Message* pMessageClone = pMessage->clone();
-    cms::BytesMessage* pBytesMessage = dynamic_cast<cms::BytesMessage*>(pMessageClone);
 
-    Enqueue(pBytesMessage);
+//    LOG_F(INFO, "MessageConsumer::on_message TODO");
+    // TODO: LOG_F(INFO, "TODO MessageConsumer::on_message");
+//    assert(pMessage);
+//
+//    cms::Message* pMessageClone = pMessage->clone();
+//    proton::message* pBytesMessage = dynamic_cast<proton::message*>(pMessageClone);
+//
+//    Enqueue(pBytesMessage);
 }
 
 // Method(s)
@@ -93,14 +100,15 @@ void MessageConsumer::Dispatch()
         m_aTupleQueueMutex.lock();
         while (!m_aTupleQueue.empty())
         {
-            Poco::Tuple<cms::BytesMessage*>*  pTuple = m_aTupleQueue.front();
+            Poco::Tuple<proton::message*>*  pTuple = m_aTupleQueue.front();
             m_aTupleQueue.pop();
             ReceivedCMSMessageEvent(this, pTuple);
         }
         m_aTupleQueueMutex.unlock();
     }
-    catch ( cms::CMSException& e )
+    catch ( std::exception& e )
     {
-        e.printStackTrace();
+        //e.printStackTrace();
+        std::cout << e.what();
     }
 }
