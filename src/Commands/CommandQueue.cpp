@@ -64,11 +64,7 @@ CommandQueue::~CommandQueue()
     using namespace Poco;
 //    using namespace cms;
 
-<<<<<<< HEAD
     m_aCommandConsumer.CommandConsumedEvent -= Delegate<CommandQueue, Tuple<proton::message*, google::protobuf::Message*>*& >(this, &CommandQueue::HandleCommandConsumedEvent);
-=======
-    m_aCommandConsumer.CommandConsumedEvent -= Delegate<CommandQueue, Tuple<BytesMessage*, google::protobuf::Message*>*& >(this, &CommandQueue::HandleCommandConsumedEvent);
->>>>>>> d822ceb... no-issue: CMS decaf StlQueue -> std::queue + std::mutex.
 }
 
 // Method(s)
