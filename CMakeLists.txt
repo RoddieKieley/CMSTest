@@ -119,7 +119,7 @@ src/Proto/box2d.pb.cc
 src/Shared/Timer.cpp
 src/Shared/fake_cpp11.hpp
 src/Application/Configuration.cpp
-src/Application/Configuration.h)
+src/Application/Configuration.h src/Network/sender.cpp src/Network/sender.h src/Network/receiver.cpp src/Network/receiver.h src/Network/closed.cpp src/Network/closed.h)
 
 find_library( BOX2_D_LIBRARY Box2D)
 message( STATUS "BOX2_D_LIBRARY is ${BOX2_D_LIBRARY}")

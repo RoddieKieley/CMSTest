@@ -13,7 +13,7 @@
 //   limitations under the License.
 
 #include "MessageConsumer.h"
-#include "SimpleAsyncConsumer.h"
+#include "receiver.h"
 //#include <cms/BytesMessage.h>
 //#include <cms/CMSException.h>
 #include <google/protobuf/message.h>
@@ -25,10 +25,10 @@
 // Constructor
 MessageConsumer::
 _Dependencies::
-_Dependencies(SimpleAsyncConsumer* pSimpleAsyncConsumer) :
-    m_pSimpleAsyncConsumer(pSimpleAsyncConsumer)
+_Dependencies(receiver* preceiver) :
+    m_preceiver(preceiver)
 {
-    assert(m_pSimpleAsyncConsumer);
+    assert(m_preceiver);
 }
 
 // Destructor
@@ -48,19 +48,21 @@ MessageConsumer::MessageConsumer(_Dependencies* pDependencies)
 //    LOG_F(INFO, "MessageConsumer::MessageConsumer TODO");
     // TODO: LOG_F(INFO, "TODO MessageConsumer::MessageConsumer");
 
-    m_pSimpleAsyncConsumer = pDependencies->m_pSimpleAsyncConsumer;
+    m_preceiver = pDependencies->m_preceiver;
     
-    assert(m_pSimpleAsyncConsumer);
-    m_pSimpleAsyncConsumer->runConsumer();
-//    m_pSimpleAsyncConsumer->SetMessageListener(this);
+    assert(m_preceiver);
+
+    // LOG_F TODO FIXME what's needed here?
+    //m_preceiver->runConsumer();
+//    m_preceiver->SetMessageListener(this);
 }
 
 // Destructor
 MessageConsumer::~MessageConsumer()
 {
-    m_pSimpleAsyncConsumer->close();
-    delete m_pSimpleAsyncConsumer;
-    m_pSimpleAsyncConsumer = NULL;
+    m_preceiver->close();
+    delete m_preceiver;
+    m_preceiver = NULL;
 }
 
 // Helper(s)

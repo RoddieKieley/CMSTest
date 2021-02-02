@@ -36,7 +36,7 @@ namespace google
         class Message;
     }
 }
-class SimpleAsyncConsumer;
+class receiver;
 class AEntity;
 
 
@@ -49,10 +49,10 @@ public:
     private:
     protected:
     public:
-        SimpleAsyncConsumer*                m_pSimpleAsyncConsumer;
+        receiver*                m_preceiver;
         
         // Constructor
-        _Dependencies(SimpleAsyncConsumer* pSimpleAsyncConsumer);
+        _Dependencies(receiver* preceiver);
         
         // Destructor
         ~_Dependencies();
@@ -62,7 +62,7 @@ private:
 protected:
     std::queue<Poco::Tuple<proton::message*>* >                       m_aTupleQueue;
     std::mutex                                                        m_aTupleQueueMutex;
-    SimpleAsyncConsumer*                                              m_pSimpleAsyncConsumer;
+    receiver*                                              m_preceiver;
     
     // Helper(s)
     void                                                Enqueue(proton::message* pBytesMessage);

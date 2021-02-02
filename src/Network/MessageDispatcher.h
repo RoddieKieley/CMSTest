@@ -26,7 +26,7 @@ namespace google
         class Message;
     }
 }
-class SimpleAsyncProducer;
+class sender;
 
 
 class MessageDispatcher
@@ -37,10 +37,10 @@ public:
     private:
     protected:
     public:
-        SimpleAsyncProducer*                m_pSimpleAsyncProducer;
+        sender*                m_psender;
         
         // Constructor
-        _Dependencies(SimpleAsyncProducer* pSimpleAsyncProducer);
+        _Dependencies(sender* psender);
         
         // Destructor
         ~_Dependencies();
@@ -50,7 +50,7 @@ private:
 protected:
     std::queue<std::pair<const unsigned char*, unsigned long>* >         m_aMessageQueue;
     std::mutex                                                           m_aMessageQueueMutex;
-    SimpleAsyncProducer*                                                            m_pSimpleAsyncProducer;
+    sender*                                                            m_psender;
     
     // Helper(s)
     void                                                Enqueue(google::protobuf::Message* pMessage);

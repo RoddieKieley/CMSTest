@@ -19,9 +19,11 @@
 #include "../Commands/SecurityCommand.h"
 #include "../Commands/JoinSecurityCommand.h"
 #include "../Commands/LeaveSecurityCommand.h"
-#include "../Network/SimpleAsyncProducer.h"
-#include "../Network/SimpleAsyncConsumer.h"
-#include "../Network/ProtonConsumer.h"
+//#include "../Network/SimpleAsyncProducer.h"
+//#include "../Network/SimpleAsyncConsumer.h"
+//#include "../Network/ProtonConsumer.h"
+#include "../Network/sender.h"
+#include "../Network/receiver.h"
 #include "../Events/EventDispatcher.h"
 #include "../Commands/CommandConsumer.h"
 #include "../Commands/CommandQueue.h"
@@ -37,7 +39,6 @@
 #include "activemq/library/ActiveMQCPP.h"
 #include <iostream>
 #include "../Logging/loguru.cpp"
-
 
 
 void usage(char **argv) {
@@ -88,7 +89,16 @@ int main(int argc, char* argv[])
 
     LOG_F(INFO, "Initializing the ActiveMQCPP library");
     activemq::library::ActiveMQCPP::initializeLibrary();
-    
+
+    // Run the proton container
+    proton::container container;
+    auto container_thread = std::thread([&]() { container.run(); });
+
+    // A single sender and receiver to be shared by all the threads
+    // LOG_F TODO TESTME
+    sender send(container, strBrokerURI, strGameEventOutDestinationURI);
+    receiver recv(container, strBrokerURI, strCommandInDestinationURI);
+
     PodFactory&                     thePodFactory = PodFactory::Instance();
     BulletFactory&                  theBulletFactory = BulletFactory::Instance();
     auto&                           theEntityGameEventFactory = FactoryT<GameEventBuffer, EntityGameEvent_Dependencies>::Instance();
@@ -97,13 +107,18 @@ int main(int argc, char* argv[])
     EventDispatcher&                theEventDispatcher = EventDispatcher::Instance(&theEventDispatcherDependencies);
 
     LOG_F(INFO, "main creating SimpleAsyncProducer with strBrokerURI: %s", Configuration::Instance().BrokerURI.c_str());
-    SimpleAsyncProducer*                pSimpleAsyncProducer = new SimpleAsyncProducer(Configuration::Instance().BrokerURI, strGameEventOutDestinationURI, true);
-    MessageDispatcher::_Dependencies    theMessageDispatcherDependencies(pSimpleAsyncProducer);
+//    SimpleAsyncProducer*                pSimpleAsyncProducer = new SimpleAsyncProducer(Configuration::Instance().BrokerURI, strGameEventOutDestinationURI, true);
+//    MessageDispatcher::_Dependencies    theMessageDispatcherDependencies(pSimpleAsyncProducer);
+//    MessageDispatcher&                  theMessageDispatcher = MessageDispatcher::Instance(&theMessageDispatcherDependencies);
+    MessageDispatcher::_Dependencies    theMessageDispatcherDependencies(&send);
     MessageDispatcher&                  theMessageDispatcher = MessageDispatcher::Instance(&theMessageDispatcherDependencies);
-    
+
+
     LOG_F(INFO, "main creating SimpleAsyncConsumer with strBrokerURI: %s", Configuration::Instance().BrokerURI.c_str());
-    SimpleAsyncConsumer*                pSimpleAsyncConsumer = new SimpleAsyncConsumer(Configuration::Instance().BrokerURI, strCommandInDestinationURI);
-    MessageConsumer::_Dependencies      theMessageConsumerDependencies(pSimpleAsyncConsumer);
+//    SimpleAsyncConsumer*                pSimpleAsyncConsumer = new SimpleAsyncConsumer(Configuration::Instance().BrokerURI, strCommandInDestinationURI);
+//    MessageConsumer::_Dependencies      theMessageConsumerDependencies(pSimpleAsyncConsumer);
+//    MessageConsumer&                    theMessageConsumer = MessageConsumer::Instance(&theMessageConsumerDependencies);
+    MessageConsumer::_Dependencies      theMessageConsumerDependencies(&recv);
     MessageConsumer&                    theMessageConsumer = MessageConsumer::Instance(&theMessageConsumerDependencies);
 
     auto&                               theSecurityCommandBufferFactory = FactoryT<redhatgamedev::srt::CommandBuffer, SecurityCommand_Dependencies>::Instance();
@@ -118,11 +133,12 @@ int main(int argc, char* argv[])
     
     Server* pServer = new Server(theEventDispatcher, theMessageDispatcher, theMessageConsumer, theCommandConsumer, theCommandQueue);
 
-    LOG_F(INFO, "Starting simple Proton consumer");
-    ProtonConsumer pProtonConsumer(strProtonURI);
-    proton::container(pProtonConsumer).run();
+//    LOG_F(INFO, "Starting simple Proton consumer");
+//    ProtonConsumer pProtonConsumer(strProtonURI);
+//    proton::container(pProtonConsumer).run();
+
     //pServer->run();
-    
+
     // Wait to exit.
     LOG_F(INFO, "press 'q' to quit");
     while( std::cin.get() != 'q') {}

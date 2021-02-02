@@ -13,7 +13,7 @@
 //   limitations under the License.
 
 #include "MessageDispatcher.h"
-#include "SimpleAsyncProducer.h"
+#include "sender.h"
 #include "../Events/EventDispatcher.h"
 #include "../Proto/GameEventBuffer.pb.h"
 #include <Poco/Delegate.h>
@@ -26,10 +26,10 @@
 // Constructor
 MessageDispatcher::
 _Dependencies::
-_Dependencies(SimpleAsyncProducer* pSimpleAsyncProducer) :
-    m_pSimpleAsyncProducer(pSimpleAsyncProducer)
+_Dependencies(sender* psender) :
+    m_psender(psender)
 {
-    assert(m_pSimpleAsyncProducer);
+    assert(m_psender);
 }
 
 // Destructor
@@ -46,13 +46,13 @@ MessageDispatcher::MessageDispatcher(_Dependencies* pDependencies)
 {
     assert(pDependencies);
     
-    m_pSimpleAsyncProducer = pDependencies->m_pSimpleAsyncProducer;
+    m_psender = pDependencies->m_psender;
     
     EventDispatcher& theEventDispatcher = EventDispatcher::Instance();
     theEventDispatcher.EventDispatchedEvent += Poco::Delegate<MessageDispatcher, google::protobuf::Message*&>(this, &MessageDispatcher::HandleEventDispatchedEvent);
     
     
-    assert(m_pSimpleAsyncProducer);
+    assert(m_psender);
 }
 
 // Destructor
@@ -138,7 +138,9 @@ void MessageDispatcher::Dispatch()
             m_aMessageQueue.pop();
             if (pMessagePair->second > 0)
             {
-                m_pSimpleAsyncProducer->Send(pMessagePair->first, (int)pMessagePair->second);
+                //m_psender->Send(pMessagePair->first, (int)pMessagePair->second);
+                // LOG_F TODO wire up correct send call
+                m_psender->send(proton::message("TODO FIXME pMessagePair->first"));
             }
         }
         catch ( cms::CMSException& e )
