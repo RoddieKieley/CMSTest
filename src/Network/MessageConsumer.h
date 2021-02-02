@@ -18,17 +18,11 @@
 #include <proton/messaging_handler.hpp>
 #include <Poco/BasicEvent.h>
 #include <Poco/Tuple.h>
-//#include <cms/MessageListener.h>
 #include <utility>
 #include <string>
 #include <queue>
 #include <mutex>
 
-//namespace proton
-//{
-//    class message;
-////    class BytesMessage;
-//}
 namespace google
 {
     namespace protobuf
@@ -40,8 +34,7 @@ class receiver;
 class AEntity;
 
 
-class MessageConsumer// :
-//        proton::messaging_handler
+class MessageConsumer
 {
 public:
     class _Dependencies
@@ -90,9 +83,6 @@ public:
     // Dispatches all the messages it has received to the network
     // via the configured simple async producer
     void Dispatch();
-    
-    // messaging_handler implementation
-//    virtual void on_message(proton::delivery &d, proton::message &response);
 };
 
 #endif /* defined(__SRT__MessageConsumer__) */

@@ -106,9 +106,7 @@ src/Game/PodFactory.cpp
 src/Game/World.cpp
 src/Network/MessageConsumer.cpp
 src/Network/MessageDispatcher.cpp
-src/Network/SimpleAsyncConsumer.cpp
-src/Network/SimpleAsyncProducer.cpp
-src/Network/ProtonConsumer.cpp
+        src/Network/ProtonConsumer.cpp
 src/Proto/CommandBuffer.pb.cc
 src/Proto/DualStickRawInputCommandBuffer.pb.cc
 src/Proto/EntityGameEventBuffer.pb.cc

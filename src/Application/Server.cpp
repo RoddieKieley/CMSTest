@@ -16,7 +16,6 @@
 #include "Server.h"
 #include "../Game/World.h"
 #include "../Game/AEntity.h"
-//#include "decaf/lang/Runnable.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -24,8 +23,6 @@
 #include <thread>
 #include <assert.h>
 #include "../Logging/loguru.hpp"
-
-//using namespace std::chrono_literals;
 
 
 // Constructor(s)
@@ -35,7 +32,6 @@ Server::Server(EventDispatcher& theEventDispatcher,
                CommandConsumer& theCommandConsumer,
                CommandQueue& theCommandQueue) :
     m_pWorld(NULL),
-    //m_pInput(NULL),
     m_pMainThread(NULL),
     m_bStop(false),
     m_theEventDispatcher(theEventDispatcher),
@@ -63,7 +59,6 @@ void Server::Setup()
     AEntity::ClassSetup();
 
     m_pWorld = new World();
-    //m_pInput = new Input();
 
     LOG_SCOPE_F(INFO, "Starting the world producer");
     m_pMainThread = new std::thread([this]() {run();});
@@ -77,9 +72,6 @@ void Server::Teardown()
     delete m_pMainThread;
     m_pMainThread = NULL;
     
-//    delete m_pInput;
-//    m_pInput = NULL;
-
     delete m_pWorld;
     m_pWorld = NULL;
     

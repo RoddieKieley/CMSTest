@@ -14,8 +14,6 @@
 
 #include "MessageConsumer.h"
 #include "receiver.h"
-//#include <cms/BytesMessage.h>
-//#include <cms/CMSException.h>
 #include <google/protobuf/message.h>
 #include <string.h>
 #include <string>
@@ -50,12 +48,7 @@ MessageConsumer::MessageConsumer(_Dependencies* pDependencies)
     
     assert(m_preceiver);
 
-    // TODO: Proton update needed
-    //m_preceiver->runConsumer();
-//    m_preceiver->SetMessageListener(this);
-
     // TODO: Proton TESTME -> kick off the receiver thread in the MessageConsumer
-    //std::thread([&]() { receive_thread(recv, remaining); })
     m_pReceiverThread = new std::thread([&]() { receive_thread(*m_preceiver); });
 }
 
@@ -81,26 +74,6 @@ void MessageConsumer::Enqueue(proton::message* pBytesMessage)
     m_aTupleQueue.push(pTuple);
     m_aTupleQueueMutex.unlock();
 }
-
-// cms::MessageListener implementation
-//void MessageConsumer::onMessage(const cms::Message* pMessage)
-//void MessageConsumer::on_message(proton::delivery &d, proton::message &message)
-//{
-//
-////    LOG_F(INFO, "MessageConsumer::on_message TODO");
-//
-//    // TODO: Proton update needed
-////    assert(pMessage);
-////
-////    cms::Message* pMessageClone = pMessage->clone();
-////    proton::message* pBytesMessage = dynamic_cast<proton::message*>(pMessageClone);
-////
-////    Enqueue(pBytesMessage);
-//
-//    // TODO: Proton TESTME -> does this do a deep copy? if so who deletes it and when?
-//    proton::message* pMessage = new proton::message(message);
-//    Enqueue(pMessage);
-//}
 
 // Method(s)
 void MessageConsumer::receive_thread(receiver& r) {
@@ -145,7 +118,6 @@ void MessageConsumer::Dispatch()
     }
     catch ( std::exception& e )
     {
-        //e.printStackTrace();
-        std::cout << e.what();
+        std::cout << e.what() << std::endl;
     }
 }

@@ -21,7 +21,6 @@
 #include "../Commands/CommandConsumer.h"
 #include "../Commands/CommandQueue.h"
 #include "../Game/B2DWorld.h"
-#include "../Game/Input.h"
 #include "../Proto/box2d.pb.h"
 #include <string>
 #include <thread>
@@ -45,7 +44,6 @@ public:
 private:
     
 protected:
-    //Input*                  m_pInput;
     World*                  m_pWorld;
     
     std::thread*            m_pMainThread;

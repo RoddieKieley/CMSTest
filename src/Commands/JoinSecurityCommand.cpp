@@ -16,12 +16,7 @@
 #include "../Application/Configuration.h"
 #include "../Proto/CommandBuffer.pb.h"
 #include "../Proto/SecurityCommandBuffer.pb.h"
-#include "../Network/SimpleAsyncProducer.h"
 #include <proton/message.hpp>
-//#include <cms/Destination.h>
-//#include <cms/BytesMessage.h>
-//#include <cms/TemporaryQueue.h>
-//#include <decaf/util/UUID.h>
 #include <assert.h>
 #include <iostream>
 #include "../Logging/loguru.hpp"
@@ -72,5 +67,5 @@ void JoinSecurityCommand::Execute()
 //    pSimpleAsyncProducer->Send(strUUID);
 //    delete pSimpleAsyncProducer;
 //
-//    ExecutedEvent(this, strUUID);
+    ExecutedEvent(this, strUUID);
 }
