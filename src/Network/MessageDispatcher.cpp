@@ -139,7 +139,7 @@ void MessageDispatcher::Dispatch()
             if (pMessagePair->second > 0)
             {
                 //m_psender->Send(pMessagePair->first, (int)pMessagePair->second);
-                // LOG_F TODO wire up correct send call
+                // TODO: Proton update needed
                 m_psender->send(proton::message("TODO FIXME pMessagePair->first"));
             }
         }

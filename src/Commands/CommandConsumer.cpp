@@ -75,7 +75,7 @@ void CommandConsumer::Enqueue(Poco::Tuple<proton::message*>* pTuple)
     std::pair<unsigned char*, unsigned long>* pMessagePair = MessageToPair(pBytesMessage);
     assert(pMessagePair);
     
-    /// TODO: 08/03/13
+    /// TODO: Command Factory -> Generalize 08/03/13
     /// Obviously need more general command factory depending on the type of message payload received
     google::protobuf::Message* pMessage = m_aSecurityCommandFactory.Create(pMessagePair);
     
@@ -99,8 +99,7 @@ std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton:
     
     pair<unsigned char*, unsigned long>*    pMessagePair = NULL;
 
-//    LOG_F(INFO, "TODO: CommandConsumer::MessageToPair proton::message impl required!");
-        // TODO: LOG_F(INFO, "TODO: CommandConsumer::MessageToPair proton::message impl required!");
+    // TODO: Proton update needed -> CommandConsumer::MessageToPair proton::message impl required!
 //    pBytesMessage->reset();
 //    int iBodyLength = pBytesMessage->getBodyLength();
 //    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];

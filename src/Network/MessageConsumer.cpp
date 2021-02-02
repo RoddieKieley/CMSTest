@@ -45,14 +45,11 @@ MessageConsumer::MessageConsumer(_Dependencies* pDependencies)
 {
     assert(pDependencies);
 
-//    LOG_F(INFO, "MessageConsumer::MessageConsumer TODO");
-    // TODO: LOG_F(INFO, "TODO MessageConsumer::MessageConsumer");
-
     m_preceiver = pDependencies->m_preceiver;
     
     assert(m_preceiver);
 
-    // LOG_F TODO FIXME what's needed here?
+    // TODO: Proton update needed
     //m_preceiver->runConsumer();
 //    m_preceiver->SetMessageListener(this);
 }
@@ -82,7 +79,8 @@ void MessageConsumer::on_message(proton::delivery &d, proton::message &response)
 {
 
 //    LOG_F(INFO, "MessageConsumer::on_message TODO");
-    // TODO: LOG_F(INFO, "TODO MessageConsumer::on_message");
+
+    // TODO: Proton update needed
 //    assert(pMessage);
 //
 //    cms::Message* pMessageClone = pMessage->clone();

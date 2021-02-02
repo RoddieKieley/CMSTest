@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
         }
         else if (0 == strcmp(argv[i], "--broker-uri"))
         {
-            // TODO: Error checking on arg
+            // TODO: Process -> Usage Error checking on arg
             strBrokerURI = argv[++i];
         }
         else if (0 == strcmp(argv[i], "--sleep-cycle"))
@@ -87,15 +87,15 @@ int main(int argc, char* argv[])
     Configuration::Instance().BrokerURI = strBrokerURI;
     Configuration::Instance().ServerSleepCycle = strtol(strServerSleepCycle.c_str(), nullptr, 0);
 
-    LOG_F(INFO, "Initializing the ActiveMQCPP library");
-    activemq::library::ActiveMQCPP::initializeLibrary();
+//    LOG_F(INFO, "Initializing the ActiveMQCPP library");
+//    activemq::library::ActiveMQCPP::initializeLibrary();
 
     // Run the proton container
     proton::container container;
     auto container_thread = std::thread([&]() { container.run(); });
 
     // A single sender and receiver to be shared by all the threads
-    // LOG_F TODO TESTME
+    // TODO: Proton TESTME
     sender send(container, strBrokerURI, strGameEventOutDestinationURI);
     receiver recv(container, strBrokerURI, strCommandInDestinationURI);
 
@@ -142,8 +142,12 @@ int main(int argc, char* argv[])
     // Wait to exit.
     LOG_F(INFO, "press 'q' to quit");
     while( std::cin.get() != 'q') {}
+
     pServer->stop();
-    activemq::library::ActiveMQCPP::shutdownLibrary();
+
+    send.close();
+    recv.close();
+//    activemq::library::ActiveMQCPP::shutdownLibrary();
 
     delete pServer;
     pServer = NULL;
