@@ -22,6 +22,7 @@
 #include <assert.h>
 //#include "../Logging/loguru.cpp"
 
+
 // Constructor
 MessageConsumer::
 _Dependencies::
@@ -52,11 +53,19 @@ MessageConsumer::MessageConsumer(_Dependencies* pDependencies)
     // TODO: Proton update needed
     //m_preceiver->runConsumer();
 //    m_preceiver->SetMessageListener(this);
+
+    // TODO: Proton TESTME -> kick off the receiver thread in the MessageConsumer
+    //std::thread([&]() { receive_thread(recv, remaining); })
+    m_pReceiverThread = new std::thread([&]() { receive_thread(*m_preceiver); });
 }
 
 // Destructor
 MessageConsumer::~MessageConsumer()
 {
+    m_pReceiverThread->join();
+    delete m_pReceiverThread;
+    m_pReceiverThread = NULL;
+
     m_preceiver->close();
     delete m_preceiver;
     m_preceiver = NULL;
@@ -75,21 +84,49 @@ void MessageConsumer::Enqueue(proton::message* pBytesMessage)
 
 // cms::MessageListener implementation
 //void MessageConsumer::onMessage(const cms::Message* pMessage)
-void MessageConsumer::on_message(proton::delivery &d, proton::message &response)
-{
-
-//    LOG_F(INFO, "MessageConsumer::on_message TODO");
-
-    // TODO: Proton update needed
-//    assert(pMessage);
+//void MessageConsumer::on_message(proton::delivery &d, proton::message &message)
+//{
 //
-//    cms::Message* pMessageClone = pMessage->clone();
-//    proton::message* pBytesMessage = dynamic_cast<proton::message*>(pMessageClone);
+////    LOG_F(INFO, "MessageConsumer::on_message TODO");
 //
-//    Enqueue(pBytesMessage);
-}
+//    // TODO: Proton update needed
+////    assert(pMessage);
+////
+////    cms::Message* pMessageClone = pMessage->clone();
+////    proton::message* pBytesMessage = dynamic_cast<proton::message*>(pMessageClone);
+////
+////    Enqueue(pBytesMessage);
+//
+//    // TODO: Proton TESTME -> does this do a deep copy? if so who deletes it and when?
+//    proton::message* pMessage = new proton::message(message);
+//    Enqueue(pMessage);
+//}
 
 // Method(s)
+void MessageConsumer::receive_thread(receiver& r) {
+    std::mutex out_lock;
+    #define OUT(x) do { std::lock_guard<std::mutex> l(out_lock); x; } while (false)
+
+    OUT(std::cerr << "unexpected error in receive_thread " << std::endl);
+
+    try {
+        auto id = std::this_thread::get_id();
+        int n = 0;
+        // atomically check and decrement remaining *before* receiving.
+        // If it is 0 or less then return, as there are no more
+        // messages to receive so calling r.receive() would block forever.
+        while (true) {
+            auto m = r.receive();
+            // TODO: Proton TESTME -> does this do a deep copy? if so who deletes it and when?
+            proton::message* pMessage = new proton::message(m);
+            Enqueue(pMessage);
+            ++n;
+            OUT(std::cout << id << " received \"" << m.body() << '"' << std::endl);
+        }
+        OUT(std::cout << id << " received " << n << " messages" << std::endl);
+    } catch (const closed&) {}
+}
+
 // Dispatches all the messages it has received from the network
 // via the configured simple async consumer
 void MessageConsumer::Dispatch()

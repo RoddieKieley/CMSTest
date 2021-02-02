@@ -40,8 +40,8 @@ class receiver;
 class AEntity;
 
 
-class MessageConsumer :
-        proton::messaging_handler
+class MessageConsumer// :
+//        proton::messaging_handler
 {
 public:
     class _Dependencies
@@ -62,7 +62,8 @@ private:
 protected:
     std::queue<Poco::Tuple<proton::message*>* >                       m_aTupleQueue;
     std::mutex                                                        m_aTupleQueueMutex;
-    receiver*                                              m_preceiver;
+    receiver*                                                         m_preceiver;
+    std::thread*                                                      m_pReceiverThread;
     
     // Helper(s)
     void                                                Enqueue(proton::message* pBytesMessage);
@@ -84,12 +85,14 @@ public:
     }
     
     // Method(s)
+    void receive_thread(receiver& r);
+
     // Dispatches all the messages it has received to the network
     // via the configured simple async producer
     void Dispatch();
     
     // messaging_handler implementation
-    virtual void on_message(proton::delivery &d, proton::message &response);
+//    virtual void on_message(proton::delivery &d, proton::message &response);
 };
 
 #endif /* defined(__SRT__MessageConsumer__) */

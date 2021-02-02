@@ -140,7 +140,11 @@ void MessageDispatcher::Dispatch()
             {
                 //m_psender->Send(pMessagePair->first, (int)pMessagePair->second);
                 // TODO: Proton update needed
-                m_psender->send(proton::message("TODO FIXME pMessagePair->first"));
+                //m_psender->send(proton::message("TODO FIXME pMessagePair->first"));
+
+                // TODO: Proton TESTME
+                proton::message msg((const char*)pMessagePair->first);
+                m_psender->send(msg);
             }
         }
         catch ( cms::CMSException& e )
