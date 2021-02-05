@@ -22,6 +22,7 @@
 #include <string>
 #include <queue>
 #include <mutex>
+#include <thread>
 
 namespace google
 {
