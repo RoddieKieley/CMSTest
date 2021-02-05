@@ -106,7 +106,6 @@ src/Game/PodFactory.cpp
 src/Game/World.cpp
 src/Network/MessageConsumer.cpp
 src/Network/MessageDispatcher.cpp
-        src/Network/ProtonConsumer.cpp
 src/Proto/CommandBuffer.pb.cc
 src/Proto/DualStickRawInputCommandBuffer.pb.cc
 src/Proto/EntityGameEventBuffer.pb.cc
@@ -117,21 +116,24 @@ src/Proto/box2d.pb.cc
 src/Shared/Timer.cpp
 src/Shared/fake_cpp11.hpp
 src/Application/Configuration.cpp
-src/Application/Configuration.h src/Network/sender.cpp src/Network/sender.h src/Network/receiver.cpp src/Network/receiver.h src/Network/closed.cpp src/Network/closed.h)
+src/Application/Configuration.h
+src/Network/sender.cpp
+src/Network/sender.h
+src/Network/receiver.cpp
+src/Network/receiver.h
+src/Network/closed.cpp
+src/Network/closed.h)
 
 find_library( BOX2_D_LIBRARY Box2D)
 message( STATUS "BOX2_D_LIBRARY is ${BOX2_D_LIBRARY}")
 find_library( PROTOCOL_BUFFERS_LIBRARY protobuf)
 message( STATUS "PROTOCOL_BUFFERS_LIBRARY is ${PROTOCOL_BUFFERS_LIBRARY}")
-find_library( ACTIVEMQ_CPP_LIBRARY activemq-cpp)
-message( STATUS "ACTIVEMQ_CPP_LIBRARY is ${ACTIVEMQ_CPP_LIBRARY}")
 find_library( QPID_PROTON_CPP_LIBRARY qpid-proton)
 message( STATUS "QPID_PROTON_CPP_LIBRARY is ${QPID_PROTON_CPP_LIBRARY}")
 
 find_package(ProtonCpp REQUIRED)
 
 set( STATIC_DEPENDENCIES
-${ACTIVEMQ_CPP_LIBRARY}
 ${QPID_PROTON_CPP_LIBRARY}
 ${BOX2_D_LIBRARY}
 ${PROTOCOL_BUFFERS_LIBRARY}
@@ -171,13 +173,9 @@ ${RESOURCES}
 
 target_include_directories(srt-game-server
    PUBLIC SYSTEM
-        /usr/local/include/activemq-cpp
-        /usr/inlude/proton
-        /usr/include/activemq-cpp-3.9.4
-        /usr/include/apr-1
+        /usr/include/proton
         /usr/local/include
         /opt/local/include
-        /opt/local/include/apr-1
 )
 
 target_link_libraries(srt-game-server

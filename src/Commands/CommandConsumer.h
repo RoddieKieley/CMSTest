@@ -59,7 +59,7 @@ protected:
     
     // Helper(s)
     void                                                Enqueue(Poco::Tuple<proton::message*>* pTuple);
-    std::pair<unsigned char*, unsigned long>*           MessageToPair(proton::message* pBytesMessage);
+    std::pair<unsigned char*, unsigned long>*           MessageToPair(proton::message* pMessage);
     
     // Constructor(s)
     CommandConsumer(_Dependencies* pDependencies);

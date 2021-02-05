@@ -90,9 +90,9 @@ void CommandConsumer::Enqueue(Poco::Tuple<proton::message*>* pTuple)
     delete pTuple;
 }
 
-std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton::message* pBytesMessage)
+std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton::message* pMessage)
 {
-    assert(pBytesMessage);
+    assert(pMessage);
     
     using namespace std;
 //    using namespace cms;
@@ -100,12 +100,31 @@ std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton:
     pair<unsigned char*, unsigned long>*    pMessagePair = NULL;
 
     // TODO: Proton update needed -> CommandConsumer::MessageToPair proton::message impl required!
-//    pBytesMessage->reset();
-//    int iBodyLength = pBytesMessage->getBodyLength();
+//    pMessage->reset();
+//    int iBodyLength = pMessage->getBodyLength();
 //    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
-//    memcpy(pucBodyBytesCopy, pBytesMessage->getBodyBytes(), iBodyLength * sizeof(unsigned char));
+//    memcpy(pucBodyBytesCopy, pMessage->getBodyBytes(), iBodyLength * sizeof(unsigned char));
 //    pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);
-    
+
+//    std::vector<char> charVec;
+//    pMessage->decode(charVec);
+//    int iBodyLength = charVec.size();
+//    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
+//    memcpy(pucBodyBytesCopy, charVec.data(), iBodyLength * sizeof(unsigned char));
+//    pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);
+
+    auto theMessageBody = pMessage->body();
+//    proton::amqp_binary = pMessage->body();
+
+    proton::binary b;
+    b = proton::get<proton::binary>(theMessageBody);
+    std::cout << hex << b << std::endl;
+    int iBodyLength = b.size();
+    std::cout << "body size is " << iBodyLength << std::endl;
+    unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
+    memcpy(pucBodyBytesCopy, b.data(), iBodyLength * sizeof(unsigned char));
+    pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);
+
     return pMessagePair;
 }
 

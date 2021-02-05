@@ -17,7 +17,6 @@
 #include "../Events/EventDispatcher.h"
 #include "../Proto/GameEventBuffer.pb.h"
 #include <Poco/Delegate.h>
-#include <cms/CMSException.h>
 #include <google/protobuf/message.h>
 #include <string>
 #include <assert.h>
