@@ -16,6 +16,7 @@
 #include "sender.h"
 #include "../Events/EventDispatcher.h"
 #include "../Proto/GameEventBuffer.pb.h"
+#include "../Logging/loguru.hpp"
 #include <Poco/Delegate.h>
 #include <google/protobuf/message.h>
 #include <string>
@@ -144,7 +145,8 @@ void MessageDispatcher::Dispatch()
         }
         catch ( std::exception& e )
         {
-            std::cout << e.what() << std::endl;
+//            std::cout << e.what() << std::endl;
+            LOG_F(INFO, e.what());
         }
     }
     m_aMessageQueueMutex.unlock();

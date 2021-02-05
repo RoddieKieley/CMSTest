@@ -118,9 +118,9 @@ std::pair<unsigned char*, unsigned long>* CommandConsumer::MessageToPair(proton:
 
     proton::binary b;
     b = proton::get<proton::binary>(theMessageBody);
-    std::cout << hex << b << std::endl;
+//    std::cout << hex << b << std::endl;
     int iBodyLength = b.size();
-    std::cout << "body size is " << iBodyLength << std::endl;
+//    std::cout << "body size is " << iBodyLength << std::endl;
     unsigned char* pucBodyBytesCopy = new unsigned char[iBodyLength];
     memcpy(pucBodyBytesCopy, b.data(), iBodyLength * sizeof(unsigned char));
     pMessagePair = new pair<unsigned char*, unsigned long>(pucBodyBytesCopy, iBodyLength);

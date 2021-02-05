@@ -14,11 +14,11 @@
 
 #include "MessageConsumer.h"
 #include "receiver.h"
+#include "../Logging/loguru.hpp"
 #include <google/protobuf/message.h>
 #include <string.h>
 #include <string>
 #include <assert.h>
-//#include "../Logging/loguru.cpp"
 
 
 // Constructor
@@ -93,10 +93,10 @@ void MessageConsumer::receive_thread(receiver& r) {
             // TODO: Proton TESTME -> does this do a deep copy? if so who deletes it and when?
             proton::message* pMessage = new proton::message(m);
             Enqueue(pMessage);
-            ++n;
-            OUT(std::cout << id << " received \"" << m.body() << '"' << std::endl);
+//            ++n;
+//            OUT(std::cout << id << " received \"" << m.body() << '"' << std::endl);
         }
-        OUT(std::cout << id << " received " << n << " messages" << std::endl);
+//        OUT(std::cout << id << " received " << n << " messages" << std::endl);
     } catch (const closed&) {}
 }
 
@@ -118,6 +118,6 @@ void MessageConsumer::Dispatch()
     }
     catch ( std::exception& e )
     {
-        std::cout << e.what() << std::endl;
+        LOG_F(INFO, e.what());
     }
 }
