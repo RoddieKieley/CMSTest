@@ -69,7 +69,7 @@ endif()
 ## Debug
 ##
 set(CMAKE_BUILD_TYPE Debug)
-message(STATUS, "CXXFLAGS: ${CMAKE_CXX_FLAGS}")
+#message(STATUS, "CXXFLAGS: ${CMAKE_CXX_FLAGS}")
 
 ##
 ## srt-game-server Files

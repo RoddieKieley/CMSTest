@@ -127,7 +127,7 @@ void World::b2WorldToPbWorld(b2World* pb2World, PbWorld*& pPbWorldDefault)
         pPbVec2Force->set_y(0.0f);
         pPbBody->set_allocated_force(pPbVec2Force);
         
-        pEntity = static_cast<AEntity*>(pBody->GetUserData());
+        pEntity = (AEntity*)(pBody->GetUserData().pointer);
         assert(NULL != pEntity);
         pPbBody->set_uuid(pEntity->UUID);
         pPbBody->set_tag(pEntity->Tag);

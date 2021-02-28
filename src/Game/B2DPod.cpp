@@ -44,7 +44,7 @@ B2DPod::_Dependencies::_Dependencies(const b2Vec2& b2v2Position) :
 B2DPod::B2DPod(B2DPod::_Dependencies& theDependencies) :
     AB2DEntity(B2DWorld::Factory().CreateBody(&theDependencies.BodyDef))
 {
-    m_pb2Body->CreateFixture(&theDependencies.FixtureDef);
+    b2Fixture* pbFixture = m_pb2Body->CreateFixture(&theDependencies.FixtureDef);
     m_pb2Fixture = m_pb2Body->GetFixtureList();
 }
 
