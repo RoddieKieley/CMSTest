@@ -24,7 +24,7 @@ B2DPod::_Dependencies::_Dependencies(const b2Vec2& b2v2Position) :
 {
     // Override the defaults where appropriate
     // Set the size of our shape
-    m_b2CircleShape.m_radius = 11.0f;
+    m_b2CircleShape.m_radius = 90.0f;
     
     // Set the fixture and use the shape
 //    m_ab2FixtureDef.density = 1.0f;
