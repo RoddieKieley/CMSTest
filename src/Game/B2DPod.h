@@ -16,7 +16,7 @@
 //   limitations under the License.
 
 #include "AB2DEntity.h"
-#include <box2D/box2d.h>
+#include <box2d/box2d.h>
 #include <queue>
 #include <mutex>
 

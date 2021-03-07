@@ -18,7 +18,7 @@
 #include "AB2DEntity.h"
 #include "B2DBullet.h"
 #include "../Shared/Timer.h"
-#include <box2D/box2d.h>
+#include <box2d/box2d.h>
 #include "../Shared/MakeT.h"
 #include <Poco/Delegate.h>
 #include <string>

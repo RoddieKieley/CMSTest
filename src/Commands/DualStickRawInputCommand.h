@@ -16,7 +16,7 @@
 //   limitations under the License.
 
 #include "RawInputCommand.h"
-#include <box2D/box2d.h>
+#include <box2d/box2d.h>
 #include <Poco/BasicEvent.h>
 #include <string>
 
