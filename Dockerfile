@@ -2,12 +2,10 @@
 ARG fedora_version=33
 FROM fedora:${fedora_version} as build-env
 
-#COPY containerbuild/srt.repo /etc/yum.repos.d/
-#RUN sudo dnf install Box2D-2.3.1-12.fc32.x86_64 Box2D-devel-2.3.1-12.fc32.x86_64 compat-openssl10 openssl poco-devel poco-foundation protobuf protobuf-devel gcc g++ cmake git qpid-proton-cpp qpid-proton-cpp-devel yaml-cpp-devel --assumeyes --verbose
 RUN sudo dnf install Box2D.x86_64 Box2D-devel.x86_64 compat-openssl10 openssl poco-devel poco-foundation protobuf protobuf-devel gcc g++ cmake git qpid-proton-cpp qpid-proton-cpp-devel yaml-cpp-devel --assumeyes --verbose
 
 WORKDIR /tmp/srt-game-server/src/Proto
-RUN for i in $(ls -lC1 *.proto); do protoc $i --cpp_out=.; done;
+RUN for i in `ls -lC1 *.proto`; do `echo protoc $i --cpp_out=.`; done;
 RUN mkdir /tmp/build
 WORKDIR /tmp/build
 
@@ -21,7 +19,7 @@ RUN cmake --build .
 # Run
 FROM fedora:${fedora_version} as base-env
 COPY containerbuild/srt.repo /etc/yum.repos.d/
-RUN sudo dnf install Box2D-2.3.1-12.fc32.x86_64 Box2D-devel-2.3.1-12.fc32.x86_64 compat-openssl10 openssl poco-devel poco-foundation protobuf protobuf-devel qpid-proton-cpp qpid-proton-cpp-devel yaml-cpp --assumeyes --verbose
+RUN sudo dnf install Box2D.x86_64 Box2D-devel.x86_64 compat-openssl10 openssl poco-devel poco-foundation protobuf protobuf-devel qpid-proton-cpp qpid-proton-cpp-devel yaml-cpp --assumeyes --verbose
 
 ENV USER_UID=1000
 ENV USER_NAME=srt
