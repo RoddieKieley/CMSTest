@@ -15,7 +15,7 @@
 #include "World.h"
 #include "B2DWorld.h"
 #include "AEntity.h"
-#include <Box2D/Box2D.h>
+#include <box2D/box2d.h>
 #include <Poco/Delegate.h>
 #include <assert.h>
 #include "../Logging/loguru.hpp"

@@ -14,7 +14,7 @@
 
 #include "B2DBullet.h"
 #include "B2DWorld.h"
-#include <Box2D/Box2D.h>
+#include <box2D/box2d.h>
 
 
 // Constructor
